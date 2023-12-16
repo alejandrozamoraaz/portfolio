@@ -11,10 +11,10 @@ export default function LocaleSwitcher({
     const pathName = usePathname();
 
     const buildNewPath = (locale: string) => {
-        if (!pathName) return '/';
+        if (!pathName) return '/portfolio/es';
         const segments = pathName.split('/');
         segments[1] = locale;
-        return segments.join('/');
+        return segments.join('/portfolio/');
     };
 
     const handleChangeLocale = (event: React.ChangeEvent<HTMLSelectElement>) => {

@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    basePath: "/portfolio/[lang]",
+    basePath: '/portfolio/es',
+    assetPrefix: "/portfolio/es/",
     images: {
+        unoptimized: true,
         remotePatterns: [
             {
                 protocol: 'https',
