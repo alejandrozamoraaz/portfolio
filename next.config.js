@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
+    basePath: "/portfolio/[lang]",
     images: {
         remotePatterns: [
             {
