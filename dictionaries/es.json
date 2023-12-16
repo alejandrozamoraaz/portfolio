@@ -1,0 +1,28 @@
+{
+    "common": {
+        "textAutoTranslated": ""
+    },
+    "headerSection": {
+        "iam": "Yo soy",
+        "developer": "Desarrollador",
+        "designer": "Diseñador",
+        "analyst": "Analista"
+    },
+    "projectsSection": {
+        "title": "Proyectos",
+        "graphicDesignUiUx": "Diseño gráfico, UI & UX",
+        "fullStackDevelopment": "Desarrollo Full Stack"
+    },
+    "aboutSection": {
+        "title": "Acerca de",
+        "about01": "Junior Alejandro Zamora Navarrete es un ingeniero apasionado con un enfoque vanguardista y habilidades destacadas en diseño, arquitectura y desarrollo de software y videojuegos, realidad virtual, aumentada, desarrollo de IA y análisis de datos.",
+        "about02": "Comprometido con la excelencia y el crecimiento continuo, destaca por su capacidad para abordar proyectos desafiantes con entusiasmo y adaptarse a entornos dinámicos.",
+        "about03": "Con una dedicación inquebrantable a la calidad, Zamora aporta creatividad y versatilidad a cada tarea, siendo reconocido por su capacidad para ofrecer soluciones innovadoras.",
+        "about04": "Su combinación única de habilidades técnicas y creativas lo convierte en un recurso valioso para proyectos que requieren un enfoque integral y una mentalidad proactiva.",
+        "skills": "Habilidades",
+        "badges": "Insignias"
+    },
+    "contactSection": {
+        "title": "Contactar"
+    }
+}

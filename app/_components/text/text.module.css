@@ -1,0 +1,19 @@
+.bodySmall {
+    font-size: var(--font-size-body-small);
+}
+
+.body {
+    font-size: var(--font-size-body);
+}
+
+.bodyLarge {
+    font-size: var(--font-size-body-large);
+}
+
+.title {
+    font-size: var(--font-size-title);
+}
+
+.headline {
+    font-size: var(--font-size-headline);
+}

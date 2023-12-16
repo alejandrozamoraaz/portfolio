@@ -1,0 +1,10 @@
+.chip {
+    padding: var(--chip-padding) calc(var(--chip-padding) * 2);
+    border-radius: var(--border-radius);   
+    border: 2px solid var(--primary-color-highlight);
+}
+
+.chipText {
+    font-size: var(--chip-font-size);
+    color: var(--primary-color-highlight);
+}
