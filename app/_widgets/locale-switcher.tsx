@@ -11,7 +11,7 @@ export default function LocaleSwitcher({
     const pathName = usePathname();
 
     const buildNewPath = (locale: string) => {
-        if (!pathName) return '/portfolio/es';
+        if (!pathName) return '/portfolio';
         const segments = pathName.split('/');
         segments[1] = locale;
         return segments.join('/portfolio/');

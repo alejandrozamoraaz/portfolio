@@ -1,4 +1,4 @@
-import layoutStyle from '@/app/[lang]/layout.module.css'
+import layoutStyle from '@/app/layout.module.css'
 
 export const highlightNavigationButtonFromCurrentSection = () => {
     const sections = document.querySelectorAll("section");

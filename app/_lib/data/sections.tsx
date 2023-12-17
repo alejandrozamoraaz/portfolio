@@ -1,6 +1,6 @@
-import Projects from '@/app/[lang]/_sections/projects'
-import About from '@/app/[lang]/_sections/about'
-import Contact from '@/app/[lang]/_sections/contact'
+import Projects from '@/app/_sections/projects'
+import About from '@/app/_sections/about'
+import Contact from '@/app/_sections/contact'
 
 export const sections = (dictionary: {
     projectsSection: {

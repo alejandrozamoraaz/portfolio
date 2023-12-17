@@ -1,7 +1,7 @@
 'use client'
 
 import iconButtonStyle from '@/app/_components/icon_button/icon-button.module.css'
-import layoutStyle from '@/app/[lang]/layout.module.css'
+import layoutStyle from '@/app/layout.module.css'
 
 import IconImage from '@/app/_components/icon-image'
 

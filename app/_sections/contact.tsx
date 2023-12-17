@@ -1,4 +1,4 @@
-import ContactButtons from '@/app/[lang]/_widgets/contact-buttons'
+import ContactButtons from '@/app/_widgets/contact-buttons'
 
 export default function Contact() {
     return (

@@ -1,20 +1,15 @@
 import style from './page.module.css'
 
 import { getDictionary } from '@/get-dictionary'
-import { Locale } from '@/i18n-config'
 
-import layoutStyle from '@/app/[lang]/layout.module.css'
+import layoutStyle from '@/app/layout.module.css'
 import IconImage from '@/app/_components/icon-image'
 import Text from '@/app/_components/text/text'
-import Header from '@/app/[lang]/_sections/Header'
+import Header from '@/app/_sections/Header'
 import { sections } from '@/app/_lib/data/sections'
 
-export default async function Home({
-  params: { lang },
-}: {
-  params: { lang: Locale }
-}) {
-  const dictionary = await getDictionary(lang);
+export default async function Home() {
+  const dictionary = await getDictionary('es');
 
   return (
     <main className={layoutStyle.main + " col gap-large"}>

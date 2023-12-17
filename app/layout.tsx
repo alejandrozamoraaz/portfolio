@@ -1,4 +1,4 @@
-import '../globals.css'
+import './globals.css'
 import style from './layout.module.css'
 
 import type { Metadata } from 'next'
@@ -32,10 +32,10 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { lang: Locale };
 }) {
-  const dictionary = await getDictionary(params.lang);
+  const dictionary = await getDictionary('es');
 
   return (
-    <html lang={params.lang}>
+    <html lang="es">
       <body className={`${mainFont.className} antialiased`}>
         <div className={style.layout}>
           <div className={style.topBar + " row vertical-center p-x"}>
@@ -51,8 +51,8 @@ export default async function RootLayout({
             </div>
             <div className="col col-10">
               <div className={style.actions + " gap"}>
-                {params.lang !== "es" && <Chip text={dictionary.common.textAutoTranslated} />}
-                <LocaleSwitcher activeLocale={params.lang} />
+                {/* {params.lang !== "es" && <Chip text={dictionary.common.textAutoTranslated} />} */}
+                {/* <LocaleSwitcher activeLocale={params.lang} /> */}
               </div>
             </div>
           </div>

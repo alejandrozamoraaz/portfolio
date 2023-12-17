@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Text from '@/app/_components/text/text'
-import ContactButtons from '@/app/[lang]/_widgets/contact-buttons'
-import Typewriter from '@/app/[lang]/_widgets/typewriter'
+import ContactButtons from '@/app/_widgets/contact-buttons'
+import Typewriter from '@/app/_widgets/typewriter'
 
 export default function Header({
     dictionary,
