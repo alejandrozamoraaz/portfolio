@@ -23,7 +23,12 @@ export default function Header({
 
                 <div className="m-y">
                     <Text text={dictionary.headerSection.iam} />
-                    <Typewriter words={[dictionary.headerSection.developer, dictionary.headerSection.designer, dictionary.headerSection.analyst]} />
+                    <Typewriter words={[
+                        dictionary.headerSection.architect,
+                        dictionary.headerSection.developer,
+                        dictionary.headerSection.designer,
+                        dictionary.headerSection.analyst
+                    ]} />
                 </div>
 
                 <ContactButtons />

@@ -4,6 +4,7 @@
     },
     "headerSection": {
         "iam": "Yo soy",
+        "architect": "Arquitecto",
         "developer": "Desarrollador",
         "designer": "Diseñador",
         "analyst": "Analista"
