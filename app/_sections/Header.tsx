@@ -9,6 +9,7 @@ export default function Header({
     dictionary: {
         headerSection: {
             iam: string,
+            architect: string,
             developer: string,
             designer: string,
             analyst: string
