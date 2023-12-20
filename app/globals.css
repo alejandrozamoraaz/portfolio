@@ -157,8 +157,12 @@ body {
   align-items: center;
 }
 
-.center {
+.horizontal-center {
   display: flex;
+  justify-content: center;
+}
+
+.center {
   align-items: center;
   justify-content: center;
 }
@@ -196,6 +200,7 @@ body {
 }
 
 .button {
+  appearance: none;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -251,4 +256,35 @@ body {
   width: 100%;
   height: var(--footer-size);
   overflow: hidden;
+}
+
+.f-carousel {
+  width: 100%;
+  --f-carousel-slide-width: calc(100% / 6);
+  --f-carousel-spacing: var(--padding-small);
+  --f-carousel-dot-color: #fff;
+  /* --f-carousel-slide-padding: var(--padding); */
+
+  /* --f-button-next-pos: 1rem; */
+  /* --f-button-prev-pos: 1rem; */
+
+  /* --f-button-width: 44px; */
+  /* --f-button-height: 44px; */
+  --f-button-border-radius: 50%;
+
+  --f-button-color: #fff;
+  --f-button-hover-color: #fff;
+  --f-button-active-color: #fff;
+
+  --f-button-bg: rgba(0, 0, 0, 0.5);
+  --f-button-hover-bg: rgba(0, 0, 0, 0.8);
+  --f-button-active-bg: rgba(0, 0, 0, 0.8);
+
+  /* --f-button-svg-width: 22px; */
+  /* --f-button-svg-height: 22px; */
+  --f-button-svg-stroke-width: 3;
+}
+
+.f-carousel .f-carousel__track {
+  margin-top: var(--padding-small);
 }

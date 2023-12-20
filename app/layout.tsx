@@ -1,6 +1,9 @@
 import './globals.css'
 import style from './layout.module.css'
 
+import '@fancyapps/ui/dist/carousel/carousel.css'
+import '@fancyapps/ui/dist/carousel/carousel.autoplay.css'
+
 import type { Metadata } from 'next'
 import Image from 'next/image'
 
@@ -8,10 +11,10 @@ import { getDictionary } from '@/get-dictionary'
 import { i18n, Locale } from '@/i18n-config'
 import { mainFont } from '@/app/fonts'
 
-import Chip from '@/app/_components/chip/chip'
+// import Chip from '@/app/_components/chip/chip'
 
 import FloatAction from './_widgets/float-action'
-import LocaleSwitcher from './_widgets/locale-switcher'
+// import LocaleSwitcher from './_widgets/locale-switcher'
 import NavigationBar from './_widgets/navigation-bar'
 
 export const metadata: Metadata = {

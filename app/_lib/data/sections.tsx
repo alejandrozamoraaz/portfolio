@@ -14,13 +14,13 @@ export const sections = (dictionary: {
     }
 }) => {
     return [
-        {
-            linkName: 'Projects',
-            iconUrl: 'https://img.icons8.com/3d-fluency/94/news.png',
-            iconAlt: dictionary.projectsSection.title + ' - icon by Icons8',
-            name: dictionary.projectsSection.title,
-            content: Projects
-        },
+        // {
+        //     linkName: 'Projects',
+        //     iconUrl: 'https://img.icons8.com/3d-fluency/94/news.png',
+        //     iconAlt: dictionary.projectsSection.title + ' - icon by Icons8',
+        //     name: dictionary.projectsSection.title,
+        //     content: Projects
+        // },
         {
             linkName: 'About',
             iconUrl: 'https://img.icons8.com/3d-fluency/94/user-male--v4.png',

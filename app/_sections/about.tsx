@@ -1,4 +1,8 @@
 import Text from '@/app/_components/text/text'
+import Chip from '@/app/_components/chip/chip'
+
+import Skills from '@/app/_widgets/skills'
+import Badges from '@/app/_widgets/badges'
 
 export default function About({
     dictionary,
@@ -17,6 +21,7 @@ export default function About({
     return (
         <div className="row">
             <div className="col col-12">
+                <Chip text="By AI" />
 
                 <Text weight={600} type="bodyLarge" text={dictionary.aboutSection.about01} />
                 <Text weight={600} classText="m-y-large" text={dictionary.aboutSection.about02} />
@@ -29,10 +34,8 @@ export default function About({
                     </div>
                 </div>
 
-                {/* <Text weight={600} classText="m-y-large" text={dictionary.aboutSection.skills} />
-
-                <Text weight={600} classText="m-y-large" text={dictionary.aboutSection.badges} /> */}
-
+                <Skills dictionary={dictionary} />
+                <Badges dictionary={dictionary} />
             </div>
         </div>
     );

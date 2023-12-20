@@ -27,6 +27,12 @@ export default function ContactButtons() {
                 iconUrl="https://img.icons8.com/3d-fluency/94/facebook-circled.png"
                 iconAlt="Facebook - icon by Icons8"
             />
+            <IconButton
+                href="https://www.threads.net/@alejandrozamoraaz"
+                isHrefExternal={true}
+                iconUrl="https://i.postimg.cc/7PS0ZCxb/threads.png"
+                iconAlt="Threads - icon by Fahrul Saputra on IconScout"
+            />
         </div>
     );
 }

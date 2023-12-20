@@ -2,6 +2,7 @@
     padding: var(--chip-padding) calc(var(--chip-padding) * 2);
     border-radius: var(--border-radius);   
     border: 2px solid var(--primary-color-highlight);
+    max-width:fit-content;
 }
 
 .chipText {

@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: 'export',
-    // basePath: '/portfolio',
     images: {
         unoptimized: true,
         remotePatterns: [
@@ -14,11 +13,6 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: 'i.postimg.cc',
                 pathname: '/**'
-            },
-            {
-                protocol: 'https',
-                hostname: 'pngimg.com',
-                pathname: '/uploads/under_construction/**'
             }
         ],
     },
