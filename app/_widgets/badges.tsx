@@ -48,7 +48,8 @@ export default function Badges({
 
     useEffect(() => {
         const carouselOptions = {
-            Navigation: false
+            Navigation: false,
+            Autoplay: true
         };
 
         new Carousel(document.getElementById("badgesCarousel"), carouselOptions, { Autoplay });
@@ -59,7 +60,7 @@ export default function Badges({
             <Text weight={600} classText="m-y-large" text={dictionary.aboutSection.badges} />
             <div className="f-carousel" id="badgesCarousel">
                 {badges.map((badge, index) => (
-                    <a key={index} className="button col f-carousel__slide center" target="_blank" href={badge.href}>
+                    <a key={"badge_" + index} className="button col f-carousel__slide center" target="_blank" href={badge.href}>
                         <IconImage iconUrl={badge.imageUrl} iconAlt={badge.name} size="large" />
                         <Text type="bodySmall" text={badge.name} />
                     </a>

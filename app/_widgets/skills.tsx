@@ -18,23 +18,24 @@ export default function Skills({
         }
     }
 }) {
-    const skills = [
-        <Kotlin width={48} height={48} />,
-        <Figma width={48} height={48} />,
-        <AdobeXd width={48} height={48} />,
-        <DotNet width={48} height={48} />,
-        <Css width={48} height={48} />,
-        <Flutter width={48} height={48} />,
-        <Unity width={48} height={48} />,
-        <PowerBi width={48} height={48} />,
-        <Sql width={48} height={48} />,
-        <Python width={48} height={48} />,
-        <Azure width={48} height={48} />
+    const skills: JSX.Element[] = [
+        <Kotlin key="kotlin" width={48} height={48} />,
+        <Figma key="figma" width={48} height={48} />,
+        <AdobeXd key="adobexd" width={48} height={48} />,
+        <DotNet key="dotnet" width={48} height={48} />,
+        <Css key="css" width={48} height={48} />,
+        <Flutter key="flutter" width={48} height={48} />,
+        <Unity key="unity" width={48} height={48} />,
+        <PowerBi key="powerbi" width={48} height={48} />,
+        <Sql key="sql" width={48} height={48} />,
+        <Python key="pyton" width={48} height={48} />,
+        <Azure key="azure" width={48} height={48} />
     ];
 
     useEffect(() => {
         const carouselOptions = {
-            Navigation: false
+            Navigation: false,
+            Autoplay: true
         };
 
         new Carousel(document.getElementById("skillsCarousel"), carouselOptions, { Autoplay });
@@ -45,7 +46,7 @@ export default function Skills({
             <Text weight={600} classText="m-y-large" text={dictionary.aboutSection.skills} />
             <div className="f-carousel" id="skillsCarousel">
                 {skills.map((skill, index) => (
-                    <div key={index} className="f-carousel__slide horizontal-center">
+                    <div key={"skill_" + index} className="f-carousel__slide horizontal-center">
                         {skill}
                     </div>
                 ))}
