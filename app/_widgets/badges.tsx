@@ -17,11 +17,8 @@ export default function Badges({
     dictionary,
 }: {
     dictionary: {
-        common: {
-            goTo: string
-        },
         aboutSection: {
-            badges: string
+            badges: string;
         }
     }
 }) {
@@ -41,7 +38,7 @@ export default function Badges({
             renderToString(
                 <a className="button col gap" target="_blank" href={badge.href}>
                     <IconImage iconUrl={badge.imageUrl} iconAlt={badge.name} size="large" />
-                    <Chip text={dictionary.common.goTo} />
+                    <Chip text="See" />
                 </a>
             ).then((text) => badgesCarousel.appendSlide({ html: text }));
         });

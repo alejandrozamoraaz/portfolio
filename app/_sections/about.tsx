@@ -9,9 +9,6 @@ export default function About({
     isByAI,
 }: {
     dictionary: {
-        common: {
-            goTo: string
-        },
         aboutSection: {
             about01: string,
             about02: string,

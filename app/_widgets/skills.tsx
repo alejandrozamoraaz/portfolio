@@ -16,7 +16,7 @@ export default function Skills({
 }: {
     dictionary: {
         aboutSection: {
-            skills: string
+            skills: string;
         }
     }
 }) {
