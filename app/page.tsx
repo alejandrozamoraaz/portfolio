@@ -25,7 +25,7 @@ export default async function Home() {
               <Text text={link.name} type="title" weight={600} />
             </div>
 
-            <link.content dictionary={dictionary} />
+            <link.content dictionary={dictionary} isByAI={true} />
           </section>
         );
       })}

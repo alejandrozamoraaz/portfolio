@@ -1,5 +1,7 @@
 .layout {
     display: grid;
+    height: 100%;
+    width: 100%;
 }
 
 .topBar {
@@ -32,11 +34,6 @@
     transform: rotate(0deg);
 }
 
-.actions {
-    display: flex;
-    justify-content: flex-end;
-}
-
 .main {
     grid-row: 2;
 }
@@ -54,7 +51,6 @@
     display: flex;
     z-index: 900;
     gap: var(--padding);
-    justify-content: space-evenly;
     overflow: hidden;
 }
 

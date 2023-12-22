@@ -6,8 +6,12 @@ import Badges from '@/app/_widgets/badges'
 
 export default function About({
     dictionary,
+    isByAI,
 }: {
     dictionary: {
+        common: {
+            goTo: string
+        },
         aboutSection: {
             about01: string,
             about02: string,
@@ -16,12 +20,13 @@ export default function About({
             skills: string,
             badges: string
         }
-    }
+    },
+    isByAI: boolean
 }) {
     return (
         <div className="row">
             <div className="col col-12">
-                <Chip text="By AI" />
+                {isByAI && <Chip text="By AI" />}
 
                 <Text weight={600} type="bodyLarge" text={dictionary.aboutSection.about01} />
                 <Text weight={600} classText="m-y-large" text={dictionary.aboutSection.about02} />

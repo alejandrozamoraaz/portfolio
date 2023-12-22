@@ -28,7 +28,7 @@ export default function NavigationBar({
     }, []);
 
     return (
-        <div className={style.navigationBar}>
+        <div className={style.navigationBar + " justify-evenly"}>
             <NavigationButtons dictionary={dictionary} />
         </div>
     );

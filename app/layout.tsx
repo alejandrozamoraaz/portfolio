@@ -53,10 +53,10 @@ export default async function RootLayout({
               </div>
             </div>
             <div className="col col-10">
-              <div className={style.actions + " gap"}>
-                {/* {params.lang !== "es" && <Chip text={dictionary.common.textAutoTranslated} />} */}
-                {/* <LocaleSwitcher activeLocale={params.lang} /> */}
-              </div>
+              {/* <div className="justify-end gap"> */}
+              {/* {params.lang !== "es" && <Chip text={dictionary.common.textAutoTranslated} />} */}
+              {/* <LocaleSwitcher activeLocale={params.lang} /> */}
+              {/* </div> */}
             </div>
           </div>
 

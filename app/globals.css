@@ -55,6 +55,10 @@ body {
   background: linear-gradient(to left, var(--secondary-color-33), var(--primary-color-33));
 }
 
+.text-color {
+  color: var(--text-color);
+}
+
 .container,
 .container-fluid {
   width: 100%;
@@ -162,6 +166,15 @@ body {
   justify-content: center;
 }
 
+.justify-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
 .center {
   align-items: center;
   justify-content: center;
@@ -258,33 +271,28 @@ body {
   overflow: hidden;
 }
 
+@media (min-width: 768px) {
+  .mini-carousel-slide {
+    width: calc((100%) / 4) !important;
+  }
+}
+
 .f-carousel {
-  width: 100%;
-  --f-carousel-slide-width: calc(100% / 6);
-  --f-carousel-spacing: var(--padding-small);
-  --f-carousel-dot-color: #fff;
-  /* --f-carousel-slide-padding: var(--padding); */
+  --f-carousel-dot-color: var(--text-color);
 
-  /* --f-button-next-pos: 1rem; */
-  /* --f-button-prev-pos: 1rem; */
-
-  /* --f-button-width: 44px; */
-  /* --f-button-height: 44px; */
   --f-button-border-radius: 50%;
 
-  --f-button-color: #fff;
-  --f-button-hover-color: #fff;
-  --f-button-active-color: #fff;
+  --f-button-color: var(--text-color);
+  --f-button-hover-color: var(--text-color);
+  --f-button-active-color: var(--text-color);
 
   --f-button-bg: rgba(0, 0, 0, 0.5);
   --f-button-hover-bg: rgba(0, 0, 0, 0.8);
   --f-button-active-bg: rgba(0, 0, 0, 0.8);
 
-  /* --f-button-svg-width: 22px; */
-  /* --f-button-svg-height: 22px; */
   --f-button-svg-stroke-width: 3;
 }
 
-.f-carousel .f-carousel__track {
-  margin-top: var(--padding-small);
-}
+/* .f-carousel__track {
+  margin: var(--padding-small) !important;
+} */

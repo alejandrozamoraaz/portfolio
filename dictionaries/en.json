@@ -1,5 +1,6 @@
 {
     "common": {
+        "goTo": "Go to",
         "textAutoTranslated": "Text translated from Spanish"
     },
     "headerSection": {

@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
+    // output: 'export', descomentariar al hacer commit
     images: {
         unoptimized: true,
         remotePatterns: [

@@ -11,7 +11,15 @@ export default function IconImage({
     size?: "large" | undefined;
     classIcon?: string;
 }) {
-    const iconSize = size != "large" ? 32 : 48;
+    const iconSize = (() => {
+        switch (size) {
+            case "large":
+                return 48;
+            default:
+                return 32;
+        }
+    })();
+
     return (
         <Image
             src={iconUrl}
