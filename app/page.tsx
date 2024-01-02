@@ -1,6 +1,7 @@
 import { getDictionary } from '@/get-dictionary'
 
 import Image from 'next/image'
+import cloudinaryLoader from '@/cloudinary-loader'
 
 import IconImage from '@/app/_components/icon-image'
 import Text from '@/app/_components/text/text'
@@ -35,7 +36,7 @@ export default async function Home() {
         </div>
 
         <Image
-          src="cv012qnfwhvwsd6tsqcg"
+          src="cv012qnfwhvwsd6tsqcg.png"
           alt="Alejandro Zamora in a blue suit and white shirt in a blue circle with a blue background and a blue circle with a man in a white shirt and blue blazer."
           style={{
             objectFit: "contain",

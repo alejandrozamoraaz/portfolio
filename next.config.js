@@ -4,7 +4,7 @@ const nextConfig = {
     images: {
         loader: 'custom',
         loaderFile: './cloudinary-loader.ts'
-        // unoptimized: true,
+        // unoptimized: true
     },
 };
 
