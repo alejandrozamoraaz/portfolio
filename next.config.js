@@ -2,9 +2,9 @@
 const nextConfig = {
     output: 'export', //descomentariar al hacer commit
     images: {
-        loader: 'custom',
-        loaderFile: './cloudinary-loader.ts',
-        domains: ['res.cloudinary.com'],
+        // loader: 'custom',
+        // loaderFile: './cloudinary-loader.ts',
+        // domains: ['res.cloudinary.com'],
         remotePatterns: [
             {
                 protocol: 'https',

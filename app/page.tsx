@@ -36,7 +36,7 @@ export default async function Home() {
         </div>
 
         <Image
-          src="cv012qnfwhvwsd6tsqcg.png"
+          src="https://res.cloudinary.com/dlyfwab7x/image/upload/v1704143537/cv012qnfwhvwsd6tsqcg.png"
           alt="Alejandro Zamora in a blue suit and white shirt in a blue circle with a blue background and a blue circle with a man in a white shirt and blue blazer."
           style={{
             objectFit: "contain",
