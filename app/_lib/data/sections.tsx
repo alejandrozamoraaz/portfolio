@@ -16,21 +16,21 @@ export const sections = (dictionary: {
     return [
         // {
         //     linkName: 'Projects',
-        //     iconUrl: 'icons/gnytybm13qdybiry6ztt',
+        //     iconUrl: 'https://res.cloudinary.com/dlyfwab7x/image/upload/v1704144609/icons/gnytybm13qdybiry6ztt.png',
         //     iconAlt: 'Noticias - icon by Icons8',
         //     name: dictionary.projectsSection.title,
         //     content: Projects
         // },
         {
             linkName: 'About',
-            iconUrl: 'icons/ztd1acdbprqepq8jr4n1',
+            iconUrl: 'https://res.cloudinary.com/dlyfwab7x/image/upload/v1704144832/icons/ztd1acdbprqepq8jr4n1.png',
             iconAlt: 'Usuario masculino - icon by Icons8',
             name: dictionary.aboutSection.title,
             content: About
         },
         {
             linkName: 'Contact',
-            iconUrl: 'icons/nokcptgecqzsvnfbxkhx',
+            iconUrl: 'https://res.cloudinary.com/dlyfwab7x/image/upload/v1704145021/icons/nokcptgecqzsvnfbxkhx.png',
             iconAlt: 'Charla - icon by Icons8',
             name: dictionary.contactSection.title,
             content: Contact

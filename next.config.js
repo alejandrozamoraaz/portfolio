@@ -1,10 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export', //descomentariar al hacer commit
+    output: 'export',
     images: {
-        // loader: 'custom',
-        // loaderFile: './cloudinary-loader.ts',
-        // domains: ['res.cloudinary.com'],
         remotePatterns: [
             {
                 protocol: 'https',
@@ -12,8 +9,6 @@ const nextConfig = {
                 pathname: '/dlyfwab7x/image/upload/**',
             },
         ],
-
-        // unoptimized: true
     },
 };
 

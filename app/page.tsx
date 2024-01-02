@@ -1,7 +1,6 @@
 import { getDictionary } from '@/get-dictionary'
 
 import Image from 'next/image'
-import cloudinaryLoader from '@/cloudinary-loader'
 
 import IconImage from '@/app/_components/icon-image'
 import Text from '@/app/_components/text/text'

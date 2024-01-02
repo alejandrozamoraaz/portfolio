@@ -47,7 +47,7 @@ export default async function RootLayout({
         <header className="header">
           <div className="brand">
             <Image
-              src="vtqcg6xuptsud5hkx1te"
+              src="https://res.cloudinary.com/dlyfwab7x/image/upload/v1704135888/vtqcg6xuptsud5hkx1te.png"
               alt="Logo Alejandro Zamora"
               width={32}
               height={21}
