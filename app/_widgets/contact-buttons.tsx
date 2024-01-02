@@ -1,36 +1,36 @@
-import IconButton from '@/app/_components/icon_button/icon-button'
+import IconButton from '@/app/_components/icon-button'
 
 export default function ContactButtons() {
     return (
-        <div className="row gap">
+        <div className="flex gap">
             <IconButton
                 href="https://github.com/alejandrozamoraaz"
                 isHrefExternal={true}
-                iconUrl="https://img.icons8.com/3d-fluency/94/github.png"
+                iconUrl="icons/sllwivcceoufmztfw35m"
                 iconAlt="Github - icon by Icons8"
             />
             <IconButton
                 href="https://www.linkedin.com/in/alejandrozamoraaz"
                 isHrefExternal={true}
-                iconUrl="https://img.icons8.com/3d-fluency/94/linkedin.png"
+                iconUrl="icons/kq6fy2vylvb6lratn5wf"
                 iconAlt="Linkedin - icon by Icons8"
             />
             <IconButton
                 href="https://www.instagram.com/alejandrozamoraaz"
                 isHrefExternal={true}
-                iconUrl="https://img.icons8.com/3d-fluency/94/instagram-new.png"
+                iconUrl="icons/p2f89owh0ftbor8o4s5a"
                 iconAlt="Instagram - icon by Icons8"
             />
             <IconButton
                 href="https://www.facebook.com/alejandrozamoraaz"
                 isHrefExternal={true}
-                iconUrl="https://img.icons8.com/3d-fluency/94/facebook-circled.png"
+                iconUrl="icons/itqamy6g0fy3q1elbwy0"
                 iconAlt="Facebook - icon by Icons8"
             />
             <IconButton
                 href="https://www.threads.net/@alejandrozamoraaz"
                 isHrefExternal={true}
-                iconUrl="https://i.postimg.cc/7PS0ZCxb/threads.png"
+                iconUrl="icons/urwqyabounygxf22dqxf"
                 iconAlt="Threads - icon by Fahrul Saputra on IconScout"
             />
         </div>

@@ -25,12 +25,12 @@ export default function IconImage({
             src={iconUrl}
             alt={iconAlt}
             className={classIcon}
-            style={{
-                position: "relative"
-            }}
+            // style={{
+            //     position: "relative"
+            // }}
             width={iconSize}
             height={iconSize}
-            priority
+            // priority
         />
     );
 }

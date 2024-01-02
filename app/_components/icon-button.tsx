@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import style from './icon-button.module.css'
 import IconImage from '@/app/_components/icon-image'
 
 export default function IconButton({
@@ -7,16 +6,18 @@ export default function IconButton({
     isHrefExternal,
     iconUrl,
     iconAlt,
-    classButton
+    classButton,
+    scroll
 }: {
     href: string;
     isHrefExternal?: boolean;
     iconUrl: string;
     iconAlt: string;
     classButton?: String;
+    scroll?: boolean;
 }) {
     return (
-        <Link className={"button " + style.iconButton + " " + classButton} href={href} target={isHrefExternal ? "_blank" : "_self"}>
+        <Link className={"button icon-button " + classButton} href={href} rel={isHrefExternal ? "noreferrer" : undefined} target={isHrefExternal ? "_blank" : "_self"}>
             <IconImage iconUrl={iconUrl} iconAlt={iconAlt} />
         </Link>
     );

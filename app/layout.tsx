@@ -1,5 +1,7 @@
-import './globals.css'
-import style from './layout.module.css'
+import '@/app/_lib/styles/globals.css'
+import '@/app/_lib/styles/layout.css'
+import '@/app/_lib/styles/theme.css'
+import '@/app/_lib/styles/effects.css'
 
 import '@fancyapps/ui/dist/carousel/carousel.css'
 import '@fancyapps/ui/dist/carousel/carousel.autoplay.css'
@@ -8,14 +10,16 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 
 import { getDictionary } from '@/get-dictionary'
-import { i18n, Locale } from '@/i18n-config'
+// import { i18n, Locale } from '@/i18n-config'
 import { mainFont } from '@/app/fonts'
 
 // import Chip from '@/app/_components/chip/chip'
 
-import FloatAction from './_widgets/float-action'
+import FloatActions from './_lib/widgets/float-actions'
 // import LocaleSwitcher from './_widgets/locale-switcher'
-import NavigationBar from './_widgets/navigation-bar'
+import Navigation from './_lib/widgets/navigation'
+
+import Text from '@/app/_components/text/text'
 
 export const metadata: Metadata = {
   title: 'Junior Alejandro Zamora\'s Portfolio',
@@ -24,49 +28,48 @@ export const metadata: Metadata = {
   description: 'Junior Alejandro Zamora\'s Portfolio',
 }
 
-export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ lang: locale }))
-}
+// export async function generateStaticParams() {
+//   return i18n.locales.map((locale) => ({ lang: locale }))
+// }
 
 export default async function RootLayout({
   children,
-  params,
+  // params,
 }: {
   children: React.ReactNode;
-  params: { lang: Locale };
+  // params: { lang: Locale };
 }) {
   const dictionary = await getDictionary('es');
 
   return (
     <html lang="es">
-      <body className={`${mainFont.className} antialiased`}>
-        <div className={style.layout}>
-          <div className={style.topBar + " row vertical-center p-x"}>
-            <div className="col col-2">
-              <div className={style.brand + " vertical-center gradient-background-color"}>
-                <Image
-                  src="https://i.postimg.cc/MZ4XNZQn/icon192.png"
-                  alt="Logo"
-                  width={48}
-                  height={27}
-                />
-              </div>
-            </div>
-            <div className="col col-10">
-              {/* <div className="justify-end gap"> */}
-              {/* {params.lang !== "es" && <Chip text={dictionary.common.textAutoTranslated} />} */}
-              {/* <LocaleSwitcher activeLocale={params.lang} /> */}
-              {/* </div> */}
-            </div>
+      <body className={`${mainFont.className} antialiased wrapper`}>
+        <header className="header">
+          <div className="brand">
+            <Image
+              src="vtqcg6xuptsud5hkx1te"
+              alt="Logo Alejandro Zamora"
+              width={32}
+              height={21}
+            />
           </div>
+          {/* <div className="justify-end gap"> */}
+          {/* {params.lang !== "es" && <Chip text={dictionary.common.textAutoTranslated} />} */}
+          {/* <LocaleSwitcher activeLocale={params.lang} /> */}
+          {/* </div> */}
+        </header>
 
-          <NavigationBar dictionary={dictionary} />
-
-          <FloatAction />
-
+        <main className="content">
           {children}
-        </div>
 
+          <FloatActions />
+
+          <footer className="footer">
+            <Text weight={300} type="bodySmall" text="Template by Alejandro Zamora" />
+          </footer>
+        </main>
+
+        <Navigation dictionary={dictionary} />
       </body>
     </html>
   )

@@ -1,0 +1,84 @@
+body {
+    color: var(--text-color);
+    background: var(--background-color);
+}
+
+.wrapper {
+    .header {
+        .brand {
+            background: linear-gradient(to left, var(--secondary-color-33), var(--primary-color-33));
+            box-shadow: 0 0 2px var(--primary-color), 0 0 5px var(--primary-color);
+        }
+    }
+
+    .navigation {
+
+        .active>.navigation-button-icon,
+        .navigation-button:hover>.navigation-button-icon {
+            & {
+                outline: 2px solid var(--primary-color-highlight);
+                box-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
+                background: linear-gradient(to left, var(--secondary-color), var(--primary-color));
+            }
+        }
+
+    }
+}
+
+.container {
+    background-color: var(--surface-color);
+}
+
+.button {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+
+    &:hover {
+        color: var(--primary-color-highlight);
+    }
+}
+
+.icon-button:hover {
+    outline: 2px solid var(--primary-color-highlight);
+    box-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
+    background: linear-gradient(to left, var(--secondary-color), var(--primary-color));
+}
+
+.text-button {
+    color: var(--primary-color-highlight);
+    background: linear-gradient(to left, var(--secondary-color-33), var(--primary-color-33));
+
+    &:hover {
+        outline: 2px solid var(--primary-color-highlight);
+        box-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
+    }
+}
+
+.chip {
+    border: 2px solid var(--primary-color-highlight);
+    background-color: var(--background-color);
+    color: var(--primary-color-highlight);
+}
+
+.f-carousel {
+    --f-carousel-dot-color: var(--text-color);
+
+    .f-button {
+        --f-button-color: var(--text-color);
+        --f-button-hover-color: var(--text-color);
+        --f-button-active-color: var(--text-color);
+
+        --f-button-bg: rgb(33 33 33 / 64%);
+        --f-button-hover-bg: rgb(33 33 33 / 74%);
+        --f-button-active-bg: rgb(33 33 33 / 84%);
+    }
+}
+
+.project-carousel-slide {
+    /* outline: 3px solid var(--background-color) !important; */
+
+    .project-images-carousel {
+        /* background-color: var(--secondary-color-33); */
+    }
+}

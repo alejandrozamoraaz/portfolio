@@ -16,22 +16,22 @@ export const sections = (dictionary: {
     return [
         // {
         //     linkName: 'Projects',
-        //     iconUrl: 'https://img.icons8.com/3d-fluency/94/news.png',
-        //     iconAlt: dictionary.projectsSection.title + ' - icon by Icons8',
+        //     iconUrl: 'icons/gnytybm13qdybiry6ztt',
+        //     iconAlt: 'Noticias - icon by Icons8',
         //     name: dictionary.projectsSection.title,
         //     content: Projects
         // },
         {
             linkName: 'About',
-            iconUrl: 'https://img.icons8.com/3d-fluency/94/user-male--v4.png',
-            iconAlt: dictionary.aboutSection.title + ' - icon by Icons8',
+            iconUrl: 'icons/ztd1acdbprqepq8jr4n1',
+            iconAlt: 'Usuario masculino - icon by Icons8',
             name: dictionary.aboutSection.title,
             content: About
         },
         {
             linkName: 'Contact',
-            iconUrl: 'https://img.icons8.com/3d-fluency/94/chat.png',
-            iconAlt: dictionary.contactSection.title + ' - icon by Icons8',
+            iconUrl: 'icons/nokcptgecqzsvnfbxkhx',
+            iconAlt: 'Charla - icon by Icons8',
             name: dictionary.contactSection.title,
             content: Contact
         },

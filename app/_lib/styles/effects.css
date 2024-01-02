@@ -1,0 +1,60 @@
+.show-on-scroll {
+    view-timeline-name: --show-on-scroll;
+    view-timeline-axis: block;
+    animation-timeline: --show-on-scroll;
+    animation-name: showOnScrollAnimation;
+    animation-range: entry 5% cover 13%;
+    animation-fill-mode: both;
+}
+
+@keyframes showOnScrollAnimation {
+    from {
+        opacity: 0;
+        scale: 25%;
+    }
+
+    to {
+        opacity: 1;
+        scale: 100%;
+    }
+}
+
+.blink {
+    animation: blinkAnimation linear 600ms infinite;
+}
+
+@keyframes blinkAnimation {
+    to {
+        opacity: 0;
+    }
+}
+
+.wrapper {
+    .header {
+        .brand {
+            transition: transform ease 500ms;
+
+            &:hover {
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    .navigation {
+
+        .active>.navigation-button-icon,
+        .navigation-button:hover>.navigation-button-icon {
+            & {
+                transition:
+                    transform ease-in 100ms,
+                    outline ease-in 100ms;
+                transform: scale(0.95);
+            }
+        }
+    }
+}
+
+.button:active {
+    transition: transform 200ms;
+    transform: scale(0.9);
+}

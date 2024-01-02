@@ -1,4 +1,3 @@
-import layoutStyle from '@/app/layout.module.css'
 
 export const highlightNavigationButtonFromCurrentSection = () => {
     const sections = document.querySelectorAll("section");
@@ -6,10 +5,10 @@ export const highlightNavigationButtonFromCurrentSection = () => {
     const footerHeight = footer.offsetHeight;
 
     const isMobilePortrait = window.innerWidth < 767;
-    const navigationBar = document.querySelector('.' + layoutStyle.navigationBar) as HTMLElement;
+    const navigationBar = document.querySelector('.navigation') as HTMLElement;
     const bottomNavHeight = isMobilePortrait ? navigationBar.offsetHeight : 0;
 
-    const appbar = document.querySelector('.' + layoutStyle.topBar) as HTMLElement;
+    const appbar = document.querySelector('.header') as HTMLElement;
 
     const scrollPosition = window.scrollY;
 
@@ -34,11 +33,11 @@ export const highlightNavigationButtonFromCurrentSection = () => {
 };
 
 const highlightMenuLink = (sectionId: string) => {
-    const links = document.querySelectorAll('.' + layoutStyle.navigationButton);
-    links.forEach((link) => link.classList.remove(layoutStyle.active));
+    const links = document.querySelectorAll('.navigationButton');
+    links.forEach((link) => link.classList.remove('active'));
 
-    const currentLink = document.querySelector('.' + layoutStyle.navigationButton + '[id="#' + sectionId + '"]');
+    const currentLink = document.querySelector('.navigationButton' + '[id="#' + sectionId + '"]');
     if (currentLink) {
-        currentLink.classList.add(layoutStyle.active);
+        currentLink.classList.add('active');
     }
 };
