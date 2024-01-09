@@ -37,7 +37,7 @@ import Text from '@/app/_components/text/text'
 
 
 import React, { useEffect } from 'react';
-import { useTranslation } from 'next-i18next';
+import { useTranslation } from 'react-i18next';
 import i18n from '@/i18n';
 
 export default function RootLayout({
