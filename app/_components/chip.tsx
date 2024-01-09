@@ -8,10 +8,10 @@ export default function Chip({
     content?: any;
 }) {
     return (
-        <div className="chip">
+        <div className="chip gap-small">
             {content}
             {text != null && (
-                <Text type="bodySmall" weight={300} text={text} />
+                <Text type="bodySmall" text={text} />
             )}
         </div>
     );

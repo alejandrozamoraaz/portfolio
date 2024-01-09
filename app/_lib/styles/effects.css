@@ -19,16 +19,6 @@
     }
 }
 
-.blink {
-    animation: blinkAnimation linear 600ms infinite;
-}
-
-@keyframes blinkAnimation {
-    to {
-        opacity: 0;
-    }
-}
-
 .wrapper {
     .header {
         .brand {
@@ -41,8 +31,6 @@
     }
 
     .navigation {
-
-        .active>.navigation-button-icon,
         .navigation-button:hover>.navigation-button-icon {
             & {
                 transition:
@@ -55,6 +43,10 @@
 }
 
 .button:active {
-    transition: transform 200ms;
+    transition: transform ease-in 200ms;
     transform: scale(0.9);
+}
+
+.fancybox__backdrop::after {
+    transform: scale(11);
 }

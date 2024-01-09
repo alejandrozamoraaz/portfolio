@@ -3,11 +3,7 @@
         "textAutoTranslated": ""
     },
     "headerSection": {
-        "iam": "Yo soy",
-        "architect": "Arquitecto",
-        "developer": "Desarrollador",
-        "designer": "Diseñador",
-        "analyst": "Analista"
+        "iam": "Yo soy"
     },
     "projectsSection": {
         "title": "Proyectos",
@@ -16,10 +12,14 @@
     },
     "aboutSection": {
         "title": "Acerca de",
-        "about01": "Junior Alejandro Zamora Navarrete es un ingeniero apasionado con un enfoque vanguardista y habilidades destacadas en diseño, arquitectura y desarrollo de software y videojuegos, realidad virtual, aumentada, desarrollo de IA y análisis de datos.",
-        "about02": "Comprometido con la excelencia y el crecimiento continuo, destaca por su capacidad para abordar proyectos desafiantes con entusiasmo y adaptarse a entornos dinámicos.",
-        "about03": "Con una dedicación inquebrantable a la calidad, Zamora aporta creatividad y versatilidad a cada tarea, siendo reconocido por su capacidad para ofrecer soluciones innovadoras.",
-        "about04": "Su combinación única de habilidades técnicas y creativas lo convierte en un recurso valioso para proyectos que requieren un enfoque integral y una mentalidad proactiva.",
+        "about011": " Ingeniero en Sistemas de informacion",
+        "about012": " graduado en la Universidad Autónoma de Nicaragua, en el año 2024. Actualmente con el rol de ",
+        "about013": "Software engineer",
+        "about014": ", incluyendo roles de ",
+        "about015": "desarrollador Full-Stack y Diseñador UI/UX.",
+        "about02": "Técnico especialista en programacion en el Tecnológico Nacional - INATEC, entre otras certificaciones mostradas en LinkedIn, algunas de ellas son: Scrum Foundation, Power BI Avanzado e Infraestructura de red.",
+        "about03": "Comprometido con el aprendizaje continuo, explorando nuevas tecnologías y metodologías para adaptarse con éxito a entornos dinámicos y abordar desafíos emergentes con confianza.",
+        "about04": "Su versatilidad y enfoque vanguardista lo ha llevado a familiarizarse y extender su conocimiento a otros campos como AI, videojuegos y analisis de datos.",
         "skills": "Habilidades",
         "badges": "Insignias"
     },

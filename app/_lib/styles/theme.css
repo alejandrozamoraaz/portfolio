@@ -1,22 +1,35 @@
 body {
-    color: var(--text-color);
-    background: var(--background-color);
+    color: var(--surface-color);
+    background-color: color-mix(in srgb, var(--base-color) 96%, var(--primary-color));
+    accent-color: var(--primary-color);
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.primary-highlight-color {
+    color: var(--primary-highlight-color);
+}
+
+.secondary-highlight-color {
+    color: var(--secondary-highlight-color);
 }
 
 .wrapper {
     .header {
         .brand {
-            background: linear-gradient(to left, var(--secondary-color-33), var(--primary-color-33));
+            background: linear-gradient(to left, color-mix(in srgb, var(--base-color) 67%, var(--secondary-color)), color-mix(in srgb, var(--base-color) 67%, var(--primary-color)));
             box-shadow: 0 0 2px var(--primary-color), 0 0 5px var(--primary-color);
         }
     }
 
     .navigation {
+        background-color: color-mix(in srgb, var(--base-color) 64%, var(--primary-color));
 
-        .active>.navigation-button-icon,
         .navigation-button:hover>.navigation-button-icon {
             & {
-                outline: 2px solid var(--primary-color-highlight);
+                outline: 2px solid var(--primary-highlight-color);
                 box-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
                 background: linear-gradient(to left, var(--secondary-color), var(--primary-color));
             }
@@ -25,60 +38,80 @@ body {
     }
 }
 
-.container {
-    background-color: var(--surface-color);
+.vh-100-header {
+    .img-under-content {
+        background-color: color-mix(in srgb, var(--base-color) 87%, var(--secondary-color));
+    }
+}
+
+.container-title {
+    background-color: color-mix(in srgb, var(--base-color) 59%, var(--secondary-color));
 }
 
 .button {
     background: none;
-    border: none;
     color: var(--primary-color);
+    -webkit-tap-highlight-color: transparent;
+
+    color: color-mix(in srgb, var(--surface-color) 80%, var(--primary-color));
+}
+
+.icon-button {
+    background-color: color-mix(in srgb, var(--base-color) 60%, var(--primary-color));
 
     &:hover {
-        color: var(--primary-color-highlight);
+        outline: 2px solid var(--primary-highlight-color);
     }
 }
 
-.icon-button:hover {
-    outline: 2px solid var(--primary-color-highlight);
-    box-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
-    background: linear-gradient(to left, var(--secondary-color), var(--primary-color));
+.float-button {
+    background-color: color-mix(in srgb, var(--base-color) 6%, var(--secondary-color));
+
+    &:hover {
+        outline: 2px solid var(--secondary-highlight-color);
+    }
 }
 
 .text-button {
-    color: var(--primary-color-highlight);
-    background: linear-gradient(to left, var(--secondary-color-33), var(--primary-color-33));
+    background-color: var(--primary-color);
 
     &:hover {
-        outline: 2px solid var(--primary-color-highlight);
-        box-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
+        outline: 2px solid var(--primary-highlight-color);
     }
 }
 
 .chip {
-    border: 2px solid var(--primary-color-highlight);
-    background-color: var(--background-color);
-    color: var(--primary-color-highlight);
+    color: color-mix(in srgb, var(--base-color) 54%, var(--primary-color));
+    background-color: var(--primary-highlight-color);
 }
 
 .f-carousel {
-    --f-carousel-dot-color: var(--text-color);
-
-    .f-button {
-        --f-button-color: var(--text-color);
-        --f-button-hover-color: var(--text-color);
-        --f-button-active-color: var(--text-color);
-
-        --f-button-bg: rgb(33 33 33 / 64%);
-        --f-button-hover-bg: rgb(33 33 33 / 74%);
-        --f-button-active-bg: rgb(33 33 33 / 84%);
-    }
+    --f-carousel-dot-color: var(--surface-color);
 }
 
-.project-carousel-slide {
-    /* outline: 3px solid var(--background-color) !important; */
+.f-carousel__dots li button {
+    -webkit-tap-highlight-color: transparent;
+}
 
-    .project-images-carousel {
-        /* background-color: var(--secondary-color-33); */
-    }
+.f-button {
+    -webkit-tap-highlight-color: transparent;
+    --f-button-color: var(--surface-color);
+    --f-button-bg: rgba(123, 123, 123, 0.64);
+}
+
+.card {
+    background-color: color-mix(in srgb, var(--base-color) 83%, var(--primary-color));
+}
+
+.fancybox__backdrop::after {
+    filter: blur(2px);
+    opacity: 0.3;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.fancybox__thumbs.is-classic {
+    --f-thumb-outline: 0;
 }

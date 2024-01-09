@@ -14,13 +14,13 @@ export const sections = (dictionary: {
     }
 }) => {
     return [
-        // {
-        //     linkName: 'Projects',
-        //     iconUrl: 'https://res.cloudinary.com/dlyfwab7x/image/upload/v1704144609/icons/gnytybm13qdybiry6ztt.png',
-        //     iconAlt: 'Noticias - icon by Icons8',
-        //     name: dictionary.projectsSection.title,
-        //     content: Projects
-        // },
+        {
+            linkName: 'Projects',
+            iconUrl: 'https://res.cloudinary.com/dlyfwab7x/image/upload/v1704144609/icons/gnytybm13qdybiry6ztt.png',
+            iconAlt: 'Noticias - icon by Icons8',
+            name: dictionary.projectsSection.title,
+            content: Projects
+        },
         {
             linkName: 'About',
             iconUrl: 'https://res.cloudinary.com/dlyfwab7x/image/upload/v1704144832/icons/ztd1acdbprqepq8jr4n1.png',

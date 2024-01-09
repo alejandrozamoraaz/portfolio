@@ -2,11 +2,9 @@
 
 import { useEffect } from 'react'
 import { Carousel } from '@fancyapps/ui'
-import { Autoplay } from "@fancyapps/ui/dist/carousel/carousel.autoplay.esm.js"
 
 import Text from '@/app/_components/text/text'
-import Chip from '@/app/_components/chip'
-import IconImage from '@/app/_components/icon-image'
+import Icon from '@/app/_components/icon'
 import TextButton from '@/app/_components/text-button'
 
 import { renderToString } from '@/app/_lib/utils/render-to-string'
@@ -19,6 +17,11 @@ export default function About({
     dictionary: {
         aboutSection: {
             about01: string,
+            about011: string,
+            about012: string,
+            about013: string,
+            about014: string,
+            about015: string,
             about02: string,
             about03: string,
             about04: string,
@@ -35,18 +38,13 @@ export default function About({
                 classes: {
                     slide: "f-carousel__slide mini-carousel-slide main-axis-center cross-axis-center"
                 }
-            },
-            { Autoplay }
+            }
         );
         skills.map((Skill) => {
             renderToString(
-                <Skill width={48} height={48} />
+                <Icon type="svg" svgIconProps={{ svgContent: Skill }} size="large" />
             ).then((text) => skillsCarousel.appendSlide({ html: text }));
         });
-
-        const autoPlay = new Autoplay(skillsCarousel, Autoplay.defaults);
-        autoPlay.start();
-
 
         const badgesCarousel = new Carousel(
             document.getElementById("badgesCarousel"),
@@ -55,14 +53,13 @@ export default function About({
                 classes: {
                     slide: "f-carousel__slide mini-carousel-slide main-axis-center cross-axis-center col gap-small"
                 }
-            },
-            { Autoplay }
+            }
         );
 
         badges.map((badge) => {
             renderToString(
                 <>
-                    <IconImage iconUrl={badge.imageUrl} iconAlt={badge.alt} size="large" />
+                    <Icon type="img" imageIconProps={{ src: badge.imageUrl, alt: badge.alt }} size="large" />
                     <TextButton href={badge.href} isHrefExternal={true} text="See" />
                 </>
             ).then((text) => badgesCarousel.appendSlide({ html: text }));
@@ -71,11 +68,14 @@ export default function About({
 
     return (
         <div className="col gap">
-            <div className="p-y p-x" style={{ position: "absolute", top: "0", right: "0" }}>
-                <Chip text="By AI" />
+            <div>
+                <Text text="Junior Alejandro Zamora Navarrete" type="title" classText="display-inline" />
+                <Text text={dictionary.aboutSection.about011} type="bodyLarge" classText="primary-color display-inline" />
+                <Text text={dictionary.aboutSection.about012} classText="display-inline" />
+                <Text text={dictionary.aboutSection.about013} type="bodyLarge" classText="primary-highlight-color display-inline" />
+                <Text text={dictionary.aboutSection.about014} classText="display-inline" />
+                <Text text={dictionary.aboutSection.about015} type="bodyLarge" classText="secondary-highlight-color display-inline" />
             </div>
-
-            <Text text={dictionary.aboutSection.about01} type="bodyLarge" />
             <Text text={dictionary.aboutSection.about02} />
 
             <div className="flex">
@@ -86,6 +86,18 @@ export default function About({
                     <Text text={dictionary.aboutSection.about04} />
                 </div>
             </div>
+
+
+            <br /><br />
+            <br />
+            {/* Junior Alejandro Zamora Navarrete es un ingeniero apasionado con un enfoque vanguardista y habilidades destacadas en diseño, arquitectura y desarrollo de software y videojuegos, realidad virtual, aumentada, desarrollo de IA y análisis de datos. */}
+            {/* Comprometido con la excelencia y el crecimiento continuo, destaca por su capacidad para abordar proyectos desafiantes con entusiasmo y adaptarse a entornos dinámicos */}
+            {/* Con una dedicación inquebrantable a la calidad, Zamora aporta creatividad y versatilidad a cada tarea, siendo reconocido por su capacidad para ofrecer soluciones innovadoras. */}
+            {/* Su combinación única de habilidades técnicas y creativas lo convierte en un recurso valioso para proyectos que requieren un enfoque integral y una mentalidad proactiva. */}
+
+
+
+
 
             <Text type="bodyLarge" text={dictionary.aboutSection.skills} />
             <div id="skillsCarousel" className="f-carousel"></div>

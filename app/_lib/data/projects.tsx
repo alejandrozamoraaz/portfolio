@@ -1,4 +1,5 @@
 import { ProjectType } from '@/app/_lib/definitions'
+import { AdobeXd, DotNet, Css, Sql } from '@/app/_lib/icons'
 
 export const projectTypes: ProjectType[] = [
     {
@@ -9,15 +10,18 @@ export const projectTypes: ProjectType[] = [
                 title: "Prototipo de Gestor de expedientes clínicos",
                 description: "Desarrollo de un sitio web corporativo con funcionalidades avanzadas.",
                 year: 2022,
+                technologies: [
+                    { svgContent: AdobeXd }
+                ],
                 images: [
+                    "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147583/projects/prototipo-de-gestor-de-expedientes/cih56rir0b2snxq6tw8v.png",
+                    "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147583/projects/prototipo-de-gestor-de-expedientes/t7sh6f9rqrrbotywzbj0.png",
+                    "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147583/projects/prototipo-de-gestor-de-expedientes/f8nnqyoh2x92dbo9lngo.png",
                     "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147582/projects/prototipo-de-gestor-de-expedientes/qfbddpaiaismwdei6wrm.png",
                     "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147582/projects/prototipo-de-gestor-de-expedientes/wctdrgzi4q0kg8xesutu.png",
                     "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147583/projects/prototipo-de-gestor-de-expedientes/r2vg7z2vean3w7owlwuy.png",
-                    "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147583/projects/prototipo-de-gestor-de-expedientes/f8nnqyoh2x92dbo9lngo.png",
                     "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147583/projects/prototipo-de-gestor-de-expedientes/qzhdndazclm0fpszjxm0.png",
-                    "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147583/projects/prototipo-de-gestor-de-expedientes/t7sh6f9rqrrbotywzbj0.png",
                     "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147583/projects/prototipo-de-gestor-de-expedientes/k5rujzabijmujyeqokx7.png",
-                    "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147583/projects/prototipo-de-gestor-de-expedientes/cih56rir0b2snxq6tw8v.png",
                     "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147584/projects/prototipo-de-gestor-de-expedientes/uf2hbkaogiwg9eo4mciq.png"
                 ]
             }
@@ -31,7 +35,15 @@ export const projectTypes: ProjectType[] = [
                 title: "Gestor de expedientes clínicos, citas e inventario",
                 description: "Desarrollo de una aplicación móvil para la gestión eficiente de tareas diarias.Desarrollo de una aplicación móvil para la gestión eficiente de tareas diarias.Desarrollo de una aplicación móvil para la gestión eficiente de tareas diarias.Desarrollo de una aplicación móvil para la gestión eficiente de tareas diarias.Desarrollo de una aplicación móvil para la gestión eficiente de tareas diarias.Desarrollo de una aplicación móvil para la gestión eficiente de tareas diarias.Desarrollo de una aplicación móvil para la gestión eficiente de tareas diarias.",
                 year: 2020,
-                url: "wwww.huhu.com/ty",
+                technologies: [
+                    // asp.net
+                    // c#
+
+                    { svgContent: AdobeXd },
+                    { svgContent: DotNet },
+                    { svgContent: Css },
+                    { svgContent: Sql }
+                ],
                 images: [
                     "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147639/projects/gestor-de-expedientes-clinicos-citas-e-inventario/soctm9gkpxuvzdn0lhsf.png",
                     "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147639/projects/gestor-de-expedientes-clinicos-citas-e-inventario/itumoqmnv7b4napgqmzn.png",
@@ -53,6 +65,15 @@ export const projectTypes: ProjectType[] = [
                 title: "Aplicación web para la calidad",
                 description: "Creación de un juego educativo interactivo para niños en dispositivos móviles.",
                 year: 2022,
+                url: "eeeeeee.dd",
+                technologies: [
+                    // HTML
+                    // C#
+
+                    { svgContent: DotNet },
+                    { svgContent: Css },
+                    { svgContent: Sql }
+                ],
                 images: [
                     "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147733/projects/aplicacion-web-para-la-calidad/lf5w3h5bzjlry2onwqsw.png",
                     "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147733/projects/aplicacion-web-para-la-calidad/esp49rlzhttrj1muaxii.png",

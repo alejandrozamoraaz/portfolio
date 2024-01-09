@@ -1,24 +1,36 @@
+'use client'
+
 import Link from 'next/link'
-import IconImage from '@/app/_components/icon-image'
+import Icon from '@/app/_components/icon'
+import { SvgIconProps, ImageIconProps } from '@/app/_lib/definitions'
 
 export default function IconButton({
     href,
     isHrefExternal,
-    iconUrl,
-    iconAlt,
+    onClick,
+    isFloat,
     classButton,
-    scroll
+    iconType,
+    imageIconProps,
+    svgIconProps
 }: {
-    href: string;
+    href?: string;
     isHrefExternal?: boolean;
-    iconUrl: string;
-    iconAlt: string;
+    onClick?: () => void;
+    isFloat?: boolean;
     classButton?: String;
-    scroll?: boolean;
+    iconType: 'svg' | 'img';
+    imageIconProps?: ImageIconProps;
+    svgIconProps?: SvgIconProps;
 }) {
     return (
-        <Link className={"button icon-button " + classButton} href={href} rel={isHrefExternal ? "noreferrer" : undefined} target={isHrefExternal ? "_blank" : "_self"}>
-            <IconImage iconUrl={iconUrl} iconAlt={iconAlt} />
-        </Link>
+        href ?
+            <Link className={`button ${isFloat ? "float-button" : "icon-button"} ${classButton}`} href={href} rel={isHrefExternal ? "noreferrer" : undefined} target={isHrefExternal ? "_blank" : "_self"}>
+                <Icon type={iconType} imageIconProps={imageIconProps} svgIconProps={svgIconProps} />
+            </Link>
+            :
+            <button type="button" onClick={onClick} className={`button ${isFloat ? "float-button" : "icon-button"} ${classButton}`}>
+                <Icon type={iconType} imageIconProps={imageIconProps} svgIconProps={svgIconProps} />
+            </button>
     );
 }

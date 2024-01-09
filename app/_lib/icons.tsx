@@ -1,7 +1,13 @@
 import React from 'react';
 
+export const Copy: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" {...props} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+    </svg>
+);
+
 export const Kotlin: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-    <svg {...props} stroke="#fff" className="icon icon-tabler icon-tabler-brand-kotlin" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <svg {...props} stroke="currentColor" className="icon icon-tabler icon-tabler-brand-kotlin" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <title>kotlin</title>
         <path d="M0 0h24v24H0z" fill="none" stroke="none" />
         <path d="M20 20h-16v-16h16" />
@@ -12,14 +18,14 @@ export const Kotlin: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 );
 
 export const Figma: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-    <svg {...props} fill="#fff" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
+    <svg {...props} fill="currentColor" viewBox="0 0 384 512" xmlns="http://www.w3.org/2000/svg">
         <title>figma</title>
         <path d="M14 95.7924C14 42.8877 56.8878 0 109.793 0H274.161C327.066 0 369.954 42.8877 369.954 95.7924C369.954 129.292 352.758 158.776 326.711 175.897C352.758 193.019 369.954 222.502 369.954 256.002C369.954 308.907 327.066 351.795 274.161 351.795H272.081C247.279 351.795 224.678 342.369 207.666 326.904V415.167C207.666 468.777 163.657 512 110.309 512C57.5361 512 14 469.243 14 416.207C14 382.709 31.1945 353.227 57.2392 336.105C31.1945 318.983 14 289.5 14 256.002C14 222.502 31.196 193.019 57.2425 175.897C31.196 158.776 14 129.292 14 95.7924ZM176.288 191.587H109.793C74.2172 191.587 45.3778 220.427 45.3778 256.002C45.3778 291.44 73.9948 320.194 109.381 320.416C109.518 320.415 109.655 320.415 109.793 320.415H176.288V191.587ZM207.666 256.002C207.666 291.577 236.505 320.417 272.081 320.417H274.161C309.737 320.417 338.576 291.577 338.576 256.002C338.576 220.427 309.737 191.587 274.161 191.587H272.081C236.505 191.587 207.666 220.427 207.666 256.002ZM109.793 351.795C109.655 351.795 109.518 351.794 109.381 351.794C73.9948 352.015 45.3778 380.769 45.3778 416.207C45.3778 451.652 74.6025 480.622 110.309 480.622C146.591 480.622 176.288 451.186 176.288 415.167V351.795H109.793ZM109.793 31.3778C74.2172 31.3778 45.3778 60.2173 45.3778 95.7924C45.3778 131.368 74.2172 160.207 109.793 160.207H176.288V31.3778H109.793ZM207.666 160.207H274.161C309.737 160.207 338.576 131.368 338.576 95.7924C338.576 60.2173 309.737 31.3778 274.161 31.3778H207.666V160.207Z" />
     </svg>
 );
 
 export const AdobeXd: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-    <svg {...props} fill="#fff" version="1.1" viewBox="0 0 512 512" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+    <svg {...props} fill="currentColor" version="1.1" viewBox="0 0 512 512" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
         <title>adobe xd</title>
         <g id="_x33__x2C__XD_x2C__Adobe">
             <g>
@@ -34,21 +40,21 @@ export const AdobeXd: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 );
 
 export const DotNet: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-    <svg {...props} fill="#fff" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <svg {...props} fill="currentColor" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
         <title>dotnet</title>
         <path d="M3.175 20.551c-0.001 0.289-0.123 0.549-0.318 0.733l-0.001 0c-0.2 0.188-0.47 0.303-0.767 0.303s-0.568-0.116-0.769-0.304l0.001 0.001c-0.195-0.184-0.317-0.444-0.317-0.732s0.122-0.549 0.318-0.732l0.001-0c0.2-0.188 0.47-0.303 0.767-0.303s0.567 0.115 0.768 0.304l-0.001-0.001c0.195 0.184 0.317 0.444 0.318 0.733v0zM14.051 21.417h-1.947l-5.126-8.088c-0.118-0.182-0.227-0.392-0.314-0.613l-0.009-0.024h-0.045c0.041 0.365 0.064 0.787 0.064 1.215 0 0.104-0.001 0.208-0.004 0.312l0-0.015v7.213h-1.721v-11.003h2.073l4.955 7.898c0.209 0.326 0.344 0.552 0.404 0.675h0.030c-0.050-0.374-0.078-0.806-0.078-1.245 0-0.083 0.001-0.165 0.003-0.248l-0 0.012v-7.093h1.715zM22.433 21.417h-6.025v-11.003h5.786v1.55h-4.005v3.117h3.69v1.542h-3.69v3.254h4.244zM30.996 11.964h-3.084v9.454h-1.781v-9.454h-3.077v-1.55h7.941z"></path>
     </svg>
 );
 
 export const Css: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-    <svg {...props} fill="#fff" className="bi bi-filetype-css" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+    <svg {...props} fill="currentColor" className="bi bi-filetype-css" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
         <title>css</title>
         <path d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5L14 4.5ZM3.397 14.841a1.13 1.13 0 0 0 .401.823c.13.108.289.192.478.252.19.061.411.091.665.091.338 0 .624-.053.859-.158.236-.105.416-.252.539-.44.125-.189.187-.408.187-.656 0-.224-.045-.41-.134-.56a1.001 1.001 0 0 0-.375-.357 2.027 2.027 0 0 0-.566-.21l-.621-.144a.97.97 0 0 1-.404-.176.37.37 0 0 1-.144-.299c0-.156.062-.284.185-.384.125-.101.296-.152.512-.152.143 0 .266.023.37.068a.624.624 0 0 1 .246.181.56.56 0 0 1 .12.258h.75a1.092 1.092 0 0 0-.2-.566 1.21 1.21 0 0 0-.5-.41 1.813 1.813 0 0 0-.78-.152c-.293 0-.551.05-.776.15-.225.099-.4.24-.527.421-.127.182-.19.395-.19.639 0 .201.04.376.122.524.082.149.2.27.352.367.152.095.332.167.539.213l.618.144c.207.049.361.113.463.193a.387.387 0 0 1 .152.326.505.505 0 0 1-.085.29.559.559 0 0 1-.255.193c-.111.047-.249.07-.413.07-.117 0-.223-.013-.32-.04a.838.838 0 0 1-.248-.115.578.578 0 0 1-.255-.384h-.765ZM.806 13.693c0-.248.034-.46.102-.633a.868.868 0 0 1 .302-.399.814.814 0 0 1 .475-.137c.15 0 .283.032.398.097a.7.7 0 0 1 .272.26.85.85 0 0 1 .12.381h.765v-.072a1.33 1.33 0 0 0-.466-.964 1.441 1.441 0 0 0-.489-.272 1.838 1.838 0 0 0-.606-.097c-.356 0-.66.074-.911.223-.25.148-.44.359-.572.632-.13.274-.196.6-.196.979v.498c0 .379.064.704.193.976.131.271.322.48.572.626.25.145.554.217.914.217.293 0 .554-.055.785-.164.23-.11.414-.26.55-.454a1.27 1.27 0 0 0 .226-.674v-.076h-.764a.799.799 0 0 1-.118.363.7.7 0 0 1-.272.25.874.874 0 0 1-.401.087.845.845 0 0 1-.478-.132.833.833 0 0 1-.299-.392 1.699 1.699 0 0 1-.102-.627v-.495ZM6.78 15.29a1.176 1.176 0 0 1-.111-.449h.764a.578.578 0 0 0 .255.384c.07.049.154.087.25.114.095.028.201.041.319.041.164 0 .301-.023.413-.07a.559.559 0 0 0 .255-.193.507.507 0 0 0 .085-.29.387.387 0 0 0-.153-.326c-.101-.08-.256-.144-.463-.193l-.618-.143a1.72 1.72 0 0 1-.539-.214 1 1 0 0 1-.351-.367 1.068 1.068 0 0 1-.123-.524c0-.244.063-.457.19-.639.127-.181.303-.322.527-.422.225-.1.484-.149.777-.149.304 0 .564.05.779.152.217.102.384.239.5.41.12.17.187.359.2.566h-.75a.56.56 0 0 0-.12-.258.624.624 0 0 0-.246-.181.923.923 0 0 0-.37-.068c-.216 0-.387.05-.512.152a.472.472 0 0 0-.184.384c0 .121.047.22.143.3a.97.97 0 0 0 .404.175l.621.143c.217.05.406.12.566.211.16.09.285.21.375.358.09.148.135.335.135.56 0 .247-.063.466-.188.656a1.216 1.216 0 0 1-.539.439c-.234.105-.52.158-.858.158-.254 0-.476-.03-.665-.09a1.404 1.404 0 0 1-.478-.252 1.13 1.13 0 0 1-.29-.375Z" fillRule="evenodd" />
     </svg>
 );
 
 export const Flutter: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-    <svg {...props} fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <svg {...props} fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <title>flutter</title>
         <g>
             <path d="M0 0h24v24H0z" fill="none" />
@@ -58,21 +64,21 @@ export const Flutter: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 );
 
 export const Unity: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-    <svg {...props} fill="#fff" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <svg {...props} fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <title>unity</title>
         <path d="M19.9 19.2L15.6 12l4.3-7.2L22 12l-2.1 7.2zm-9.5-.7L5 13.2h8.6l4.3 7.2-7.5-1.9zm0-13.1l7.5-1.9-4.3 7.2H4.9c0 .1 5.5-5.3 5.5-5.3zm11-5.4l-9.8 2.5L10.1 5H7.2L0 12l7.2 7h2.9l1.4 2.5 9.8 2.5 2.6-9.5-1.4-2.5L24 9.5 21.4 0z" />
     </svg>
 );
 
 export const PowerBi: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-    <svg {...props} fill="#fff" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24">
+    <svg {...props} fill="currentColor" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24">
         <title>power bi</title>
         <path d="M 4 5 C 2.35 5 1 6.35 1 8 L 1 15 C 1 16.3 1.84 17.410312 3 17.820312 L 3 8 C 3 7.45 3.45 7 4 7 L 20 7 C 20.55 7 21 7.45 21 8 L 21 17.820312 C 22.16 17.410312 23 16.3 23 15 L 23 8 C 23 6.35 21.65 5 20 5 L 4 5 z M 18 9 C 17.448 9 17 9.448 17 10 L 17 19 C 17 19.552 17.448 20 18 20 C 18.552 20 19 19.552 19 19 L 19 10 C 19 9.448 18.552 9 18 9 z M 10 11 C 9.448 11 9 11.448 9 12 L 9 19 C 9 19.552 9.448 20 10 20 C 10.552 20 11 19.552 11 19 L 11 12 C 11 11.448 10.552 11 10 11 z M 14 13 C 13.448 13 13 13.448 13 14 L 13 19 C 13 19.552 13.448 20 14 20 C 14.552 20 15 19.552 15 19 L 15 14 C 15 13.448 14.552 13 14 13 z M 6 15 C 5.448 15 5 15.448 5 16 L 5 19 C 5 19.552 5.448 20 6 20 C 6.552 20 7 19.552 7 19 L 7 16 C 7 15.448 6.552 15 6 15 z"></path>
     </svg>
 );
 
 export const Sql: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-    <svg {...props} fill="#fff" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+    <svg {...props} fill="currentColor" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
         <title>sql</title>
         <g id="sql">
             <g>
@@ -85,7 +91,7 @@ export const Sql: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 );
 
 export const Python: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-    <svg {...props} stroke="#fff" version="1.1" viewBox="0 0 512 512" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+    <svg {...props} stroke="currentColor" version="1.1" viewBox="0 0 512 512" xmlSpace="preserve" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
         <title>python</title>
         <g id="comp_x5F_267-python">
             <g>
@@ -100,7 +106,7 @@ export const Python: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 );
 
 export const Azure: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-    <svg {...props} stroke="#fff" fill="none" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+    <svg {...props} stroke="currentColor" fill="none" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
         <title>azure</title>
         <path d="M3.5 4.5L0.5 11.5H3.5L7.5 0.5L3.5 4.5Z" strokeLinejoin="round" />
         <path d="M14.5 13.5L9.5 2.5L7.5 7.5L10.5 11.5L4.5 13.5H14.5Z" strokeLinejoin="round" />

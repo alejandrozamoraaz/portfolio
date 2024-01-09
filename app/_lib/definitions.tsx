@@ -1,3 +1,5 @@
+import { FC, SVGProps } from "react"
+
 export type Badge = {
     name: string;
     imageUrl: string;
@@ -15,6 +17,16 @@ export type Project = {
     title: string;
     description: string;
     year: number;
+    technologies: SvgIconProps[];
     url?: string;
-    images: string[];
+    images?: string[];
 };
+
+export type SvgIconProps = {
+    svgContent: FC<SVGProps<SVGSVGElement>>;
+}
+
+export type ImageIconProps = {
+    src: string;
+    alt: string;
+}

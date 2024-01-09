@@ -1,21 +1,20 @@
 .wrapper {
-    position: relative;
     display: grid;
-    grid-template-rows: var(--header-size) 1fr var(--navigation-size);
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "header"
-        "content"
-        "navigation"
-    ;
-    height: 100vh;
+    position: relative;
     width: 100vw;
-    overflow: hidden;
+    height: 100vh;
+    min-height: 100vh;
+    min-width: 100vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: var(--header-size) 1fr;
+    grid-template-areas:
+        "header header"
+        "content content"
+    ;
 
     /* For large screens */
     @media (min-width: 700px) {
-        grid-template-rows: var(--header-size) 1fr;
-        grid-template-columns: var(--navigation-size) 1fr;
+        grid-template-columns: calc(var(--navigation-size) + var(--padding)) 1fr;
         grid-template-areas:
             "header header"
             "navigation content"
@@ -27,6 +26,7 @@
         display: flex;
         justify-content: space-between;
         padding: var(--padding-small) var(--padding);
+        height: var(--header-size);
 
         .brand {
             width: var(--brand-size);
@@ -38,44 +38,43 @@
         }
     }
 
-    .content {
-        scroll-behavior: smooth;
-        overflow: auto;
-        grid-area: content;
-        position: relative;
+    .float-actions {
+        z-index: 1;
+        position: fixed;
+        display: flex;
+        gap: var(--padding-small);
+        flex-direction: column;
+        right: var(--padding);
+        bottom: calc(var(--navigation-size) + var(--padding));
 
-        .float-actions {
-            z-index: 1;
-            position: fixed;
-            display: flex;
-            gap: var(--padding-small);
-            flex-direction: column;
-            right: calc(var(--padding-small) * 2);
-            bottom: calc(var(--navigation-size) + var(--padding-small));
-
-            /* For large screens */
-            @media (min-width: 700px) {
-                bottom: calc(var(--footer-size) + var(--padding-small));
-            }
-        }
-
-        .footer {
-            grid-area: footer;
-            display: flex;
-            height: var(--footer-size);
-            align-items: center;
-            justify-content: space-around;
+        /* For large screens */
+        @media (min-width: 700px) {
+            right: calc(var(--padding) * 2);
+            bottom: calc(var(--padding-small) * 2);
         }
     }
 
     .navigation {
         grid-area: navigation;
+        position: fixed;
+        bottom: 0;
+        z-index: 3;
         display: flex;
+        flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
+        height: var(--navigation-size);
+        width: 95%;
+        margin: var(--padding-small);
+        border-radius: var(--border-radius);
 
         @media (min-width: 700px) {
+            position: relative;
+            bottom: auto;
+            z-index: auto;
             flex-direction: column;
+            width: auto;
+            height: auto;
         }
 
         .navigation-button {
@@ -83,12 +82,33 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding: var(--padding-small);
             height: var(--navigation-button-size);
-            width: var(--navigation-button-size);
+            width: calc(var(--navigation-button-size) + (var(--navigation-button-size) / 2));
 
             .navigation-button-icon {
                 border-radius: 50%;
             }
+        }
+    }
+
+    .content {
+        grid-area: content;
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        position: relative;
+        padding-bottom: var(--navigation-size);
+
+        /* For large screens */
+        @media (min-width: 700px) {
+            padding-bottom: 0;
+        }
+
+        .footer {
+            display: flex;
+            height: var(--footer-size);
+            align-items: center;
+            justify-content: space-around;
         }
     }
 }
