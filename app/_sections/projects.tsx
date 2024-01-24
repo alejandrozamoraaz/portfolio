@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import { Carousel, Fancybox } from '@fancyapps/ui'
+import { TFunction } from 'i18next'
 
 import { renderToString } from '@/app/_lib/utils/render-to-string'
 import { projectTypes } from '@/app/_lib/data/projects'
@@ -10,9 +11,11 @@ import Text from '@/app/_components/text/text'
 import Chip from '@/app/_components/chip'
 import ProjectCard from '@/app/_widgets/project-card'
 
-export default function Projects() {
+export default function Projects({ t }: {
+  t: TFunction<[]>;
+}) {
   useEffect(() => {
-    projectTypes.forEach((type, index) => {
+    projectTypes(t).forEach((type, index) => {
       const typeProjectsCarousel = new Carousel(document.getElementById("typeProjectsCarousel_" + index), {
         center: false,
         classes: {
@@ -24,7 +27,7 @@ export default function Projects() {
 
       type.projects.map((project) => {
         renderToString(
-          <ProjectCard project={project} />
+          <ProjectCard project={project} t={t} />
         ).then((text) => typeProjectsCarousel.appendSlide({ html: text }));
       });
     });
@@ -100,20 +103,20 @@ export default function Projects() {
           <div class="fancybox__col">
             <div class="fancybox__data col gap">  
               <h3 id="fancybox_title"></h3>
-              <p class="font-semibold" id="fancybox_description"></p>
+              <div id="fancybox_description"></div>
             </div>
           </div>
         </div>
       </div>`,
       },
     });
-  }, []);
+  }, [t]);
 
   return (
     <>
-      <Chip text="❗Los datos incluidos en los proyectos son demonstrativos" />
-      
-      {projectTypes.map((type, index) => {
+      <Chip text={t("projects_data_placeholder", { ns: "common" })} />
+
+      {projectTypes(t).map((type, index) => {
         return (
           <div className="p-y col gap" key={type.type}>
             <Text classText="p-y" type="bodyLarge" text={type.type} />

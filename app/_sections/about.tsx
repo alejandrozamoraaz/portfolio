@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import { Carousel } from '@fancyapps/ui'
+import { TFunction } from 'i18next'
 
 import Text from '@/app/_components/text/text'
 import Icon from '@/app/_components/icon'
@@ -11,25 +12,11 @@ import { renderToString } from '@/app/_lib/utils/render-to-string'
 import { skills } from '@/app/_lib/data/skills'
 import { badges } from '@/app/_lib/data/badges'
 
-export default function About({
-    dictionary
-}: {
-    dictionary: {
-        aboutSection: {
-            about01: string,
-            about011: string,
-            about012: string,
-            about013: string,
-            about014: string,
-            about015: string,
-            about02: string,
-            about03: string,
-            about04: string,
-            skills: string,
-            badges: string
-        }
+export default function About(
+    { t }: {
+        t: TFunction<[]>;
     }
-}) {
+) {
     useEffect(() => {
         const skillsCarousel = new Carousel(
             document.getElementById("skillsCarousel"),
@@ -60,49 +47,38 @@ export default function About({
             renderToString(
                 <>
                     <Icon type="img" imageIconProps={{ src: badge.imageUrl, alt: badge.alt }} size="large" />
-                    <TextButton href={badge.href} isHrefExternal={true} text="See" />
+                    <TextButton href={badge.href} isHrefExternal={true} text={t("see", { ns: "common" })} />
                 </>
             ).then((text) => badgesCarousel.appendSlide({ html: text }));
         });
-    }, []);
+    }, [t]);
 
     return (
         <div className="col gap">
             <div>
-                <Text text="Junior Alejandro Zamora Navarrete" type="title" classText="display-inline" />
-                <Text text={dictionary.aboutSection.about011} type="bodyLarge" classText="primary-color display-inline" />
-                <Text text={dictionary.aboutSection.about012} classText="display-inline" />
-                <Text text={dictionary.aboutSection.about013} type="bodyLarge" classText="primary-highlight-color display-inline" />
-                <Text text={dictionary.aboutSection.about014} classText="display-inline" />
-                <Text text={dictionary.aboutSection.about015} type="bodyLarge" classText="secondary-highlight-color display-inline" />
+                <Text text="Junior Alejandro Zamora Navarrete" type="bodyLarge" classText="display-inline" />
+                <Text text={t('about011', { ns: 'about_section' })} type="bodyLarge" classText="primary-color display-inline" />
+                <Text text={t('about012', { ns: 'about_section' })} classText="display-inline" />
+                <Text text={t('about013', { ns: 'about_section' })} type="title" classText="primary-highlight-color display-inline" />
+                <Text text={t('about014', { ns: 'about_section' })} classText="display-inline" />
+                <Text text={t('about015', { ns: 'about_section' })} type="bodyLarge" classText="secondary-highlight-color display-inline" />
             </div>
-            <Text text={dictionary.aboutSection.about02} />
+
+            <Text text={t('about02', { ns: 'about_section' })} />
 
             <div className="flex">
                 <div className="col">
-                    <Text text={dictionary.aboutSection.about03} />
+                    <Text text={t('about03', { ns: 'about_section' })} />
                 </div>
                 <div className="col">
-                    <Text text={dictionary.aboutSection.about04} />
+                    <Text text={t('about04', { ns: 'about_section' })} />
                 </div>
             </div>
 
-
-            <br /><br />
-            <br />
-            {/* Junior Alejandro Zamora Navarrete es un ingeniero apasionado con un enfoque vanguardista y habilidades destacadas en diseño, arquitectura y desarrollo de software y videojuegos, realidad virtual, aumentada, desarrollo de IA y análisis de datos. */}
-            {/* Comprometido con la excelencia y el crecimiento continuo, destaca por su capacidad para abordar proyectos desafiantes con entusiasmo y adaptarse a entornos dinámicos */}
-            {/* Con una dedicación inquebrantable a la calidad, Zamora aporta creatividad y versatilidad a cada tarea, siendo reconocido por su capacidad para ofrecer soluciones innovadoras. */}
-            {/* Su combinación única de habilidades técnicas y creativas lo convierte en un recurso valioso para proyectos que requieren un enfoque integral y una mentalidad proactiva. */}
-
-
-
-
-
-            <Text type="bodyLarge" text={dictionary.aboutSection.skills} />
+            <Text classText="m-t-large" type="bodyLarge" text={t('skills', { ns: 'about_section' })} />
             <div id="skillsCarousel" className="f-carousel"></div>
 
-            <Text type="bodyLarge" text={dictionary.aboutSection.badges} />
+            <Text type="bodyLarge" text={t('badges', { ns: 'about_section' })} />
             <div id="badgesCarousel" className="f-carousel"></div>
         </div>
     );

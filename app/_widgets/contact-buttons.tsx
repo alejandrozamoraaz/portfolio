@@ -8,6 +8,7 @@ export default function ContactButtons() {
             <div className="flex gap">
                 <IconButton
                     href="https://github.com/alejandrozamoraaz"
+                    title="Github"
                     isHrefExternal={true}
                     iconType="img"
                     imageIconProps={{
@@ -17,6 +18,7 @@ export default function ContactButtons() {
                 />
                 <IconButton
                     href="https://www.linkedin.com/in/alejandrozamoraaz"
+                    title="Linkedin"
                     isHrefExternal={true}
                     iconType="img"
                     imageIconProps={{

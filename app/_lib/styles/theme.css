@@ -25,16 +25,23 @@ body {
     }
 
     .navigation {
-        background-color: color-mix(in srgb, var(--base-color) 64%, var(--primary-color));
+        background-color: color-mix(in srgb, var(--base-color) 72%, var(--primary-color));
 
         .navigation-button:hover>.navigation-button-icon {
             & {
                 outline: 2px solid var(--primary-highlight-color);
-                box-shadow: 0 0 5px var(--primary-color), 0 0 10px var(--primary-color);
-                background: linear-gradient(to left, var(--secondary-color), var(--primary-color));
             }
         }
 
+    }
+}
+
+
+@keyframes activate-navigation {
+
+    0%,
+    100% {
+        background-color: var(--primary-highlight-color);
     }
 }
 
@@ -100,7 +107,7 @@ body {
 }
 
 .card {
-    background-color: color-mix(in srgb, var(--base-color) 83%, var(--primary-color));
+    background-color: color-mix(in srgb, var(--base-color) 88%, var(--primary-color));
 }
 
 .fancybox__backdrop::after {

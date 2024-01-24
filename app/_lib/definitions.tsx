@@ -30,3 +30,8 @@ export type ImageIconProps = {
     src: string;
     alt: string;
 }
+
+export type Language = {
+    display: string;
+    code: string
+}

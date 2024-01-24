@@ -1,20 +1,14 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import i18n from 'i18next'
+import { initReactI18next } from 'react-i18next'
 
-import enTranslation from './translations/en.json';
-import esTranslation from './translations/es.json';
-
-const resources = {
-  en: enTranslation,
-  es: esTranslation,
-};
+import { languages, resources } from '@/app/_lib/languages'
 
 i18n.use(initReactI18next).init({
   resources,
-  lng: 'en', // idioma por defecto
+  lng: languages[0].code,
   interpolation: {
-    escapeValue: false, // no es necesario escapar valores para React
+    escapeValue: false,
   },
 });
 
-export default i18n;
+export default i18n

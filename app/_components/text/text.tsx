@@ -1,7 +1,7 @@
 import style from './text.module.css'
 
 interface TextProps {
-  text: string;
+  text?: string;
   type?: "headline" | "title" | "bodyLarge" | "bodySmall";
   weight?: 300 | 400 | 600 | 900;
   classText?: string;

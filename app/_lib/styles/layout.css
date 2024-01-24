@@ -11,6 +11,7 @@
         "header header"
         "content content"
     ;
+    timeline-scope: --navigation;
 
     /* For large screens */
     @media (min-width: 700px) {
@@ -35,6 +36,16 @@
             justify-content: center;
             align-items: center;
             display: flex;
+        }
+
+        .actions {
+            display: flex;
+            gap: var(--padding-small);
+            align-items: center;
+
+            &>select {
+                width: 100px;
+            }
         }
     }
 
@@ -87,6 +98,10 @@
             width: calc(var(--navigation-button-size) + (var(--navigation-button-size) / 2));
 
             .navigation-button-icon {
+                animation: activate-navigation linear;
+                animation-timeline: --navigation;
+                animation-range: calc((var(--navigation-index) - 1) * 25%) calc(var(--navigation-index) * 25% + 1px);
+
                 border-radius: 50%;
             }
         }
@@ -98,6 +113,9 @@
         scroll-behavior: smooth;
         position: relative;
         padding-bottom: var(--navigation-size);
+        scroll-timeline: --navigation y;
+        scroll-snap-type: y mandatory;
+        overscroll-behavior: contain;
 
         /* For large screens */
         @media (min-width: 700px) {
@@ -106,9 +124,17 @@
 
         .footer {
             display: flex;
-            height: var(--footer-size);
+            min-height: var(--footer-size);
+            gap: var(--padding);
             align-items: center;
             justify-content: space-around;
+            padding: var(--padding);
+            margin-bottom: calc(var(--navigation-size) + var(--padding));
+
+            /* For large screens */
+            @media (min-width: 700px) {
+                margin-bottom: calc(var(--padding) + 80px);
+            }
         }
     }
 }

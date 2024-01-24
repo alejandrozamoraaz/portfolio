@@ -1,29 +1,27 @@
-// LanguageSelector.tsx
-import React from 'react';
-import { useTranslation } from 'react-i18next';
+'use client'
 
-const LanguageSelector: React.FC = () => {
-  const { i18n } = useTranslation();
+import { useTranslation } from 'react-i18next'
+
+import { languages } from '@/app/_lib/languages'
+import Chip from '@/app/_components/chip'
+
+export default function LanguageSelector() {
+  const { t, i18n } = useTranslation("common");
 
   const changeLanguage = (newLanguage: string) => {
     i18n.changeLanguage(newLanguage);
   };
 
   return (
-    <div>
-      <button onClick={() => changeLanguage('en')}>English</button>
-      <button onClick={() => changeLanguage('es')}>Español</button>
-      {/* Add more language buttons as needed */}
-    </div>
-
-    // <select className="button text-button" value={activeLocale} onChange={handleChangeLocale}>
-    //         {i18n.locales.map((locale) => (
-    //             <option key={locale} value={locale}>
-    //                 {locale}
-    //             </option>
-    //         ))}
-    //     </select>
+    <>
+      {i18n.language !== 'es' && <Chip text={t("translate_from_spanish", { ns: "common" })} />}
+      <select title={t('change_language')} className="button text-button" value={i18n.language} onChange={(e) => changeLanguage(e.target.value)}>
+        {languages.map((locale) => (
+          <option key={locale.code} value={locale.code}>
+            {locale.display}
+          </option>
+        ))}
+      </select>
+    </>
   );
-};
-
-export default LanguageSelector;
+}
