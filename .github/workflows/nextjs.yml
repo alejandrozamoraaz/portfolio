@@ -81,6 +81,8 @@ jobs:
 
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        env:
+          GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
