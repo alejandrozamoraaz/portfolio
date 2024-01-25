@@ -9,10 +9,10 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css"
 import '@fancyapps/ui/dist/carousel/carousel.css'
 
 import React, { useEffect } from 'react'
-import { useRouter, NextRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
 import Image from 'next/image'
 import Script from 'next/script'
+import { usePathname } from 'next/navigation'
 
 import i18n from '@/i18n'
 import { mainFont } from '@/app/fonts'
@@ -20,69 +20,52 @@ import { mainFont } from '@/app/fonts'
 import LanguageSelector from '@/app/_widgets/LanguageSelector'
 import Text from '@/app/_components/text/text'
 
+import * as gtag from '@/app/_lib/utils/gtag'
+
 import FloatActions from '@/app/_lib/widgets/float-actions'
 import Navigation from '@/app/_lib/widgets/navigation'
 import Chip from '@/app/_components/chip'
 import IconButton from '@/app/_components/icon-button'
 
-// const gtag = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
-// declare global {
-//   interface Window {
-//     gtag: any;
-//   }
-// }
-
-export default function RootLayout({ children, router }: { children: React.ReactNode; router: NextRouter; }) {
+export default function RootLayout({ children }: { children: React.ReactNode; }) {
+  const pathname = usePathname();
+  const { t, i18n: i18nTranslation } = useTranslation();
 
   useEffect(() => {
+    if (process.env.NODE_ENV === 'production') {
+      gtag.pageview(pathname);
+    }
+
     if (!i18n.isInitialized) {
       i18n.init();
     }
-
-    // const handleRouteChange = (url: any) => {
-    //   window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
-    //     page_path: url,
-    //   });
-    // };
-
-    // if (router && process.env.NODE_ENV === 'production') {
-    //   router.events.on('routeChangeComplete', handleRouteChange);
-
-    //   return () => {
-    //     router.events.off('routeChangeComplete', handleRouteChange);
-    //   };
-    // }
-
-    // }, [router]);
-  }, []);
-
-  const { t, i18n: i18nTranslation } = useTranslation();
+  }, [pathname]);
 
   return (
     <html lang={i18nTranslation.language}>
       <head>
-        <title>{t('title', { ns: 'common' })}</title>
-        <meta name="keyword" content="blog creative responsive portfolio resume cv online personal portfolio professional portafolio creativo" />
-        <meta name="description" content={t('description', { ns: 'common' })} />
-        <meta name="author" content="Junior Alejandro Zamora"></meta>
-
-        {/* {process.env.NODE_ENV === 'production' && (
+        {process.env.NODE_ENV === 'production' && (
           <>
-            <Script async src={gtag} />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
 
-              gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
-            `}
-            </Script>
+              gtag('config', '${gtag.GA_TRACKING_ID}', {
+                page_path: window.location.pathname,
+              });
+            `,
+              }}
+            />
           </>
-        )} */}
+        )}
 
-        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-C99X4KDBZY"></Script>
-        <Script src="/analytics.js"></Script>
+        <title>{t('title', { ns: 'common' })}</title>
+        <meta name="keyword" content="blog creative responsive portfolio resume cv online personal portfolio professional portafolio creativo" />
+        <meta name="description" content={t('description', { ns: 'common' })} />
+        <meta name="author" content="Junior Alejandro Zamora"></meta>
       </head>
       <body className={`${mainFont.className} antialiased wrapper`}>
         <header className="header">
@@ -125,6 +108,15 @@ export default function RootLayout({ children, router }: { children: React.React
             </div>
           </footer>
         </main>
+
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <Script
+              strategy="afterInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+            />
+          </>
+        )}
       </body>
     </html >
   )

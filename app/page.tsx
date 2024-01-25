@@ -11,7 +11,7 @@ import ContactButtons from '@/app/_widgets/contact-buttons'
 import { sections } from '@/app/_lib/data/sections'
 
 export default function Home() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <div className="col gap">
