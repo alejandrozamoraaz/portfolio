@@ -9,8 +9,10 @@ import "@fancyapps/ui/dist/fancybox/fancybox.css"
 import '@fancyapps/ui/dist/carousel/carousel.css'
 
 import React, { useEffect } from 'react'
+import { useRouter, NextRouter } from 'next/router'
 import { useTranslation } from 'react-i18next'
 import Image from 'next/image'
+import Script from 'next/script'
 
 import i18n from '@/i18n'
 import { mainFont } from '@/app/fonts'
@@ -23,12 +25,35 @@ import Navigation from '@/app/_lib/widgets/navigation'
 import Chip from '@/app/_components/chip'
 import IconButton from '@/app/_components/icon-button'
 
-export default function RootLayout({ children }: { children: React.ReactNode; }) {
+const gtag = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
+declare global {
+  interface Window {
+    gtag: any;
+  }
+}
+
+export default function RootLayout({ children, router }: { children: React.ReactNode; router: NextRouter; }) {
+
   useEffect(() => {
     if (!i18n.isInitialized) {
       i18n.init();
     }
-  }, []);
+
+    const handleRouteChange = (url: any) => {
+      window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
+        page_path: url,
+      });
+    };
+
+    if (router && process.env.NODE_ENV === 'production') {
+      router.events.on('routeChangeComplete', handleRouteChange);
+
+      return () => {
+        router.events.off('routeChangeComplete', handleRouteChange);
+      };
+    }
+
+  }, [router]);
 
   const { t, i18n: i18nTranslation } = useTranslation();
 
@@ -39,6 +64,22 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
         <meta name="keyword" content="blog creative responsive portfolio resume cv online personal portfolio professional portafolio creativo" />
         <meta name="description" content={t('description', { ns: 'common' })} />
         <meta name="author" content="Junior Alejandro Zamora"></meta>
+
+        {process.env.NODE_ENV === 'production' && (
+          <>
+            <Script async src={gtag} />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+            `}
+            </Script>
+          </>
+        )}
+
       </head>
       <body className={`${mainFont.className} antialiased wrapper`}>
         <header className="header">
