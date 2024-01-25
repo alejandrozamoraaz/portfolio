@@ -25,12 +25,12 @@ import Navigation from '@/app/_lib/widgets/navigation'
 import Chip from '@/app/_components/chip'
 import IconButton from '@/app/_components/icon-button'
 
-const gtag = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
-declare global {
-  interface Window {
-    gtag: any;
-  }
-}
+// const gtag = `https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`;
+// declare global {
+//   interface Window {
+//     gtag: any;
+//   }
+// }
 
 export default function RootLayout({ children, router }: { children: React.ReactNode; router: NextRouter; }) {
 
@@ -39,21 +39,22 @@ export default function RootLayout({ children, router }: { children: React.React
       i18n.init();
     }
 
-    const handleRouteChange = (url: any) => {
-      window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
-        page_path: url,
-      });
-    };
+    // const handleRouteChange = (url: any) => {
+    //   window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
+    //     page_path: url,
+    //   });
+    // };
 
-    if (router && process.env.NODE_ENV === 'production') {
-      router.events.on('routeChangeComplete', handleRouteChange);
+    // if (router && process.env.NODE_ENV === 'production') {
+    //   router.events.on('routeChangeComplete', handleRouteChange);
 
-      return () => {
-        router.events.off('routeChangeComplete', handleRouteChange);
-      };
-    }
+    //   return () => {
+    //     router.events.off('routeChangeComplete', handleRouteChange);
+    //   };
+    // }
 
-  }, [router]);
+    // }, [router]);
+  }, []);
 
   const { t, i18n: i18nTranslation } = useTranslation();
 
@@ -65,7 +66,7 @@ export default function RootLayout({ children, router }: { children: React.React
         <meta name="description" content={t('description', { ns: 'common' })} />
         <meta name="author" content="Junior Alejandro Zamora"></meta>
 
-        {process.env.NODE_ENV === 'production' && (
+        {/* {process.env.NODE_ENV === 'production' && (
           <>
             <Script async src={gtag} />
             <Script id="google-analytics" strategy="afterInteractive">
@@ -78,8 +79,10 @@ export default function RootLayout({ children, router }: { children: React.React
             `}
             </Script>
           </>
-        )}
+        )} */}
 
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-C99X4KDBZY"></Script>
+        <Script src="/analytics.js"></Script>
       </head>
       <body className={`${mainFont.className} antialiased wrapper`}>
         <header className="header">
