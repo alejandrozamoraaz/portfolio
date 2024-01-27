@@ -103,6 +103,9 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
               <Text classText="flex-end p-y-small" type="bodySmall" text={t('developed_in', { ns: 'common' })} />
               <Text classText="flex-end" weight={300} type="bodySmall" text={t('based_in', { ns: 'common' })} />
               <Text classText="flex-end" weight={300} type="bodySmall" text="Version 1.0" />
+              <div className="flex-end p-y-small">
+                <Chip text={t('tag_google_analytics', { ns: 'common' })} />
+              </div>
             </div>
           </footer>
         </main>
