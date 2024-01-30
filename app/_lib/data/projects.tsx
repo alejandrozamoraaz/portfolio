@@ -64,7 +64,7 @@ export const projectTypes = (
                 {
                     id: "aplicacion-web-para-la-calidad",
                     title: t('aplicacion-web-para-la-calidad.title', { ns: 'projects_section' }),
-                    description: t('aplicacion-web-para-la-calidad.description', { ns: 'projects_section' }) + "<a target='_blank' href='https://repositorio.unan.edu.ni/20529/'>Thesis (Engineering)</a>",
+                    description: t('aplicacion-web-para-la-calidad.description', { ns: 'projects_section' }) + "<a target='_blank' class='button text-button' href='https://repositorio.unan.edu.ni/20529/'><small>Thesis (Engineering)</small></a>",
                     year: 2023,
                     technologies: [
                         { svgContent: Blazor },
