@@ -10,7 +10,6 @@ export default function ContactButtons() {
                     href="https://github.com/alejandrozamoraaz"
                     title="Github"
                     isHrefExternal={true}
-                    iconType="img"
                     imageIconProps={{
                         src: "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704142331/icons/sllwivcceoufmztfw35m.png",
                         alt: "Github - icon by Icons8"
@@ -20,7 +19,6 @@ export default function ContactButtons() {
                     href="https://www.linkedin.com/in/alejandrozamoraaz"
                     title="Linkedin"
                     isHrefExternal={true}
-                    iconType="img"
                     imageIconProps={{
                         src: "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704142331/icons/kq6fy2vylvb6lratn5wf.png",
                         alt: "Linkedin - icon by Icons8"

@@ -29,7 +29,7 @@ export default function About(
         );
         skills.map((Skill) => {
             renderToString(
-                <Icon type="svg" svgIconProps={{ svgContent: Skill }} size="large" />
+                <Icon svgIconProps={{ svgContent: Skill }} size="large" />
             ).then((text) => skillsCarousel.appendSlide({ html: text }));
         });
 
@@ -46,7 +46,7 @@ export default function About(
         badges.map((badge) => {
             renderToString(
                 <>
-                    <Icon type="img" imageIconProps={{ src: badge.imageUrl, alt: badge.alt }} size="large" />
+                    <Icon imageIconProps={{ src: badge.imageUrl, alt: badge.alt }} size="large" />
                     <TextButton href={badge.href} isHrefExternal={true} text={t("see", { ns: "common" })} />
                 </>
             ).then((text) => badgesCarousel.appendSlide({ html: text }));

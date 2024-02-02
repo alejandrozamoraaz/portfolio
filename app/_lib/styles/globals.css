@@ -3,9 +3,9 @@
   --surface-color: #f5f5f5;
   --primary-color: #890A9B;
   --secondary-color: #173CC2;
-  --primary-highlight-color: color-mix(in srgb, var(--primary-color) 80%, var(--surface-color));
+  --primary-highlight-color: color-mix(in srgb, var(--primary-color) 33%, var(--surface-color));
   --secondary-highlight-color: color-mix(in srgb, var(--secondary-color) 33%, var(--surface-color));
-  --font-color: color-mix(in srgb, var(--primary-color) 15%, var(--surface-color));
+  --font-color: color-mix(in srgb, var(--primary-color) 17%, var(--surface-color));
 
   --font-size-headline: 2em;
   --font-size-title: 1.5em;
@@ -176,12 +176,12 @@ body {
   text-align: center;
   text-decoration: none;
   overflow: hidden;
-}
-
-.icon-button {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon-button {
   width: var(--icon-button-size);
   height: var(--icon-button-size);
   padding: var(--icon-button-padding);
@@ -189,9 +189,6 @@ body {
 }
 
 .float-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: var(--float-button-size);
   height: var(--float-button-size);
   padding: var(--float-button-padding);
@@ -199,9 +196,6 @@ body {
 }
 
 .text-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: var(--text-button-size);
   border-radius: var(--text-button-border-radius);
@@ -319,6 +313,9 @@ body {
   --f-button-svg-width: 22px;
   --f-button-svg-height: 22px;
   --f-button-svg-stroke-width: 3;
+
+  --f-button-width: var(--icon-button-size);
+  --f-button-height: var(--icon-button-size);
 }
 
 .fancybox__thumbs.is-classic {

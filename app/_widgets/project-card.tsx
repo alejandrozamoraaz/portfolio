@@ -49,7 +49,7 @@ export default function ProjectCard({
 
                 <div className="made-with">
                     {project.technologies.map((technology, index) => (
-                        <Icon key={index} type="svg" svgIconProps={technology} />
+                        <Icon key={index} svgIconProps={technology} />
                     ))}
                 </div>
             </div>

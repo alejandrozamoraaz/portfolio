@@ -11,7 +11,6 @@ export default function IconButton({
     title,
     isFloat,
     classButton,
-    iconType,
     imageIconProps,
     svgIconProps
 }: {
@@ -21,18 +20,17 @@ export default function IconButton({
     title?: string;
     isFloat?: boolean;
     classButton?: string;
-    iconType: 'svg' | 'img';
     imageIconProps?: ImageIconProps;
     svgIconProps?: SvgIconProps;
 }) {
     return (
         href ?
             <Link className={`button ${isFloat ? "float-button" : "icon-button"} ${classButton}`} href={href} rel={isHrefExternal ? "noreferrer" : undefined} target={isHrefExternal ? "_blank" : "_self"}>
-                <Icon type={iconType} imageIconProps={imageIconProps} svgIconProps={svgIconProps} />
+                <Icon imageIconProps={imageIconProps} svgIconProps={svgIconProps} />
             </Link>
             :
             <button type="button" title={title} onClick={onClick} className={`button ${isFloat ? "float-button" : "icon-button"} ${classButton}`}>
-                <Icon type={iconType} imageIconProps={imageIconProps} svgIconProps={svgIconProps} />
+                <Icon imageIconProps={imageIconProps} svgIconProps={svgIconProps} />
             </button>
     );
 }

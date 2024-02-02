@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next'
 import { sections } from '@/app/_lib/data/sections'
 
 import Icon from '@/app/_components/icon'
+import Text from '@/app/_components/text/text'
 
 export default function Navigation() {
     const { t } = useTranslation();
@@ -19,8 +20,8 @@ export default function Navigation() {
 
                 return (
                     <Link key={index} style={style} target="_self" href={`#${link.linkName}`} className="button navigation-button">
-                        <Icon classIcon="navigation-button-icon" type="img" imageIconProps={{ src: link.iconUrl, alt: link.iconAlt }} />
-                        <h6>{link.name}</h6>
+                        <Icon classIcon="navigation-button-icon" imageIconProps={{ src: link.iconUrl, alt: link.iconAlt }} />
+                        <Text type="bodySmall" weight={300} text={link.name} />
                     </Link>
                 );
             })}

@@ -7,7 +7,6 @@ export default function FloatActions() {
                 href="#Header"
                 title="Top"
                 isFloat={true}
-                iconType="img"
                 imageIconProps={{
                     src: "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704144245/icons/divholbgjsmgpp5oscyp.png",
                     alt: "Top - icon by Icons8"

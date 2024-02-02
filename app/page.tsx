@@ -42,7 +42,7 @@ export default function Home() {
         return (
           <section key={link.linkName} id={link.linkName} className="container col gap show-on-scroll">
             <div className="flex p-y p-x gap cross-axis-center container-title">
-              <Icon type="img" imageIconProps={{ src: link.iconUrl, alt: link.iconAlt }} size="large" />
+              <Icon imageIconProps={{ src: link.iconUrl, alt: link.iconAlt }} size="large" />
               <Text text={link.name} type="title" weight={600} />
             </div>
 

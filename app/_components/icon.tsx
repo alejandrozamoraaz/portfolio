@@ -3,14 +3,12 @@ import { SvgIconProps, ImageIconProps } from '@/app/_lib/definitions'
 
 export default function Icon(
     {
-        type,
         size,
         classIcon,
         imageIconProps,
         svgIconProps
     }
         : {
-            type: 'svg' | 'img';
             size?: "large" | undefined;
             classIcon?: string;
             imageIconProps?: ImageIconProps;
@@ -26,11 +24,10 @@ export default function Icon(
         }
     })();
 
-    switch (type) {
-        case 'img':
-            return <ImageIcon props={imageIconProps!} size={iconSize} classIcon={classIcon} />;
-        case 'svg':
-            return <SvgIcon props={svgIconProps!} size={iconSize} classIcon={classIcon} />;
+    if (imageIconProps) {
+        return <ImageIcon props={imageIconProps!} size={iconSize} classIcon={classIcon} />;
+    } else {
+        return <SvgIcon props={svgIconProps!} size={iconSize} classIcon={classIcon} />;
     }
 }
 

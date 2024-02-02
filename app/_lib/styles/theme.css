@@ -40,7 +40,7 @@ body {
 
     0%,
     100% {
-        background-color: color-mix(in srgb, var(--primary-color) 80%, var(--base-color));
+        background-color: var(--primary-highlight-color);
     }
 }
 
@@ -55,16 +55,15 @@ body {
 }
 
 .button {
-    background-color: none;
     -webkit-tap-highlight-color: transparent;
     color: var(--font-color);
 }
 
 .icon-button {
-    background-color: color-mix(in srgb, var(--primary-color) 80%, var(--base-color));
+    background-color: color-mix(in srgb, var(--secondary-color) 10%, var(--base-color));
 
     &:hover {
-        outline: 2px solid var(--primary-highlight-color);
+        outline: 2px solid var(--secondary-highlight-color);
     }
 }
 
@@ -85,7 +84,7 @@ body {
 }
 
 .chip {
-    background-color: color-mix(in srgb, var(--primary-color) 40%, var(--base-color));
+    background-color: color-mix(in srgb, var(--primary-color) 20%, var(--base-color));
 }
 
 .f-carousel {
@@ -98,9 +97,14 @@ body {
     --f-button-color: var(--font-color);
     --f-button-hover-color: var(--font-color);
     --f-button-active-color: var(--font-color);
-    --f-button-bg: color-mix(in srgb, var(--primary-color) 80%, var(--base-color));
-    --f-button-hover-bg: color-mix(in srgb, var(--primary-color) 50%, var(--base-color));
-    --f-button-active-bg: color-mix(in srgb, var(--primary-color) 30%, var(--base-color));
+
+    --f-button-bg: color-mix(in srgb, var(--secondary-color) 10%, var(--base-color));
+    --f-button-hover-bg: color-mix(in srgb, var(--secondary-color) 5%, var(--base-color));
+    --f-button-active-bg: color-mix(in srgb, var(--secondary-color) 3%, var(--base-color));
+
+    &:hover {
+        outline: 2px solid var(--secondary-highlight-color);
+    }
 }
 
 .card {
@@ -109,10 +113,10 @@ body {
 
 .fancybox__backdrop::after {
     background-image: var(--bg-image);
-    filter: blur(0.3px);
-    background-color: color-mix(in srgb, var(--primary-color) 10%, var(--base-color));
+    filter: blur(0.5px);
+    background-color: color-mix(in srgb, var(--primary-color) 5%, var(--base-color));
     background-blend-mode: overlay;
-    opacity: 0.4;
+    opacity: 0.6;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

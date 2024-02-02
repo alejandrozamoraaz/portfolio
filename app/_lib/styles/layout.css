@@ -89,20 +89,16 @@
         }
 
         .navigation-button {
-            display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding: var(--padding-small);
+            padding: 3px;
             height: var(--navigation-button-size);
             width: calc(var(--navigation-button-size) + (var(--navigation-button-size) / 2));
 
             .navigation-button-icon {
+                border-radius: 50%;
                 animation: activate-navigation linear;
                 animation-timeline: --navigation;
                 animation-range: calc((var(--navigation-index) - 1) * 25%) calc(var(--navigation-index) * 25% + 1px);
-
-                border-radius: 50%;
             }
         }
     }

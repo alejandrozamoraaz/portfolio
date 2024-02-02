@@ -91,7 +91,7 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
               <Text type="bodySmall" text={t('template_by', { ns: 'common' })} />
               <Chip
                 content={
-                  <IconButton title="Github" isHrefExternal={true} href="https://github.com/alejandrozamoraaz/portfolio" iconType="img" imageIconProps={{
+                  <IconButton title="Github" isHrefExternal={true} href="https://github.com/alejandrozamoraaz/portfolio" imageIconProps={{
                     src: "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704142331/icons/sllwivcceoufmztfw35m.png",
                     alt: "Github - icon by Icons8"
                   }} />
@@ -101,7 +101,7 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
             </div>
             <div className="col">
               <Text classText="flex-end" type="bodySmall" text={t('developed_in', { ns: 'common' })} />
-              <Text classText="flex-end" weight={300} type="bodySmall" text="Version 1.0" />
+              <Text classText="flex-end" weight={300} type="bodySmall" text="Version 1.0.4" />
               <div className="flex-end p-y-small">
                 <Chip text={t('tag_google_analytics', { ns: 'common' })} />
               </div>

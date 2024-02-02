@@ -23,7 +23,7 @@ export default function CopyToClipboard({ text }: { text: string }) {
     return (
         <Chip
             content={
-                <IconButton title="Email" onClick={handleCopyToClipboard} iconType="svg" svgIconProps={{ svgContent: Copy }} />
+                <IconButton title="Email" onClick={handleCopyToClipboard} svgIconProps={{ svgContent: Copy }} />
             }
             text={copied ? 'Copied!' : text} />
 
