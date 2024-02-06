@@ -1,6 +1,6 @@
 body {
     color: var(--font-color);
-    background-color: color-mix(in srgb, var(--primary-color) 2%, var(--base-color));
+    background-color: var(--base-color);
     accent-color: var(--primary-color);
 }
 
@@ -17,14 +17,8 @@ body {
 }
 
 .wrapper {
-    .header {
-        .brand {
-            background-color: var(--base-color);
-        }
-    }
-
     .navigation {
-        background-color: color-mix(in srgb, var(--primary-color) 30%, var(--base-color));
+        background-color: color-mix(in srgb, var(--primary-color) 10%, var(--base-color));
 
         .navigation-button:hover>.navigation-button-icon {
             & {
@@ -32,6 +26,14 @@ body {
             }
         }
 
+    }
+
+    .content {
+        .header {
+            .brand {
+                background-color: var(--base-color);
+            }
+        }
     }
 }
 
@@ -46,12 +48,8 @@ body {
 
 .vh-100-header {
     .img-under-content {
-        background-color: color-mix(in srgb, var(--secondary-color) 10%, var(--base-color));
+        background-color: color-mix(in srgb, var(--secondary-color) 8%, var(--base-color));
     }
-}
-
-.container-title {
-    background-color: color-mix(in srgb, var(--secondary-color) 13%, var(--base-color));
 }
 
 .button {
@@ -84,7 +82,7 @@ body {
 }
 
 .chip {
-    background-color: color-mix(in srgb, var(--primary-color) 20%, var(--base-color));
+    background-color: color-mix(in srgb, var(--primary-color) 60%, var(--base-color));
 }
 
 .f-carousel {
@@ -108,7 +106,7 @@ body {
 }
 
 .card {
-    background-color: color-mix(in srgb, var(--primary-color) 10%, var(--base-color));
+    background-color: color-mix(in srgb, var(--primary-color) 8%, var(--base-color));
 }
 
 .fancybox__backdrop::after {

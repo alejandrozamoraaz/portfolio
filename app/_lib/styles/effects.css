@@ -1,7 +1,6 @@
 .show-on-scroll {
-    view-timeline-name: --show-on-scroll;
     view-timeline-axis: block;
-    animation-timeline: --show-on-scroll;
+    animation-timeline: view();
     animation-name: showOnScrollAnimation;
     animation-range: entry 5% cover 13%;
     animation-fill-mode: both;
@@ -20,16 +19,6 @@
 }
 
 .wrapper {
-    .header {
-        .brand {
-            transition: transform ease 500ms;
-
-            &:hover {
-                transform: rotate(-180deg);
-            }
-        }
-    }
-
     .navigation {
         .navigation-button:hover>.navigation-button-icon {
             & {
@@ -39,6 +28,24 @@
                 transform: scale(0.95);
             }
         }
+
+        .content {
+            .header {
+                .brand {
+                    transition: transform ease 500ms;
+
+                    &:hover {
+                        transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+
+        /* .navigation-button-icon {
+            animation: activate-navigation linear;
+            animation-timeline: --navigation;
+            animation-range: calc((var(--navigation-index) - 1) * 25%) calc(var(--navigation-index) * 25% + 1px);
+        } */
     }
 }
 

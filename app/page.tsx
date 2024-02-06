@@ -14,7 +14,7 @@ export default function Home() {
   const { t } = useTranslation();
 
   return (
-    <div className="col gap">
+    <>
       <section id="Header" className={"flex container vh-100-header show-on-scroll"}>
         <div className="col gap main-axis-center">
           <div>
@@ -41,15 +41,15 @@ export default function Home() {
       {sections(t).map((link) => {
         return (
           <section key={link.linkName} id={link.linkName} className="container col gap show-on-scroll">
-            <div className="flex p-y p-x gap cross-axis-center container-title">
+            <div className="flex m-y-large gap cross-axis-center main-axis-center">
               <Icon imageIconProps={{ src: link.iconUrl, alt: link.iconAlt }} size="large" />
-              <Text text={link.name} type="title" weight={600} />
+              <Text text={link.name} type="title" weight={900} />
             </div>
 
             <link.content t={t} />
           </section>
         );
       })}
-    </div>
+    </>
   )
 }

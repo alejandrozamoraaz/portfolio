@@ -1,52 +1,14 @@
 .wrapper {
-    display: grid;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    min-height: 100vh;
-    min-width: 100vw;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: var(--header-size) 1fr;
-    grid-template-areas:
-        "header header"
-        "content content"
-    ;
+    height: 100svh;
+    display: flex;
+    flex-direction: column-reverse;
+
     timeline-scope: --navigation;
 
     /* For large screens */
     @media (min-width: 700px) {
-        grid-template-columns: calc(var(--navigation-size) + var(--padding)) 1fr;
-        grid-template-areas:
-            "header header"
-            "navigation content"
-        ;
-    }
-
-    .header {
-        grid-area: header;
-        display: flex;
-        justify-content: space-between;
-        padding: var(--padding-small) var(--padding);
-        height: var(--header-size);
-
-        .brand {
-            width: var(--brand-size);
-            height: var(--brand-size);
-            border-radius: 50%;
-            justify-content: center;
-            align-items: center;
-            display: flex;
-        }
-
-        .actions {
-            display: flex;
-            gap: var(--padding-small);
-            align-items: center;
-
-            &>select {
-                width: 100px;
-            }
-        }
+        height: 100vh;
+        flex-direction: row;
     }
 
     .float-actions {
@@ -61,38 +23,37 @@
         /* For large screens */
         @media (min-width: 700px) {
             right: calc(var(--padding) * 2);
-            bottom: calc(var(--padding-small) * 2);
+            bottom: var(--padding-small);
         }
     }
 
     .navigation {
-        grid-area: navigation;
-        position: fixed;
-        bottom: 0;
-        z-index: 3;
+        margin: var(--padding-small);
+        padding: var(--padding-small);
         display: flex;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
         height: var(--navigation-size);
-        width: 95%;
-        margin: var(--padding-small);
+        width: auto;
         border-radius: var(--border-radius);
 
+        /* For large screens */
         @media (min-width: 700px) {
-            position: relative;
-            bottom: auto;
-            z-index: auto;
             flex-direction: column;
-            width: auto;
             height: auto;
+            width: calc(var(--navigation-size) * 2);
         }
 
         .navigation-button {
             flex-direction: column;
-            padding: 3px;
             height: var(--navigation-button-size);
-            width: calc(var(--navigation-button-size) + (var(--navigation-button-size) / 2));
+            width: var(--navigation-button-size);
+
+            /* For large screens */
+            @media (min-width: 700px) {
+                height: calc(var(--navigation-button-size) *2);
+            }
 
             .navigation-button-icon {
                 border-radius: 50%;
@@ -104,33 +65,40 @@
     }
 
     .content {
-        grid-area: content;
-        overflow-y: scroll;
+        overflow-x: hidden;
         scroll-behavior: smooth;
-        position: relative;
-        padding-bottom: var(--navigation-size);
+
         scroll-timeline: --navigation y;
         scroll-snap-type: y mandatory;
-        overscroll-behavior: contain;
 
-        /* For large screens */
-        @media (min-width: 700px) {
-            padding-bottom: 0;
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: var(--padding-small) var(--padding);
+            height: var(--header-size);
+
+            .brand {
+                width: var(--brand-size);
+                height: var(--brand-size);
+                border-radius: 50%;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+            }
+
+            .actions {
+                display: flex;
+                gap: var(--padding-small);
+                align-items: center;
+
+                &>select {
+                    width: 100px;
+                }
+            }
         }
 
         .footer {
-            display: flex;
-            min-height: var(--footer-size);
-            gap: var(--padding);
-            align-items: center;
-            justify-content: space-around;
-            padding: var(--padding);
-            margin-bottom: calc(var(--navigation-size) + var(--padding));
-
-            /* For large screens */
-            @media (min-width: 700px) {
-                margin-bottom: calc(var(--padding) + 80px);
-            }
+            padding-bottom: var(--navigation-size);
         }
     }
 }

@@ -16,7 +16,7 @@ export default function Contact({ t }: {
             <Script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript" />
 
             <ContactButtons />
-            <div className="flex p-y-large">
+            <div className="flex m-y-large p-y-large">
                 <Text type="bodyLarge" text={t('see_more', { ns: 'common' })} />
                 <TextButton href="https://bio.site/alejandrozamora" text="bio.site" isHrefExternal={true} />
             </div>

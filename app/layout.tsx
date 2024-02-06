@@ -14,6 +14,7 @@ import Image from 'next/image'
 import Script from 'next/script'
 import { usePathname } from 'next/navigation'
 
+import pkgJson from "@/package.json"
 import i18n from '@/i18n'
 import { mainFont } from '@/app/fonts'
 
@@ -66,29 +67,33 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
         <meta name="author" content="Junior Alejandro Zamora"></meta>
       </head>
       <body className={`${mainFont.className} antialiased wrapper`}>
-        <header className="header">
-          <div className="brand">
-            <Image
-              src="https://res.cloudinary.com/dlyfwab7x/image/upload/v1704135888/vtqcg6xuptsud5hkx1te.png"
-              alt="Logo Alejandro Zamora"
-              width={32}
-              height={21}
-            />
-          </div>
-          <div className="actions">
-            <LanguageSelector />
-          </div>
-        </header>
 
         <FloatActions />
         <Navigation />
 
-        <main className="content">
-          {children}
+        <div className="content">
+          <header id="Header" className="header main-axis-between">
+            <div className="brand">
+              <Image
+                src="https://res.cloudinary.com/dlyfwab7x/image/upload/v1704135888/vtqcg6xuptsud5hkx1te.png"
+                alt="Logo Alejandro Zamora"
+                width={32}
+                height={21}
+              />
+            </div>
+            <div className="actions">
+              <LanguageSelector />
+            </div>
+          </header>
 
-          <footer className="footer">
-            <div className="col gap">
+          <main>
+            {children}
+          </main>
+
+          <footer className="flex footer gap p-x">
+            <div className="col main-axis-between">
               <Text type="bodySmall" text={t('template_by', { ns: 'common' })} />
+              <Text weight={300} type="bodySmall" text={`${pkgJson.name} ${pkgJson.version}`} />
               <Chip
                 content={
                   <IconButton title="Github" isHrefExternal={true} href="https://github.com/alejandrozamoraaz/portfolio" imageIconProps={{
@@ -99,15 +104,14 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
                 text={t('see_project', { ns: 'common' })}
               />
             </div>
-            <div className="col">
+            <div className="col main-axis-between">
               <Text classText="flex-end" type="bodySmall" text={t('developed_in', { ns: 'common' })} />
-              <Text classText="flex-end" weight={300} type="bodySmall" text="Version 1.0.4" />
-              <div className="flex-end p-y-small">
+              <div className="flex-end">
                 <Chip text={t('tag_google_analytics', { ns: 'common' })} />
               </div>
             </div>
           </footer>
-        </main>
+        </div>
 
         {process.env.NODE_ENV === 'production' && (
           <>

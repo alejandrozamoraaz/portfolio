@@ -75,10 +75,10 @@ export default function About(
                 </div>
             </div>
 
-            <Text classText="m-t-large" type="bodyLarge" text={t('skills', { ns: 'about_section' })} />
+            <Text classText="m-y-large" type="bodyLarge" text={t('skills', { ns: 'about_section' })} />
             <div id="skillsCarousel" className="f-carousel"></div>
 
-            <Text type="bodyLarge" text={t('badges', { ns: 'about_section' })} />
+            <Text classText="m-y-large" type="bodyLarge" text={t('badges', { ns: 'about_section' })} />
             <div id="badgesCarousel" className="f-carousel"></div>
         </div>
     );
