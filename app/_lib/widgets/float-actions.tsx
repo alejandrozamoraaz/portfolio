@@ -5,7 +5,7 @@ export default function FloatActions() {
         <div className="float-actions">
             <IconButton
                 href="#Header"
-                title="Top"
+                title="Go to Top"
                 isFloat={true}
                 imageIconProps={{
                     src: "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704144245/icons/divholbgjsmgpp5oscyp.png",

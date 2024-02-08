@@ -27,10 +27,11 @@ export function Init() {
 };
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
-export const pageview = (url) => {
+export const pageview = (url, location) => {
     process.env.NODE_ENV === 'production' &&
         window.gtag("config", GA_TRACKING_ID, {
             page_path: url,
+            page_location: location
         });
 };
 

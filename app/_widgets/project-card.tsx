@@ -23,7 +23,7 @@ export default function ProjectCard({
         <>
             {project.images != null &&
                 <div className="card-image">
-                    <Link data-fancybox={project.id} data-title={project.title} data-description={project.description} href={project.images[0]}>
+                    <Link title={project.title} data-fancybox={project.id} data-title={project.title} data-description={project.description} href={project.images[0]}>
                         <Image
                             fill={true}
                             src={project.images[0]}
@@ -33,7 +33,7 @@ export default function ProjectCard({
 
                     {project.images!.map((image, index) => (
                         index > 1 &&
-                        <Link key={index} hidden={true} data-fancybox={project.id} data-title={project.title} data-description={project.description} href={image}></Link>
+                        <Link key={index} hidden={true} title={project.title} data-fancybox={project.id} data-title={project.title} data-description={project.description} href={image}></Link>
                     ))}
                 </div>
             }
