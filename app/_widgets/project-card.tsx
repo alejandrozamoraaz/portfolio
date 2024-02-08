@@ -10,6 +10,7 @@ import Icon from '@/app/_components/icon'
 import TextButton from '@/app/_components/text-button'
 
 import { TapTwo } from '@/app/_lib/icons'
+import React from 'react'
 
 export default function ProjectCard({
     project,
@@ -22,15 +23,17 @@ export default function ProjectCard({
         <>
             {project.images != null &&
                 <div className="card-image">
+                    <Link data-fancybox={project.id} data-title={project.title} data-description={project.description} href={project.images[0]}>
+                        <Image
+                            fill={true}
+                            src={project.images[0]}
+                            alt={project.title}
+                        />
+                    </Link>
+
                     {project.images!.map((image, index) => (
-                        <Link key={index} data-fancybox={project.id} data-title={project.title} data-description={project.description} href={image}>
-                            <Image
-                                fill={true}
-                                src={image}
-                                alt={project.title + " Image " + (index + 1)}
-                                hidden={index >= 2}
-                            />
-                        </Link>
+                        index > 1 &&
+                        <Link key={index} hidden={true} data-fancybox={project.id} data-title={project.title} data-description={project.description} href={image}></Link>
                     ))}
                 </div>
             }
@@ -47,11 +50,15 @@ export default function ProjectCard({
                     <Chip text={t('private', { ns: 'common' })} />
                 )}
 
-                <div className="made-with">
-                    {project.technologies.map((technology, index) => (
-                        <Icon key={index} svgIconProps={technology} />
-                    ))}
-                </div>
+                {project.technologies != null &&
+                    <div className="made-with">
+                        {
+                            project.technologies!.map((technology, index) => (
+                                <Icon key={index} svgIconProps={technology} />
+                            ))
+                        }
+                    </div>
+                }
             </div>
 
             <div className="p-x-small p-y-small bar-top-absolute">

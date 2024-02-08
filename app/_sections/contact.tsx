@@ -17,7 +17,7 @@ export default function Contact({ t }: {
 
             <ContactButtons />
             <div className="flex m-y-large p-y-large">
-                <Text type="bodyLarge" text={t('see_more', { ns: 'common' })} />
+                <Text weight={900} text={t('see_more', { ns: 'common' })} />
                 <TextButton href="https://bio.site/alejandrozamora" text="bio.site" isHrefExternal={true} />
             </div>
         </div>

@@ -15,15 +15,15 @@ export default function Home() {
 
   return (
     <>
-      <section id="Header" className={"flex container vh-100-header show-on-scroll"}>
+      <section id="Header" className={"flex container vh-100-header"}>
         <div className="col gap main-axis-center">
           <div>
             <Text text="Ing." />
-            <Text text="Junior Alejandro Zamora" type="headline" weight={900} />
+            <Text text="Junior Alejandro Zamora" type="title" />
           </div>
-          <div className="gap-small p-y">
-            <Text text={t('iam', { ns: 'common' })} type="bodySmall" />
-            <Text text={t('primary_position', { ns: 'common' })} classText="primary-color" type="title" />
+          <div className="p-y">
+            <Text text={t('iam', { ns: 'common' })} />
+            <Text text={t('primary_position', { ns: 'common' })} classText="primary-color" type="headline" />
           </div>
 
           <ContactButtons />
@@ -40,7 +40,7 @@ export default function Home() {
 
       {sections(t).map((link) => {
         return (
-          <section key={link.linkName} id={link.linkName} className="container col gap show-on-scroll">
+          <section key={link.linkName} id={link.linkName} className="container col gap">
             <div className="flex m-y-large gap cross-axis-center main-axis-center">
               <Icon imageIconProps={{ src: link.iconUrl, alt: link.iconAlt }} size="large" />
               <Text text={link.name} type="title" weight={900} />

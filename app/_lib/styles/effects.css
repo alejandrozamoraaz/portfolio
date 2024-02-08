@@ -1,4 +1,4 @@
-.show-on-scroll {
+section {
     view-timeline-axis: block;
     animation-timeline: view();
     animation-name: showOnScrollAnimation;
@@ -19,41 +19,43 @@
 }
 
 .wrapper {
+    timeline-scope: --navigation;
+
     .navigation {
-        .navigation-button:hover>.navigation-button-icon {
-            & {
-                transition:
-                    transform ease-in 100ms,
-                    outline ease-in 100ms;
-                transform: scale(0.95);
-            }
+        .navigation-button:hover .navigation-button-icon {
+            transition: outline ease-in 150ms;
         }
 
-        .content {
-            .header {
-                .brand {
-                    transition: transform ease 500ms;
+        .navigation-button {
+            .navigation-button-icon {
+                animation: activate-navigation linear;
+                animation-timeline: --navigation;
+                animation-range: calc((var(--navigation-index) - 1) * 25%) calc(var(--navigation-index) * 25% + 1px);
+            }
+        }
+    }
 
-                    &:hover {
-                        transform: rotate(-180deg);
-                    }
+    .content {
+        scroll-behavior: smooth;
+        scroll-timeline: --navigation y;
+        scroll-snap-type: y mandatory;
+
+        .header {
+            .brand {
+                transition: transform ease 500ms;
+
+                &:hover {
+                    transform: rotate(-180deg);
                 }
             }
         }
-
-        /* .navigation-button-icon {
-            animation: activate-navigation linear;
-            animation-timeline: --navigation;
-            animation-range: calc((var(--navigation-index) - 1) * 25%) calc(var(--navigation-index) * 25% + 1px);
-        } */
     }
 }
 
-.button:active {
-    transition: transform ease-in 200ms;
-    transform: scale(0.9);
+.button:hover {
+    transition: outline ease-in 100ms;
 }
 
-.fancybox__backdrop::after {
-    transform: scale(11);
+.button:active {
+    transform: scale(0.9);
 }

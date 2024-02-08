@@ -12,7 +12,7 @@ export default function Navigation() {
     const { t } = useTranslation();
 
     return (
-        <aside className="navigation">
+        <aside className="flex navigation">
             {sections(t).map((link, index) => {
                 const style = {
                     '--navigation-index': index + 2,
@@ -21,7 +21,7 @@ export default function Navigation() {
                 return (
                     <Link key={index} style={style} target="_self" href={`#${link.linkName}`} className="button navigation-button">
                         <Icon classIcon="navigation-button-icon" imageIconProps={{ src: link.iconUrl, alt: link.iconAlt }} />
-                        <Text type="bodySmall" weight={300} text={link.name} />
+                        <Text type="bodySmall" weight={900} text={link.name} />
                     </Link>
                 );
             })}

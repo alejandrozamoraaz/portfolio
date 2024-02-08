@@ -32,16 +32,18 @@ export default function Text({
     fontWeight: weight?.toString(),
   };
 
+  const classes = `${textType} ${classText} ${style.textCenter}`;
+
   switch (type) {
     case "headline":
-      return <h1 style={textStyle} className={`${textType} ${classText}`}>{text}</h1>;
+      return <h1 style={textStyle} className={classes}>{text}</h1>;
     case "title":
-      return <h2 style={textStyle} className={`${textType} ${classText}`}>{text}</h2>;
+      return <h2 style={textStyle} className={classes}>{text}</h2>;
     case "bodyLarge":
-      return <h4 style={textStyle} className={`${textType} ${classText}`}>{text}</h4>;
+      return <h4 style={textStyle} className={classes}>{text}</h4>;
     case "bodySmall":
-      return <small style={textStyle} className={`${textType} ${classText}`}>{text}</small>;
+      return <small style={textStyle} className={classes}>{text}</small>;
     default:
-      return <p style={textStyle} className={`${textType} ${classText}`}>{text}</p>;
+      return <p style={textStyle} className={classes}>{text}</p>;
   }
 }

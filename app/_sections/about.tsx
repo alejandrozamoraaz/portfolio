@@ -54,14 +54,14 @@ export default function About(
     }, [t]);
 
     return (
-        <div className="col gap">
+        <div className="col gap line-height-large">
             <div>
-                <Text text="Junior Alejandro Zamora Navarrete" type="bodyLarge" classText="display-inline" />
+                <Text text="Junior Alejandro Zamora Navarrete" classText="display-inline" />
                 <Text text={t('about011', { ns: 'about_section' })} type="bodyLarge" classText="primary-color display-inline" />
                 <Text text={t('about012', { ns: 'about_section' })} classText="display-inline" />
-                <Text text={t('about013', { ns: 'about_section' })} type="title" classText="primary-highlight-color display-inline" />
+                <Text text={t('about013', { ns: 'about_section' })} type="bodyLarge" classText="primary-highlight-color display-inline" />
                 <Text text={t('about014', { ns: 'about_section' })} classText="display-inline" />
-                <Text text={t('about015', { ns: 'about_section' })} type="bodyLarge" classText="secondary-highlight-color display-inline" />
+                <Text text={t('about015', { ns: 'about_section' })} weight={900} classText="secondary-highlight-color display-inline" />
             </div>
 
             <Text text={t('about02', { ns: 'about_section' })} />

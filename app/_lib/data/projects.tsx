@@ -18,15 +18,15 @@ export const projectTypes = (
                         { svgContent: AdobeXd }
                     ],
                     images: [
-                        "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147583/projects/prototipo-de-gestor-de-expedientes/cih56rir0b2snxq6tw8v.png",
-                        "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147583/projects/prototipo-de-gestor-de-expedientes/t7sh6f9rqrrbotywzbj0.png",
+                        "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147584/projects/prototipo-de-gestor-de-expedientes/uf2hbkaogiwg9eo4mciq.png",
                         "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147583/projects/prototipo-de-gestor-de-expedientes/f8nnqyoh2x92dbo9lngo.png",
+                        "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147583/projects/prototipo-de-gestor-de-expedientes/t7sh6f9rqrrbotywzbj0.png",
+                        "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147583/projects/prototipo-de-gestor-de-expedientes/cih56rir0b2snxq6tw8v.png",
                         "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147582/projects/prototipo-de-gestor-de-expedientes/qfbddpaiaismwdei6wrm.png",
                         "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147582/projects/prototipo-de-gestor-de-expedientes/wctdrgzi4q0kg8xesutu.png",
                         "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147583/projects/prototipo-de-gestor-de-expedientes/r2vg7z2vean3w7owlwuy.png",
                         "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147583/projects/prototipo-de-gestor-de-expedientes/qzhdndazclm0fpszjxm0.png",
-                        "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147583/projects/prototipo-de-gestor-de-expedientes/k5rujzabijmujyeqokx7.png",
-                        "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147584/projects/prototipo-de-gestor-de-expedientes/uf2hbkaogiwg9eo4mciq.png"
+                        "https://res.cloudinary.com/dlyfwab7x/image/upload/v1704147583/projects/prototipo-de-gestor-de-expedientes/k5rujzabijmujyeqokx7.png"
                     ]
                 }
             ]

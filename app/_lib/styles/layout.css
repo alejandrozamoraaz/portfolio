@@ -3,8 +3,6 @@
     display: flex;
     flex-direction: column-reverse;
 
-    timeline-scope: --navigation;
-
     /* For large screens */
     @media (min-width: 700px) {
         height: 100vh;
@@ -28,54 +26,39 @@
     }
 
     .navigation {
-        margin: var(--padding-small);
-        padding: var(--padding-small);
-        display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
         height: var(--navigation-size);
         width: auto;
         border-radius: var(--border-radius);
+        margin: var(--padding-small);
+        padding: var(--padding-small) var(--padding-large);
 
         /* For large screens */
         @media (min-width: 700px) {
             flex-direction: column;
             height: auto;
             width: calc(var(--navigation-size) * 2);
+            padding: calc(var(--padding-large) * 2) var(--padding-small);
         }
 
         .navigation-button {
             flex-direction: column;
-            height: var(--navigation-button-size);
-            width: var(--navigation-button-size);
-
-            /* For large screens */
-            @media (min-width: 700px) {
-                height: calc(var(--navigation-button-size) *2);
-            }
+            padding: 3px;
+            gap: 3px;
+            flex: 1;
 
             .navigation-button-icon {
                 border-radius: 50%;
-                animation: activate-navigation linear;
-                animation-timeline: --navigation;
-                animation-range: calc((var(--navigation-index) - 1) * 25%) calc(var(--navigation-index) * 25% + 1px);
             }
         }
     }
 
     .content {
         overflow-x: hidden;
-        scroll-behavior: smooth;
-
-        scroll-timeline: --navigation y;
-        scroll-snap-type: y mandatory;
 
         .header {
-            display: flex;
-            justify-content: space-between;
-            padding: var(--padding-small) var(--padding);
             height: var(--header-size);
+            padding: var(--padding-small);
 
             .brand {
                 width: var(--brand-size);
@@ -83,11 +66,9 @@
                 border-radius: 50%;
                 justify-content: center;
                 align-items: center;
-                display: flex;
             }
 
             .actions {
-                display: flex;
                 gap: var(--padding-small);
                 align-items: center;
 

@@ -17,9 +17,9 @@ export type Project = {
     title: string;
     description: string;
     year: number;
-    technologies: SvgIconProps[];
+    images: string[];
     url?: string;
-    images?: string[];
+    technologies?: SvgIconProps[];
 };
 
 export type SvgIconProps = {

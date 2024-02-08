@@ -7,17 +7,15 @@
   --secondary-highlight-color: color-mix(in srgb, var(--secondary-color) 33%, var(--surface-color));
   --font-color: color-mix(in srgb, var(--primary-color) 17%, var(--surface-color));
 
-  --font-size-headline: 2em;
-  --font-size-title: 1.5em;
-  --font-size-body-large: 1.1em;
-  --font-size-body: 14px;
-  --font-size-body-small: smaller;
+  --font-size-headline: 48px;
+  --font-size-title: 32px;
+  --font-size-body-large: 24px;
+  --font-size-body: 16px;
+  --font-size-body-small: 12px;
 
   --brand-size: 46px;
   --header-size: 64px;
-  --navigation-size: 72px;
-
-  --navigation-button-size: 72px;
+  --navigation-size: 74px;
 
   --icon-button-size: 38px;
   --icon-button-padding: 6px;
@@ -48,7 +46,7 @@
   outline: 0;
 }
 
-body {
+.line-height-large {
   line-height: var(--padding-large);
 }
 
@@ -144,7 +142,7 @@ body {
 }
 
 .vh-100-header {
-  height: calc(100svh - var(--header-size));
+  height: calc(100svh - var(--header-size) - var(--navigation-size));
 
   /* For large screens */
   @media (min-width: 700px) {
@@ -299,10 +297,17 @@ body {
 .fancybox__backdrop::after {
   content: '';
   position: absolute;
-  width: 10%;
-  height: 10%;
-  left: 50%;
-  top: 50%;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  filter: blur(3px);
+  background-image: var(--bg-image);
+  background-blend-mode: overlay;
+  opacity: 0.6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .fancybox__toolbar {

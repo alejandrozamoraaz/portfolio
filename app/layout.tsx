@@ -72,8 +72,8 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
         <Navigation />
 
         <div className="content">
-          <header id="Header" className="header main-axis-between">
-            <div className="brand">
+          <header id="Header" className="flex cross-axis-center main-axis-between header">
+            <div className="flex brand">
               <Image
                 src="https://res.cloudinary.com/dlyfwab7x/image/upload/v1704135888/vtqcg6xuptsud5hkx1te.png"
                 alt="Logo Alejandro Zamora"
@@ -81,7 +81,7 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
                 height={21}
               />
             </div>
-            <div className="actions">
+            <div className="flex actions">
               <LanguageSelector />
             </div>
           </header>
@@ -91,8 +91,8 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
           </main>
 
           <footer className="flex footer gap p-x">
-            <div className="col main-axis-between">
-              <Text type="bodySmall" text={t('template_by', { ns: 'common' })} />
+            <div className="col gap-small main-axis-between">
+              <Text text={t('template_by', { ns: 'common' })} />
               <Text weight={300} type="bodySmall" text={`${pkgJson.name} ${pkgJson.version}`} />
               <Chip
                 content={
@@ -105,7 +105,7 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
               />
             </div>
             <div className="col main-axis-between">
-              <Text classText="flex-end" type="bodySmall" text={t('developed_in', { ns: 'common' })} />
+              <Text classText="flex-end" text={t('developed_in', { ns: 'common' })} />
               <div className="flex-end">
                 <Chip text={t('tag_google_analytics', { ns: 'common' })} />
               </div>

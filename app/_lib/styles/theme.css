@@ -110,16 +110,5 @@ body {
 }
 
 .fancybox__backdrop::after {
-    background-image: var(--bg-image);
-    filter: blur(0.5px);
     background-color: color-mix(in srgb, var(--primary-color) 5%, var(--base-color));
-    background-blend-mode: overlay;
-    opacity: 0.6;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.fancybox__thumbs.is-classic {
-    --f-thumb-outline: 0;
 }
