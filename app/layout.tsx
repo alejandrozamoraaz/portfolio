@@ -11,7 +11,6 @@ import '@fancyapps/ui/dist/carousel/carousel.css'
 import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import Image from 'next/image'
-import Script from 'next/script'
 import { usePathname } from 'next/navigation'
 
 import pkgJson from "@/package.json"
@@ -33,9 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
   const { t, i18n: i18nTranslation } = useTranslation();
 
   useEffect(() => {
-    if (process.env.NODE_ENV === 'production') {
-      gtag.pageview(pathname);
-    }
+    gtag.pageview(pathname);
 
     if (!i18n.isInitialized) {
       i18n.init();
@@ -45,21 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
   return (
     <html lang={i18nTranslation.language}>
       <head>
-        {process.env.NODE_ENV === 'production' && (
-          <>
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-
-                  gtag('config', '${gtag.GA_TRACKING_ID}');
-                `,
-              }}
-            />
-          </>
-        )}
+        <gtag.Init />
 
         <title>{t('title', { ns: 'common' })}</title>
         <meta name="keyword" content="blog creative responsive portfolio resume cv online personal portfolio professional portafolio creativo" />
@@ -112,15 +95,6 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
             </div>
           </footer>
         </div>
-
-        {process.env.NODE_ENV === 'production' && (
-          <>
-            <Script
-              strategy="afterInteractive"
-              src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
-            />
-          </>
-        )}
       </body>
     </html >
   )
