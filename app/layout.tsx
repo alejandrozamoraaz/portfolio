@@ -12,6 +12,7 @@ import React, { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import pkgJson from "@/package.json"
 import i18n from '@/i18n'
@@ -95,6 +96,7 @@ export default function RootLayout({ children }: { children: React.ReactNode; })
             </div>
           </footer>
         </div>
+        <SpeedInsights />
       </body>
     </html >
   )
