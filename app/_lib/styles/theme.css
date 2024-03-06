@@ -29,6 +29,8 @@ body {
     }
 
     .content {
+        scrollbar-color: var(--primary-color) var(--base-color);
+
         .header {
             .brand {
                 background-color: var(--base-color);

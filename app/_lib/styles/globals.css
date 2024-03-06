@@ -15,7 +15,7 @@
 
   --brand-size: 46px;
   --header-size: 64px;
-  --navigation-size: 74px;
+  --navigation-size: 58px;
 
   --icon-button-size: 38px;
   --icon-button-padding: 6px;
@@ -47,7 +47,7 @@
 }
 
 .line-height-large {
-  line-height: var(--padding-large);
+  line-height: 1.5;
 }
 
 .overflow-text {
@@ -347,4 +347,25 @@
   width: 250px;
   gap: var(--padding-small);
   padding-bottom: var(--padding-small);
+}
+
+
+
+
+
+
+
+
+
+
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skeleton-item {
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 5px;
 }

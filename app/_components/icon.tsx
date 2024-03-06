@@ -42,5 +42,5 @@ const ImageIcon = ({ props, size, classIcon }: { props: ImageIconProps; size: nu
 );
 
 const SvgIcon = ({ props, size, classIcon }: { props: SvgIconProps; size: number; classIcon?: string; }): JSX.Element => (
-    <props.svgContent className={classIcon} style={{ minWidth: size, minHeight: size }} width={size} height={size} />
+    <props.svgContent className={classIcon} width={size} height={size} />
 );
