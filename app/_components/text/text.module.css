@@ -1,21 +1,26 @@
 .bodySmall {
     font-size: var(--font-size-body-small);
+    font-weight: 900;
 }
 
 .body {
     font-size: var(--font-size-body);
+    font-weight: 400;
 }
 
 .bodyLarge {
     font-size: var(--font-size-body-large);
+    font-weight: 400;
 }
 
 .title {
     font-size: var(--font-size-title);
+    font-weight: 900;
 }
 
 .headline {
     font-size: var(--font-size-headline);
+    font-weight: 600;
 }
 
 .textCenter {

@@ -1,0 +1,65 @@
+{
+  "common": {
+    "title": "Portafolio de Junior Alejandro Zamora",
+    "description": "Portafolio profesinal del Ingeniero de Software Junior Alejandro Zamora",
+    "autor": "Junior Alejandro Zamora",
+    "keywords": [
+      "blog",
+      "portafolio moderno",
+      "portafolio responsive",
+      "resume",
+      "cv",
+      "portafolio personal",
+      "portafolio profesional",
+      "portafolio creativo"
+    ],
+    "copied_to_clipboard": "Copiado al portapapeles",
+    "developed_in": "Desarrollado en Next JS y TypeScript",
+    "tag_google_analytics": "Usando Google Analytics",
+    "see": "Ir",
+    "see_project": "Ver proyecto",
+    "label_position": "Ing.",
+    "iam": "Yo soy",
+    "primary_position": "Ingeniero de Software"
+  },
+  "projects_section": {
+    "title": "Proyectos",
+    "projects_data_placeholder": "❗Los datos incluidos en los proyectos son marcadores de posición",
+    "private": "Privado",
+    "graphic_design_ui_ux": "Diseño gráfico, UI y UX",
+    "full_stack_development": "Desarrollo Full Stack",
+    "prototipo-de-gestor-de-expedientes": {
+      "title": "Prototipo de Gestor de expedientes clínicos",
+      "description00": "Sistema de expedientes médicos diseñado en Adobe XD, pensado para tres tipos de usuarios, el paciente que dispondrá de la visualización de su historial médico con el uso de su DNI, el médico que rellenará la información y un administrador que gestiona una o varias clinicas.",
+      "description01": "Todos los usuarios tienen la capacidad de ver sus estadisticas, El médico dispodrá de plantillas para las distintas tipos de consultas, podrá buscar al paciente pero para mejorar el proceso se recomienda que el paciente comparta su codigo QR generado al médico, cada paso o cambio del estado del paciente se guardará para la visualización futura de este.",
+      "description02": "A nivel de sistema se piensa en uno interconectado donde cada centro, institicion o clínica administre sus activos propios como medicos o paciente pero, compartan entre si su información bajo estándares y seguridad adecuada, esto con el fin de brindar una mejor experiencia y monitoreo de los expedientes de los pacientes."
+    },
+    "gestor-de-expedientes-clinicos-citas-e-inventario": {
+      "title": "Gestor de expedientes clínicos, citas e inventario",
+      "description00": "Alejandro participó en colaboración en todo el ciclo de vida, análisis de requisitos y procesos, diseño de la arquitectura y base de datos, desarrollo e implementación del sistema de gestión de expedientes clínicos, adminstración de citas, administración de inventario de medicamentos, visualización de estadisticas e informes.",
+      "description01": "Fue desarrollado en asp.net en conjunto a la libreria de DevExpress y report viewer para la generación de informes, alimentado desde una base de datos en SQL Server."
+    },
+    "aplicacion-web-para-la-calidad": {
+      "title": "Aplicación web para la calidad",
+      "description00": "Alejandro participó en colaboración en todo el ciclo de vida, análisis de requisitos y procesos, diseño de los diagramas de procesos, arquitectura y base de datos, desarrollo de la interfaz y de los diferentes módulos del sistema de calidad bajo la norma ISO 9001:2015.",
+      "description01": "Fue desarrollado en Blazor WebAssembly siendo tambien una aplicación progresiva, en conjunto a la libreria de diseño MudBlazor, alimentado desde una base de datos en SQL Server.",
+      "description02": "Ver más en:"
+    }
+  },
+  "about_section": {
+    "title": "Acerca de",
+    "badges": "Insignias",
+    "about000": "Junior Alejandro Zamora Navarrete",
+    "about011": " Ingeniero en Sistemas de informacion",
+    "about012": " graduado en la Universidad Autónoma de Nicaragua, en el año 2023. Actualmente con el rol de ",
+    "about013": "Ingeniero de software",
+    "about014": ", incluyendo roles de ",
+    "about015": "desarrollador Full-Stack y Diseñador UI/UX.",
+    "about02": "Técnico especialista en programacion en el Tecnológico Nacional - INATEC, entre otras certificaciones mostradas en LinkedIn, algunas de ellas son: Scrum Foundation, Power BI Avanzado e Infraestructura de red.",
+    "about03": "Su versatilidad y enfoque vanguardista lo ha llevado a familiarizarse y extender su conocimiento a otros campos como AI, videojuegos, analisis de datos y otros temas."
+  },
+  "contact_section": {
+    "title": "Contactar",
+    "see_more": "Ver más acerca de Alejandro"
+  }
+}

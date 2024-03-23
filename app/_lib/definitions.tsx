@@ -1,4 +1,8 @@
-import { FC, SVGProps } from "react"
+import { type getDictionary } from "@/get-dictionary"
+
+export type Dictionary = Awaited<ReturnType<typeof getDictionary>>;
+
+export type Icon = React.FC<React.SVGProps<SVGSVGElement>>;
 
 export type Badge = {
     name: string;
@@ -15,23 +19,16 @@ export type ProjectType = {
 export type Project = {
     id: string;
     title: string;
-    description: string;
+    description: string[];
     year: number;
-    images: string[];
+    image: string;
     url?: string;
-    technologies?: SvgIconProps[];
+    technologies?: Icon[];
 };
 
-export type SvgIconProps = {
-    svgContent: FC<SVGProps<SVGSVGElement>>;
-}
-
-export type ImageIconProps = {
-    src: string;
-    alt: string;
-}
-
-export type Language = {
-    display: string;
-    code: string
+export type Section = {
+    linkName: string;
+    icon: Icon;
+    name: string;
+    content: ({ t }: { t: Dictionary; }) => JSX.Element;
 }

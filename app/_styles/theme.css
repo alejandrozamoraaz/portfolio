@@ -1,0 +1,120 @@
+body {
+    color: var(--font-color);
+    accent-color: var(--primary-color);
+    background: linear-gradient(to bottom,
+            color-mix(in srgb, var(--primary-color) 13%, var(--base-color)),
+            color-mix(in srgb, var(--secondary-color) 13%, var(--base-color)),
+            var(--base-color));
+}
+
+.gradient-color {
+    background: linear-gradient(to right,
+            var(--primary-highlight-color) 0%,
+            var(--secondary-color) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.primary-color {
+    color: var(--primary-color);
+}
+
+.primary-highlight-color {
+    color: var(--primary-highlight-color);
+}
+
+.secondary-highlight-color {
+    color: var(--secondary-highlight-color);
+}
+
+.wrapper {
+    .progress-wrapper {
+        background-color: var(--primary-color);
+
+        .progress-bar-fill-wrapper,
+        .progress-bar-end-indicator-wrapper {
+            background-color: color-mix(in srgb, var(--primary-color) 50%, var(--surface-color));
+        }
+    }
+}
+
+.header-cover {
+    .img-under-content {
+        mask-image: linear-gradient(black 80%, transparent);
+        filter: opacity(0.5) blur(1px) saturate(120%);
+
+        @media (min-width: 700px) {
+            filter: none;
+        }
+    }
+
+    .blob-figure {
+        background: linear-gradient(33deg, color-mix(in srgb, var(--primary-color) 50%, var(--base-color)), color-mix(in srgb, var(--secondary-color) 50%, var(--base-color)));
+        opacity: 0.5;
+        filter: blur(15px) saturate(120%);
+
+        /* For large screens */
+        @media (min-width: 700px) {
+            opacity: 0.8;
+            filter: blur(3px) saturate(120%);
+        }
+    }
+}
+
+.button {
+    -webkit-tap-highlight-color: transparent;
+    color: var(--font-color);
+}
+
+.icon-button {
+    color: var(--secondary-highlight-color);
+    background-color: color-mix(in srgb, var(--secondary-color) 10%, var(--base-color));
+
+    &:hover {
+        outline: 2px solid var(--secondary-highlight-color);
+    }
+}
+
+.float-button {
+    background-color: color-mix(in srgb, var(--primary-color) 90%, var(--base-color));
+
+    &:hover {
+        outline: 2px solid var(--primary-highlight-color);
+    }
+}
+
+.text-button {
+    color: var(--base-color);
+    background-color: var(--surface-color);
+    border: 3px solid transparent;
+
+    &:hover {
+        background: linear-gradient(to right, var(--surface-color), var(--surface-color)) padding-box,
+            linear-gradient(71deg, var(--secondary-color), var(--primary-color)) border-box;
+
+        border: 3px solid transparent;
+    }
+}
+
+.chip {
+    color: var(--surface-color);
+    background-color: color-mix(in srgb, var(--secondary-color) 6%, var(--base-color));
+}
+
+.select {
+
+    .current-option,
+    .select-options {
+        background-color: color-mix(in srgb, var(--base-color), transparent);
+        backdrop-filter: blur(13px) saturate(120%);
+    }
+}
+
+.project-card {
+    .project-card-detail {
+        background: linear-gradient(69deg, var(--base-color), color-mix(in srgb, var(--secondary-color) 13%, var(--base-color)), var(--base-color)) padding-box,
+            linear-gradient(69deg, var(--secondary-color), var(--primary-color)) border-box;
+        border: 2px solid transparent;
+    }
+}

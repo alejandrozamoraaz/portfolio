@@ -1,7 +1,9 @@
+'use client'
+
 import Link from 'next/link'
 import Text from '@/app/_components/text/text'
 
-import { event } from '@/app/_lib/utils/gtag'
+import { event } from '@/app/_lib/helpers/gtag'
 
 export default function TextButton({
     href,
@@ -22,7 +24,7 @@ export default function TextButton({
             href={href}
             target={isHrefExternal ? "_blank" : "_self"}
         >
-            <Text text={text} />
+            <Text text={text} type="body" />
         </Link>
     );
 }

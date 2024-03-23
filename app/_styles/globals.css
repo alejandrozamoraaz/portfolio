@@ -1,0 +1,331 @@
+:root {
+  --base-color: #151515;
+  --surface-color: #f5f5f5;
+  --primary-color: #890A9B;
+  --secondary-color: #173CC2;
+  --primary-highlight-color: color-mix(in srgb, var(--primary-color) 60%, var(--surface-color));
+  --secondary-highlight-color: color-mix(in srgb, var(--secondary-color) 60%, var(--surface-color));
+  --font-color: color-mix(in srgb, var(--primary-color) 17%, var(--surface-color));
+
+  --font-size-headline: 48px;
+  --font-size-title: 32px;
+  --font-size-body-large: 24px;
+  --font-size-body: 16px;
+  --font-size-body-small: 12px;
+
+  --brand-size: 46px;
+  --header-size: 64px;
+
+  --icon-normal-size: 24px;
+  --icon-large-size: 48px;
+  --icon-extra-large-size: 80px;
+
+  --icon-button-size: 38px;
+  --icon-button-padding: 3px;
+  --icon-button-border-radius: 50%;
+
+  --float-button-size: 52px;
+  --float-button-padding: 3px;
+  --float-button-border-radius: 16px;
+
+  --text-button-size: 32px;
+  --text-button-padding: 4px;
+  --text-button-border-radius: 16px;
+
+  --border-radius-small: 8px;
+  --border-radius: 24px;
+  --border-radius-large: 45px;
+
+  --padding-small: 8px;
+  --padding: 16px;
+  --padding-large: 24px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.line-height-large {
+  line-height: 2;
+}
+
+.overflow-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.display-inline {
+  display: inline;
+}
+
+.m-x {
+  margin-left: var(--padding);
+  margin-right: var(--padding);
+}
+
+.m-y-large {
+  margin-top: var(--padding-large);
+  margin-bottom: var(--padding-large);
+}
+
+.m-t-extra-large {
+  margin-top: calc(var(--padding-large) * 4);
+}
+
+.p-y-large {
+  padding-top: var(--padding-large);
+  padding-bottom: var(--padding-large);
+}
+
+.p-y {
+  padding-top: var(--padding);
+  padding-bottom: var(--padding);
+}
+
+.p-y-small {
+  padding-top: var(--padding-small);
+  padding-bottom: var(--padding-small);
+}
+
+.p-x-large {
+  padding-right: var(--padding-large);
+  padding-left: var(--padding-large);
+}
+
+.p-x {
+  padding-right: var(--padding);
+  padding-left: var(--padding);
+}
+
+.p-x-small {
+  padding-right: var(--padding-small);
+  padding-left: var(--padding-small);
+}
+
+.gap {
+  gap: var(--padding);
+}
+
+.gap-small {
+  gap: var(--padding-small);
+}
+
+.gap-large {
+  gap: var(--padding-large)
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: var(--padding-small);
+}
+
+.col {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.main-axis-center {
+  display: flex;
+  justify-content: center;
+}
+
+.main-axis-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cross-axis-center {
+  display: flex;
+  align-items: center;
+}
+
+.header-cover {
+  position: relative;
+  min-height: 500px;
+  height: calc(100svh - var(--header-size) - var(--padding));
+  overflow: hidden;
+
+  /* For large screens */
+  @media (min-width: 700px) {
+    height: calc(100vh - var(--header-size) - var(--padding));
+    overflow: visible;
+  }
+
+  .img-under-content {
+    position: absolute;
+    aspect-ratio: 3/4;
+    z-index: -1;
+    top: 6%;
+    right: -6%;
+
+    /* For large screens */
+    @media (min-width: 700px) {
+      right: 7%;
+    }
+  }
+
+  .blob-figure {
+    position: absolute;
+    border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
+    display: block;
+    z-index: -2;
+    right: var(--padding-small);
+    width: 350px;
+    height: 350px;
+    bottom: 15%;
+    top: auto;
+
+    /* For large screens */
+    @media (min-width: 700px) {
+      width: 600px;
+      height: 600px;
+      bottom: auto;
+      top: 7.5%;
+    }
+  }
+}
+
+.button {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-button {
+  width: var(--icon-button-size);
+  height: var(--icon-button-size);
+  padding: var(--icon-button-padding);
+  border-radius: var(--icon-button-border-radius);
+}
+
+.float-button {
+  width: var(--float-button-size);
+  height: var(--float-button-size);
+  padding: var(--float-button-padding);
+  border-radius: var(--float-button-border-radius);
+}
+
+.text-button {
+  width: 100%;
+  height: var(--text-button-size);
+  border-radius: var(--text-button-border-radius);
+  padding: var(--text-button-padding) calc(var(--text-button-padding) * 3);
+  text-decoration: none;
+}
+
+.icon {
+  width: var(--icon-normal-size);
+  height: var(--icon-normal-size);
+}
+
+.icon-large {
+  width: var(--icon-large-size);
+  height: var(--icon-large-size);
+}
+
+.icon-extra-large {
+  width: var(--icon-extra-large-size);
+  height: var(--icon-extra-large-size);
+}
+
+.chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px var(--padding-small);
+  border-radius: var(--border-radius-small);
+  max-width: max-content;
+}
+
+.select {
+  position: relative;
+
+  .current-option {
+    border-radius: var(--border-radius-small);
+    padding: var(--text-button-padding) calc(var(--text-button-padding) * 3);
+
+    .arrow-icon {
+      margin-left: var(--padding-small);
+    }
+  }
+
+  .select-options {
+    position: absolute;
+    top: calc(100% + var(--padding-small));
+    width: 100%;
+    border-radius: var(--border-radius-small);
+    z-index: 3;
+
+    .select-option {
+      padding: var(--padding);
+    }
+  }
+}
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.badge-card {
+  border-radius: var(--border-radius);
+
+  img {
+    aspect-ratio: 1;
+  }
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    .project-card-cover {
+      opacity: 0;
+    }
+
+    .project-card-detail {
+      opacity: 1;
+    }
+  }
+
+  .project-card-cover {
+    opacity: 1;
+
+    img {
+      aspect-ratio: 16/9;
+      border-radius: var(--border-radius-large);
+    }
+  }
+
+  .project-card-detail {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    border-radius: var(--border-radius-large);
+
+    opacity: 0;
+  }
+}

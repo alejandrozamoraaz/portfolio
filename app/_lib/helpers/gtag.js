@@ -1,8 +1,12 @@
+'use client'
+
 import Script from 'next/script'
+import { useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 
 export const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID;
 
-export function Init() {
+export function init() {
     return (
         process.env.NODE_ENV === 'production' ?
             <>
@@ -25,6 +29,15 @@ export function Init() {
             : <></>
     );
 };
+
+export default function Default() {
+    const pathname = usePathname();
+
+    useEffect(() => {
+        pageview(pathname);
+    }, [pathname]);
+    return (<></>);
+}
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages
 export const pageview = (url, location) => {

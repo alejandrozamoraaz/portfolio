@@ -1,0 +1,65 @@
+{
+  "common": {
+    "title": "Portfolio of Junior Alejandro Zamora",
+    "description": "Professional portfolio of Software Engineer Junior Alejandro Zamora",
+    "autor": "Junior Alejandro Zamora",
+    "keywords": [
+      "blog",
+      "modern portfolio",
+      "responsive portfolio",
+      "resume",
+      "cv",
+      "personal portfolio",
+      "professional portfolio",
+      "creative portfolio"
+    ],
+    "copied_to_clipboard": "Copied to clipboard",
+    "developed_in": "Developed in Next JS and TypeScript",
+    "tag_google_analytics": "Using Google Analytics",
+    "see": "See",
+    "see_project": "See project",
+    "label_position": "Ing.",
+    "iam": "I am",
+    "primary_position": "Software Engineer"
+  },
+  "projects_section": {
+    "title": "Projects",
+    "projects_data_placeholder": "❗The data included in the projects is placeholders",
+    "private": "Private",
+    "graphic_design_ui_ux": "Graphic design, UI & UX",
+    "full_stack_development": "Full Stack Development",
+    "prototipo-de-gestor-de-expedientes": {
+      "title": "Prototype of Clinical Records Manager",
+      "description00": "Medical records system designed in Adobe XD, intended for three types of users: the patient, who will have access to the visualization of their medical history using their ID, the doctor who will input the information, and an administrator who manages one or several clinics.",
+      "description01": "All users have the ability to view their statistics. The doctor will have templates for different types of consultations and can search for the patient, but to streamline the process, it is recommended that the patient shares their generated QR code with the doctor. Every step or change in the patient's status will be saved for future viewing.",
+      "description02": "At the system level, it is designed as an interconnected one, where each center, institution, or clinic manages its own assets such as doctors or patients, but shares information among them under appropriate standards and security. This is to provide a better experience and monitoring of patients' records."
+    },
+    "gestor-de-expedientes-clinicos-citas-e-inventario": {
+      "title": "Manager of Clinical Records, Appointments, and Inventory",
+      "description00": "Alejandro participated collaboratively throughout the entire life cycle, including requirements and process analysis, architecture and database design, development, and implementation of the clinical records management system, appointment administration, medication inventory management, and visualization of statistics and reports.",
+      "description01": "The system was developed in ASP.NET in conjunction with the DevExpress library and Report Viewer for report generation, powered by a SQL Server database."
+    },
+    "aplicacion-web-para-la-calidad": {
+      "title": "Web Application for Quality",
+      "description00": "Alejandro participated collaboratively throughout the entire life cycle, including requirements and process analysis, process diagram design, architecture and database design, interface development, and the creation of different modules for the quality management system under ISO 9001:2015 standards.",
+      "description01": "The system was developed in Blazor WebAssembly, also functioning as a progressive application, in conjunction with the MudBlazor design library, and is powered by a SQL Server database.",
+      "description02": "See more at:"
+    }
+  },
+  "about_section": {
+    "title": "About",
+    "badges": "Badges",
+    "about000": "Junior Alejandro Zamora Navarrete",
+    "about011": " Information Systems Engineer",
+    "about012": " graduated from the Autonomous University of Nicaragua in 2023. Currently holding the position of ",
+    "about013": "Software Engineer",
+    "about014": ", including roles as a ",
+    "about015": "Full-Stack Developer and UI/UX Designer.",
+    "about02": "Specialist Technician in programming at the National Technological Institute - INATEC, among other certifications displayed on LinkedIn, some of which include: Scrum Foundation, Advanced Power BI, and Network Infrastructure.",
+    "about03": "His versatility and forward-thinking approach have led him to become familiar with and extend his knowledge to other fields such as AI, video games, data analysis, and other related topics."
+  },
+  "contact_section": {
+    "title": "Contact",
+    "see_more": "See more about Alejandro"
+  }
+}

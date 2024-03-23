@@ -1,10 +1,9 @@
 'use client'
 
 import Link from 'next/link'
-import Icon from '@/app/_components/icon'
-import { SvgIconProps, ImageIconProps } from '@/app/_lib/definitions'
 
-import { event } from '@/app/_lib/utils/gtag'
+import { event } from '@/app/_lib/helpers/gtag'
+import { ReactElement } from 'react';
 
 export default function IconButton({
     title,
@@ -13,8 +12,7 @@ export default function IconButton({
     onClick,
     isFloat,
     classButton,
-    imageIconProps,
-    svgIconProps
+    children,
 }: {
     title: string;
     href?: string;
@@ -22,8 +20,7 @@ export default function IconButton({
     onClick?: () => void;
     isFloat?: boolean;
     classButton?: string;
-    imageIconProps?: ImageIconProps;
-    svgIconProps?: SvgIconProps;
+    children: ReactElement<SVGAElement> | ReactElement<SVGSVGElement>;
 }) {
     const handleClick = () => {
         const action = href ? 'href' : 'click';
@@ -37,16 +34,14 @@ export default function IconButton({
         className: `button ${isFloat ? 'float-button' : 'icon-button'} ${classButton}`
     };
 
-    const IconButton = <Icon imageIconProps={imageIconProps} svgIconProps={svgIconProps} />
-
     return (
         href ?
-            <Link href={href} rel={isHrefExternal ? "noreferrer" : undefined} target={isHrefExternal ? "_blank" : "_self"} {...buttonProps}>
-                {IconButton}
+            <Link {...buttonProps} href={href} rel={isHrefExternal ? "noreferrer" : undefined} target={isHrefExternal ? "_blank" : "_self"}>
+                {children}
             </Link>
             :
             <button type="button" {...buttonProps}>
-                {IconButton}
+                {children}
             </button>
     );
 }
