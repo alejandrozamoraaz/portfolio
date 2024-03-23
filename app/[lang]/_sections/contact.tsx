@@ -20,7 +20,7 @@ export default function Contact({ t }: {
                 <ContactButtons t={t.common} actionsClass="main-axis-center p-y-small" />
                 <div className="col gap-small m-y-large">
                     <Text text={t.contact_section.see_more} type="body" />
-                    <TextButton href="https://bio.site/alejandrozamora" text="bio.site" isHrefExternal={true} />
+                    <TextButton href="https://linktr.ee/alejandrozamoraaz?subscribe" text="linktr.ee" isHrefExternal={true} />
                 </div>
             </div>
         </div>
