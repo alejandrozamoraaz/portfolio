@@ -15,14 +15,14 @@ export default function About(
         <div className="col gap">
             <div>
                 <Text text={t.about_section.about000} type="body" classText="display-inline line-height-large" />
-                <Text text={t.about_section.about011} type="bodyLarge" classText="primary-color display-inline" />
+                <Text text={t.about_section.about011} type="bodyLarge" classText="display-inline gradient-color" />
                 <Text text={t.about_section.about012} type="body" classText="display-inline line-height-large" />
-                <Text text={t.about_section.about013} type="bodyLarge" classText="primary-highlight-color display-inline" />
+                <Text text={t.about_section.about013} type="bodyLarge" classText="display-inline primary-color" />
                 <Text text={t.about_section.about014} type="body" classText="display-inline line-height-large" />
-                <Text text={t.about_section.about015} type="body" classText="secondary-highlight-color display-inline line-height-large" />
+                <Text text={t.about_section.about015} type="body" classText="display-inline line-height-large secondary-color" />
             </div>
 
-            <div className="flex line-height-large">
+            <div className="flex gap line-height-large">
                 <div className="col">
                     <Text text={t.about_section.about02} type="body" />
                 </div>

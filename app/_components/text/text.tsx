@@ -2,11 +2,11 @@ import style from './text.module.css'
 
 export default function Text({
   text,
-  type,
+  type = "body",
   classText,
 }: {
   text: string;
-  type: "headline" | "title" | "bodyLarge" | "body" | "bodySmall";
+  type?: "headline" | "title" | "bodyLarge" | "body" | "bodySmall";
   classText?: string;
 }) {
   const textType = (() => {

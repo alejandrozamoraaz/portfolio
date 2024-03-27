@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "2.3.58",
+  "version": "2.4.16",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -14,8 +14,7 @@
     "negotiator": "^0.6.3",
     "next": "^14.1.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "sharp": "^0.33.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/negotiator": "^0.6.3",

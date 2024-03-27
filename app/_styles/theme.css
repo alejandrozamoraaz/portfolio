@@ -1,15 +1,11 @@
 body {
     color: var(--font-color);
-    accent-color: var(--primary-color);
-    background: linear-gradient(to bottom,
-            color-mix(in srgb, var(--primary-color) 13%, var(--base-color)),
-            color-mix(in srgb, var(--secondary-color) 13%, var(--base-color)),
-            var(--base-color));
+    background-color: var(--base-color);
 }
 
 .gradient-color {
     background: linear-gradient(to right,
-            var(--primary-highlight-color) 0%,
+            var(--primary-color),
             var(--secondary-color) 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -20,56 +16,42 @@ body {
     color: var(--primary-color);
 }
 
-.primary-highlight-color {
-    color: var(--primary-highlight-color);
-}
-
-.secondary-highlight-color {
-    color: var(--secondary-highlight-color);
+.secondary-color {
+    color: var(--secondary-color);
 }
 
 .wrapper {
     .progress-wrapper {
-        background-color: var(--primary-color);
+        background-color: color-mix(in var(--color-mix-type), var(--surface-color) 20%, var(--base-color));
 
         .progress-bar-fill-wrapper,
         .progress-bar-end-indicator-wrapper {
-            background-color: color-mix(in srgb, var(--primary-color) 50%, var(--surface-color));
+            background-color: var(--primary-highlight-color);
         }
     }
 }
 
 .header-cover {
+    background: linear-gradient(var(--base-color), color-mix(in var(--color-mix-type), var(--secondary-highlight-color) 13%, var(--base-color)), var(--base-color));
+
     .img-under-content {
-        mask-image: linear-gradient(black 80%, transparent);
-        filter: opacity(0.5) blur(1px) saturate(120%);
-
-        @media (min-width: 700px) {
-            filter: none;
-        }
-    }
-
-    .blob-figure {
-        background: linear-gradient(33deg, color-mix(in srgb, var(--primary-color) 50%, var(--base-color)), color-mix(in srgb, var(--secondary-color) 50%, var(--base-color)));
-        opacity: 0.5;
-        filter: blur(15px) saturate(120%);
+        mask-image: linear-gradient(transparent, black, transparent 60%);
+        filter: opacity(0.1) saturate(30%);
 
         /* For large screens */
         @media (min-width: 700px) {
-            opacity: 0.8;
-            filter: blur(3px) saturate(120%);
+            filter: opacity(0.2) saturate(50%);
         }
     }
 }
 
 .button {
     -webkit-tap-highlight-color: transparent;
-    color: var(--font-color);
 }
 
 .icon-button {
     color: var(--secondary-highlight-color);
-    background-color: color-mix(in srgb, var(--secondary-color) 10%, var(--base-color));
+    background-color: color-mix(in var(--color-mix-type), var(--secondary-color) 10%, var(--base-color));
 
     &:hover {
         outline: 2px solid var(--secondary-highlight-color);
@@ -77,7 +59,8 @@ body {
 }
 
 .float-button {
-    background-color: color-mix(in srgb, var(--primary-color) 90%, var(--base-color));
+    color: var(--primary-highlight-color);
+    background-color: color-mix(in var(--color-mix-type), var(--primary-color) 90%, var(--base-color));
 
     &:hover {
         outline: 2px solid var(--primary-highlight-color);
@@ -87,34 +70,27 @@ body {
 .text-button {
     color: var(--base-color);
     background-color: var(--surface-color);
-    border: 3px solid transparent;
 
     &:hover {
-        background: linear-gradient(to right, var(--surface-color), var(--surface-color)) padding-box,
-            linear-gradient(71deg, var(--secondary-color), var(--primary-color)) border-box;
-
-        border: 3px solid transparent;
+        outline: 3px solid var(--primary-highlight-color);
     }
 }
 
 .chip {
     color: var(--surface-color);
-    background-color: color-mix(in srgb, var(--secondary-color) 6%, var(--base-color));
+    background-color: color-mix(in var(--color-mix-type), var(--secondary-color) 3%, var(--base-color));
 }
 
 .select {
 
     .current-option,
     .select-options {
-        background-color: color-mix(in srgb, var(--base-color), transparent);
-        backdrop-filter: blur(13px) saturate(120%);
+        background-color: var(--base-color);
     }
 }
 
 .project-card {
     .project-card-detail {
-        background: linear-gradient(69deg, var(--base-color), color-mix(in srgb, var(--secondary-color) 13%, var(--base-color)), var(--base-color)) padding-box,
-            linear-gradient(69deg, var(--secondary-color), var(--primary-color)) border-box;
-        border: 2px solid transparent;
+        border: 3px solid var(--primary-highlight-color);
     }
 }

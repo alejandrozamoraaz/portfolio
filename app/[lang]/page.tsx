@@ -21,7 +21,7 @@ export default async function Home({
           <section key={link.linkName} id={link.linkName} className="col m-x gap-large m-t-extra-large">
             <div className="flex gap m-y-large cross-axis-center main-axis-center">
               <link.icon className="icon-extra-large" />
-              <Text text={link.name} type="headline" />
+              <Text text={link.name} type="title" />
             </div>
 
             <link.content t={dictionary} />

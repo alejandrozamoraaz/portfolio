@@ -16,18 +16,20 @@ export default function ProjectCard({
     return (
         <div className="project-card">
             <div className="project-card-cover">
-                <Image
-                    width={300}
-                    height={230}
-                    src={project.image}
-                    alt={project.title}
-                />
+                <div className="main-axis-center">
+                    <Image
+                        width={300}
+                        height={230}
+                        src={project.image}
+                        alt={project.title}
+                    />
+                </div>
 
-                <div className="col gap p-y-small">
+                <div className="col gap p-y p-x-small">
                     <Text classText="overflow-text" text={project.title} type="bodyLarge" />
 
                     {project.technologies && (
-                        <div className="flex">
+                        <div className="flex p-x">
                             {
                                 project.technologies.map((Technology, index) => (
                                     <Technology key={index} className="icon" />
@@ -42,10 +44,6 @@ export default function ProjectCard({
                 <div className="col gap p-y p-x-small">
                     <Text text={project.title} type="bodyLarge" />
 
-                    {project.description.map((paragraph, index) => (
-                        <Text key={index} type="body" text={paragraph} />
-                    ))}
-
                     <div className="flex">
                         <Chip text={project.year.toString()} />
 
@@ -55,6 +53,10 @@ export default function ProjectCard({
                             <Chip text={t.projects_section.private} />
                         )}
                     </div>
+
+                    {project.description.map((paragraph, index) => (
+                        <Text key={index} type="body" text={paragraph} />
+                    ))}
                 </div>
             </div>
         </div>

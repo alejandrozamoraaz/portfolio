@@ -1,15 +1,16 @@
 :root {
-  --base-color: #151515;
-  --surface-color: #f5f5f5;
-  --primary-color: #890A9B;
-  --secondary-color: #173CC2;
-  --primary-highlight-color: color-mix(in srgb, var(--primary-color) 60%, var(--surface-color));
-  --secondary-highlight-color: color-mix(in srgb, var(--secondary-color) 60%, var(--surface-color));
-  --font-color: color-mix(in srgb, var(--primary-color) 17%, var(--surface-color));
+  --color-mix-type: srgb;
+  --base-color: #000000;
+  --surface-color: #ffffff;
+  --primary-color: #641faf;
+  --secondary-color: #bf337c;
+  --primary-highlight-color: color-mix(in var(--color-mix-type), var(--primary-color), var(--surface-color));
+  --secondary-highlight-color: color-mix(in var(--color-mix-type), var(--secondary-color), var(--surface-color));
+  --font-color: color-mix(in var(--color-mix-type), var(--primary-color) 25%, var(--surface-color));
 
-  --font-size-headline: 48px;
-  --font-size-title: 32px;
-  --font-size-body-large: 24px;
+  --font-size-headline: 64px;
+  --font-size-title: 36px;
+  --font-size-body-large: 20px;
   --font-size-body: 16px;
   --font-size-body-small: 12px;
 
@@ -154,45 +155,23 @@
 .header-cover {
   position: relative;
   min-height: 500px;
-  height: calc(100svh - var(--header-size) - var(--padding));
+  height: calc(100svh - var(--header-size));
   overflow: hidden;
 
   /* For large screens */
   @media (min-width: 700px) {
-    height: calc(100vh - var(--header-size) - var(--padding));
-    overflow: visible;
+    height: calc(100vh - var(--header-size));
   }
 
   .img-under-content {
     position: absolute;
-    aspect-ratio: 3/4;
     z-index: -1;
-    top: 6%;
-    right: -6%;
+    top: 5%;
+    right: -80%;
 
     /* For large screens */
     @media (min-width: 700px) {
-      right: 7%;
-    }
-  }
-
-  .blob-figure {
-    position: absolute;
-    border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
-    display: block;
-    z-index: -2;
-    right: var(--padding-small);
-    width: 350px;
-    height: 350px;
-    bottom: 15%;
-    top: auto;
-
-    /* For large screens */
-    @media (min-width: 700px) {
-      width: 600px;
-      height: 600px;
-      bottom: auto;
-      top: 7.5%;
+      right: initial;
     }
   }
 }
@@ -290,12 +269,13 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 300px);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .project-card {
   position: relative;
   overflow: hidden;
+  height: 320px;
 
   &:hover {
     .project-card-cover {
@@ -309,8 +289,10 @@
 
   .project-card-cover {
     opacity: 1;
+    height: 100%;
 
     img {
+      object-fit: cover;
       aspect-ratio: 16/9;
       border-radius: var(--border-radius-large);
     }
@@ -325,7 +307,6 @@
     overflow-y: scroll;
     scrollbar-width: none;
     border-radius: var(--border-radius-large);
-
     opacity: 0;
   }
 }

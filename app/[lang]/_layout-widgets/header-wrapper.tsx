@@ -10,7 +10,7 @@ export default function HeaderWrapper({ t }: {
         <header id="Header" className="flex cross-axis-center main-axis-between header-wrapper">
             <div className="flex brand">
                 <Image
-                    src="https://res.cloudinary.com/dlyfwab7x/image/upload/v1704135888/vtqcg6xuptsud5hkx1te.png"
+                    src="/v1704135888/vtqcg6xuptsud5hkx1te.png"
                     alt="Logo Alejandro Zamora"
                     width={32}
                     height={21}

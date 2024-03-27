@@ -16,9 +16,9 @@ export default function Projects({ t }: {
       {projectTypes(t.projects_section).map((type, index) => {
         return (
           <div key={index} className="p-y col gap">
-            <Text classText="p-y" type="title" text={type.type} />
+            <Text classText="p-y" type="bodyLarge" text={type.type} />
 
-            <div className="projects-grid gap-large main-axis-center">
+            <div className="projects-grid gap-large">
               {
                 type.projects.map((project, index) => (
                   <ProjectCard key={index} t={t} project={project} />
