@@ -164,15 +164,10 @@
   }
 
   .img-under-content {
+    pointer-events: none;
     position: absolute;
     z-index: -1;
-    top: 5%;
-    right: -80%;
-
-    /* For large screens */
-    @media (min-width: 700px) {
-      right: initial;
-    }
+    top: 0;
   }
 }
 
@@ -241,9 +236,16 @@
     }
   }
 
+  &:hover {
+    .select-options {
+      display: block;
+    }
+  }
+
   .select-options {
+    display: none;
     position: absolute;
-    top: calc(100% + var(--padding-small));
+    top: 100%;
     width: 100%;
     border-radius: var(--border-radius-small);
     z-index: 3;

@@ -22,11 +22,11 @@ export default function Header({ t }: {
             <ContactButtons t={t} />
 
             <Image
-                src="/v1711059802/20240321133703341_syo1kx.png"
+                src="/20240321133703341_syo1kxh_dw9pem.png"
                 alt="Alejandro Zamora in a blue suit and white shirt in a blue circle with a blue background and a blue circle with a man in a white shirt and blue blazer."
                 className="img-under-content"
-                width={800}
-                height={900}
+                width={900}
+                height={674}
             />
         </section>
     )

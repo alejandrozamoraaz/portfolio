@@ -9,13 +9,13 @@ html {
         justify-content: space-between;
         position: fixed;
         width: 100%;
-        height: 3px;
+        height: 6px;
         z-index: 1;
 
         .progress-bar-fill-wrapper {
             width: inherit;
-            border-end-end-radius: 6px;
-            border-start-end-radius: 6px;
+            border-end-end-radius: 50px;
+            border-start-end-radius: 50px;
             transform-origin: left;
 
             [dir="rtl"] & {
@@ -24,7 +24,7 @@ html {
         }
 
         .progress-bar-end-indicator-wrapper {
-            width: 0.5em;
+            width: var(--padding-small);
             border-end-start-radius: 6px;
             border-start-start-radius: 6px;
         }

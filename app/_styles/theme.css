@@ -22,26 +22,19 @@ body {
 
 .wrapper {
     .progress-wrapper {
-        background-color: color-mix(in var(--color-mix-type), var(--surface-color) 20%, var(--base-color));
+        background-color: color-mix(in var(--color-mix-type), var(--primary-color) 20%, var(--base-color));
 
         .progress-bar-fill-wrapper,
         .progress-bar-end-indicator-wrapper {
-            background-color: var(--primary-highlight-color);
+            background-color: var(--primary-color);
         }
     }
 }
 
 .header-cover {
-    background: linear-gradient(var(--base-color), color-mix(in var(--color-mix-type), var(--secondary-highlight-color) 13%, var(--base-color)), var(--base-color));
-
     .img-under-content {
-        mask-image: linear-gradient(transparent, black, transparent 60%);
-        filter: opacity(0.1) saturate(30%);
-
-        /* For large screens */
-        @media (min-width: 700px) {
-            filter: opacity(0.2) saturate(50%);
-        }
+        mask-image: linear-gradient(black, transparent 90%);
+        filter: opacity(0.2);
     }
 }
 
@@ -82,10 +75,8 @@ body {
 }
 
 .select {
-
-    .current-option,
     .select-options {
-        background-color: var(--base-color);
+        background-color: color-mix(in var(--color-mix-type), var(--surface-color) 10%, var(--base-color));
     }
 }
 

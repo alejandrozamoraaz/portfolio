@@ -19,9 +19,7 @@ function getLocale(request: NextRequest): string | undefined {
     locales,
   );
 
-  const locale = matchLocale(languages, locales, i18n.defaultLocale);
-
-  return locale;
+  return matchLocale(languages, locales, i18n.defaultLocale.code);
 }
 
 export function middleware(request: NextRequest) {

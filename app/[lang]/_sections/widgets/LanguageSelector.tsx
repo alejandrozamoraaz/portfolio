@@ -18,14 +18,12 @@ export default function LanguageSelector({ t }: {
   const pathName = usePathname();
   const router = useRouter();
 
-  const currentLocale = i18n.locales.find((locale) => locale.code === pathName.split("/")[1]) || { display: "English", code: "en" };
+  const currentLocale = i18n.locales.find((locale) => locale.code === pathName.split("/")[1]) || i18n.defaultLocale;
 
-  const [isOpen, setIsOpen] = useState<boolean>(false);
   const [selectedOption, setSelectedOption] = useState<Locale>(currentLocale);
 
   const changeLanguage = (locale: Locale): string => {
     setSelectedOption(locale);
-    setIsOpen(false);
 
     event({ action: "select", category: "i18n", label: `Select language {${locale.code}}`, value: null });
 
@@ -35,25 +33,21 @@ export default function LanguageSelector({ t }: {
     return segments.join("/");
   };
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
     <div className="select">
-      <div className={`button current-option ${isOpen && 'open'}`} onClick={toggleDropdown}>
+      <div className={`button current-option`}>
         <Text type="body" text={selectedOption.display} />
-        <ArrowUp className={`icon arrow-icon ${isOpen && 'open'}`} />
+        <ArrowUp className={`icon arrow-icon`} />
       </div>
-      {isOpen && (
-        <div className="col select-options open">
-          {i18n.locales.map((locale, index) => (
-            <div key={index} className="button select-option" onClick={() => router.push(changeLanguage(locale))}>
-              <Text type="body" text={locale.display} />
-            </div>
-          ))}
-        </div>
-      )}
+
+      <div className="col select-options">
+        {i18n.locales.map((locale, index) => (
+          <div key={index} className="button select-option" onClick={() => router.push(changeLanguage(locale))}>
+            <Text type="body" text={locale.display} />
+          </div>
+        ))}
+      </div>
+
     </div>
   );
 }

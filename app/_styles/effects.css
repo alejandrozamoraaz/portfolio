@@ -25,11 +25,11 @@ html {
 
 @keyframes grow-progress-wrapper {
     from {
-        transform: scaleX(0);
+        transform: translateX(-100%);
     }
 
     to {
-        transform: scaleX(1);
+        transform: translateX(0);
     }
 }
 
@@ -84,20 +84,22 @@ html {
 }
 
 .select {
+    &:hover {
+        .current-option {
+            .arrow-icon {
+                transform: rotate(0deg);
+            }
+        }
+
+        .select-options {
+            animation: select-options-show 300ms linear forwards;
+        }
+    }
+
     .current-option {
         .arrow-icon {
             transform: rotate(180deg);
             transition: transform 0.3s;
-
-            &.open {
-                transform: rotate(0deg);
-            }
-        }
-    }
-
-    .select-options {
-        &.open {
-            animation: select-options-show 300ms linear forwards;
         }
     }
 }
