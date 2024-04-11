@@ -1,0 +1,13 @@
+.normalContainer {
+    width: var(--icon-button-size);
+    height: var(--icon-button-size);
+    padding: var(--icon-button-padding);
+    border-radius: var(--icon-button-border-radius);
+}
+
+.floatContainer {
+    width: var(--float-button-size);
+    height: var(--float-button-size);
+    padding: var(--float-button-padding);
+    border-radius: var(--float-button-border-radius);
+}

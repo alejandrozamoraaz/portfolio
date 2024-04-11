@@ -1,0 +1,26 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+    height: 6px;
+    z-index: 1;
+}
+
+.barFill {
+    width: inherit;
+    border-end-end-radius: 50px;
+    border-start-end-radius: 50px;
+    transform-origin: left;
+}
+
+.barFill[dir="rtl"] & {
+    transform-origin: right;
+}
+
+.endIndicator {
+    width: var(--padding-small);
+    border-end-start-radius: 6px;
+    border-start-start-radius: 6px;
+}

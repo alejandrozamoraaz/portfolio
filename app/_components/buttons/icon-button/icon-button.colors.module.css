@@ -1,0 +1,17 @@
+.secondary {
+    color: var(--secondary-highlight-color);
+    background-color: color-mix(in var(--color-mix-type), var(--secondary-color) 90%, var(--base-color));
+}
+
+.secondary:hover {
+    background-color: color-mix(in var(--color-mix-type), var(--secondary-color) 60%, var(--base-color));
+}
+
+.primary {
+    color: var(--primary-highlight-color);
+    background: color-mix(in var(--color-mix-type), var(--primary-color) 90%, var(--base-color));
+}
+
+.primary:hover {
+    background: color-mix(in var(--color-mix-type), var(--primary-color) 60%, var(--base-color));
+}

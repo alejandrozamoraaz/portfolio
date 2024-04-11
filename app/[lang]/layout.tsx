@@ -1,20 +1,21 @@
-import '@/app/_styles/globals.css'
-import '@/app/_styles/layout.css'
-import '@/app/_styles/theme.css'
-import '@/app/_styles/effects.css'
+import '@/app/_styles/tokens.css';
+import '@/app/_styles/globals.css';
+import '@/app/_styles/theme.css';
+import '@/app/_styles/effects.css';
+import '@/app/_styles/custom.css';
 
-import type { Metadata } from 'next'
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import type { Metadata } from 'next';
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
-import { mainFont } from '@/app/fonts'
-import { i18n } from "@/i18n"
-import { getDictionary } from "@/get-dictionary"
+import { i18n } from "@/i18n";
+import { getDictionary } from "@/get-dictionary";
+import { mainFont } from '@/app/fonts';
+import * as gtag from '@/app/_lib/helpers/gtag';
 
-import * as gtag from '@/app/_lib/helpers/gtag'
-
-import ActionsWrapper from '@/app/[lang]/_layout-widgets/actions-wrapper'
-import HeaderWrapper from '@/app/[lang]/_layout-widgets/header-wrapper'
-import FooterWrapper from '@/app/[lang]/_layout-widgets/footer-wrapper'
+import Progress from '@/app/[lang]/_layout-widgets/progress/progress';
+import Actions from '@/app/[lang]/_layout-widgets/actions/actions';
+import Header from '@/app/[lang]/_layout-widgets/header/header';
+import Footer from '@/app/[lang]/_layout-widgets/footer';
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale.code }));
@@ -26,13 +27,13 @@ export async function generateMetadata(
     params: { lang: string };
   }
 ): Promise<Metadata> {
-  const dictionary = await getDictionary(params.lang);
+  const dictionary = (await getDictionary(params.lang)).common;
 
   return {
-    title: dictionary.common.title,
-    description: dictionary.common.description,
-    authors: [{ name: dictionary.common.autor }],
-    keywords: dictionary.common.keywords,
+    title: dictionary.title,
+    description: dictionary.description,
+    authors: [{ name: dictionary.autor }],
+    keywords: dictionary.keywords,
   }
 }
 
@@ -49,23 +50,20 @@ export default async function RootLayout({
       <head>
         <gtag.init />
       </head>
-      <body className={`${mainFont.className} antialiased wrapper`}>
+      <body className={`${mainFont.className} antialiased`}>
         <gtag.default />
 
-        <div className="progress-wrapper">
-          <div className="progress-bar-fill-wrapper"></div>
-          <div className="progress-bar-end-indicator-wrapper"></div>
-        </div>
+        <Progress />
 
-        <ActionsWrapper />
+        <Actions />
 
-        <HeaderWrapper t={dictionary} />
+        <Header />
 
         <main>
           {children}
         </main>
 
-        <FooterWrapper t={dictionary} />
+        <Footer t={dictionary} />
 
         <SpeedInsights />
       </body>

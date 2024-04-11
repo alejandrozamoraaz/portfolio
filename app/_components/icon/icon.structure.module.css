@@ -1,0 +1,14 @@
+.normal {
+    width: var(--icon-normal-size);
+    height: var(--icon-normal-size);
+}
+
+.large {
+    width: var(--icon-large-size);
+    height: var(--icon-large-size);
+}
+
+.extraLarge {
+    width: var(--icon-extra-large-size);
+    height: var(--icon-extra-large-size);
+}

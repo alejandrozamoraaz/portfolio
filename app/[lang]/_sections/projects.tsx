@@ -1,10 +1,10 @@
-import { projectTypes } from '@/app/_lib/data/projects'
+import { projectTypes } from '@/app/_lib/data/projects';
+import { Dictionary } from '@/app/_lib/definitions';
 
-import Text from '@/app/_components/text/text'
-import Chip from '@/app/_components/chip'
-import ProjectCard from '@/app/[lang]/_sections/widgets/project-card'
+import Text from '@/app/_components/text/text';
+import Chip from '@/app/_components/chip/chip';
 
-import { Dictionary } from '@/app/_lib/definitions'
+import ProjectCard from '@/app/[lang]/_sections/widgets/project-card';
 
 export default function Projects({ t }: {
   t: Dictionary;

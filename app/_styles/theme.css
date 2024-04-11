@@ -4,11 +4,11 @@ body {
 }
 
 .gradient-color {
-    background: linear-gradient(to right,
+    background: linear-gradient(33deg,
             var(--primary-color),
             var(--secondary-color) 100%);
-    background-clip: text;
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -20,68 +20,15 @@ body {
     color: var(--secondary-color);
 }
 
-.wrapper {
-    .progress-wrapper {
-        background-color: color-mix(in var(--color-mix-type), var(--primary-color) 20%, var(--base-color));
-
-        .progress-bar-fill-wrapper,
-        .progress-bar-end-indicator-wrapper {
-            background-color: var(--primary-color);
-        }
-    }
-}
-
-.header-cover {
-    .img-under-content {
-        mask-image: linear-gradient(black, transparent 90%);
-        filter: opacity(0.2);
-    }
-}
-
 .button {
     -webkit-tap-highlight-color: transparent;
-}
 
-.icon-button {
-    color: var(--secondary-highlight-color);
-    background-color: color-mix(in var(--color-mix-type), var(--secondary-color) 10%, var(--base-color));
-
-    &:hover {
-        outline: 2px solid var(--secondary-highlight-color);
+    &::after {
+        background-image: radial-gradient(circle, #000 10%, transparent 10.01%);
+        opacity: 0;
     }
-}
 
-.float-button {
-    color: var(--primary-highlight-color);
-    background-color: color-mix(in var(--color-mix-type), var(--primary-color) 90%, var(--base-color));
-
-    &:hover {
-        outline: 2px solid var(--primary-highlight-color);
-    }
-}
-
-.text-button {
-    color: var(--base-color);
-    background-color: var(--surface-color);
-
-    &:hover {
-        outline: 3px solid var(--primary-highlight-color);
-    }
-}
-
-.chip {
-    color: var(--surface-color);
-    background-color: color-mix(in var(--color-mix-type), var(--secondary-color) 3%, var(--base-color));
-}
-
-.select {
-    .select-options {
-        background-color: color-mix(in var(--color-mix-type), var(--surface-color) 10%, var(--base-color));
-    }
-}
-
-.project-card {
-    .project-card-detail {
-        border: 3px solid var(--primary-highlight-color);
+    &:active::after {
+        opacity: .5;
     }
 }

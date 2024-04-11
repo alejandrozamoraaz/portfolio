@@ -1,20 +1,14 @@
 'use client'
 
-import { useState } from "react"
-import { usePathname, useRouter } from "next/navigation"
+import { useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 
-import { type Locale, i18n } from "@/i18n"
+import { type Locale, i18n } from "@/i18n";
+import { event } from '@/app/_lib/helpers/gtag';
 
-import { event } from '@/app/_lib/helpers/gtag'
+import SelectButton from "@/app/_components/buttons/select-button/select-button";
 
-import { Dictionary } from "@/app/_lib/definitions"
-
-import { ArrowUp } from '@/app/_lib/icons'
-import Text from "@/app/_components/text/text"
-
-export default function LanguageSelector({ t }: {
-  t: Dictionary["common"];
-}) {
+export default function LanguageSelector() {
   const pathName = usePathname();
   const router = useRouter();
 
@@ -34,20 +28,15 @@ export default function LanguageSelector({ t }: {
   };
 
   return (
-    <div className="select">
-      <div className={`button current-option`}>
-        <Text type="body" text={selectedOption.display} />
-        <ArrowUp className={`icon arrow-icon`} />
-      </div>
-
-      <div className="col select-options">
-        {i18n.locales.map((locale, index) => (
-          <div key={index} className="button select-option" onClick={() => router.push(changeLanguage(locale))}>
-            <Text type="body" text={locale.display} />
-          </div>
-        ))}
-      </div>
-
-    </div>
+    <SelectButton
+      currentOption={{ display: selectedOption.display, value: selectedOption.code }}
+      options={
+        i18n.locales.map((locale) => ({
+          display: locale.display,
+          value: locale.code,
+        }))
+      }
+      onChange={(option) => router.push(changeLanguage({ display: option.display, code: option.value } as Locale))}
+    />
   );
 }

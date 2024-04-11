@@ -19,121 +19,20 @@ section {
 }
 
 html {
-    scroll-timeline: --progress-scroll-wrapper block;
+    scroll-timeline: --progress-scroll block;
     scroll-behavior: smooth;
 }
 
-@keyframes grow-progress-wrapper {
-    from {
-        transform: translateX(-100%);
+.button {
+    transform: translate3d(0, 0, 0);
+
+    &::after {
+        transform: scale(10, 10);
+        transition: transform .5s, opacity 1s;
     }
 
-    to {
-        transform: translateX(0);
-    }
-}
-
-.wrapper {
-    .progress-wrapper {
-        .progress-bar-fill-wrapper {
-            animation: grow-progress-wrapper auto linear;
-            animation-timeline: --progress-scroll-wrapper;
-        }
-    }
-
-    .header-wrapper {
-        .brand {
-            transition: transform ease 500ms;
-
-            &:hover {
-                transform: rotate(-180deg);
-            }
-        }
-    }
-
-    .actions-wrapper {
-        animation: actions-show-wrapper 300ms linear both;
-        animation-timeline: --progress-scroll-wrapper;
-        animation-range: entry 15% cover 20%;
-    }
-}
-
-@keyframes actions-show-wrapper {
-    0% {
-        opacity: 0;
-        display: none;
-        transform: translateY(100%);
-    }
-
-    30% {
-        transform: translateY(50%);
-        opacity: 1;
-    }
-
-    100% {
-        transform: translateY(0%);
-    }
-}
-
-.button:hover {
-    transition: outline ease-in 100ms;
-}
-
-.button:active {
-    transform: scale(0.9);
-}
-
-.select {
-    &:hover {
-        .current-option {
-            .arrow-icon {
-                transform: rotate(0deg);
-            }
-        }
-
-        .select-options {
-            animation: select-options-show 300ms linear forwards;
-        }
-    }
-
-    .current-option {
-        .arrow-icon {
-            transform: rotate(180deg);
-            transition: transform 0.3s;
-        }
-    }
-}
-
-@keyframes select-options-show {
-    0% {
-        opacity: 0;
-        transform: translateY(-10%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0%);
-    }
-}
-
-.project-card {
-    &:hover {
-        .project-card-cover {
-            transform: translateY(-100%);
-        }
-
-        .project-card-detail {
-            transform: translateY(0);
-        }
-    }
-
-    .project-card-cover {
-        transform: translateY(0);
-        transition: transform 0.3s, opacity 0.3s;
-    }
-
-    .project-card-detail {
-        transform: translateY(70%);
-        transition: transform 0.3s, opacity 0.3s;
+    &:active::after {
+        transform: scale(0, 0);
+        transition: 0s;
     }
 }

@@ -1,0 +1,7 @@
+.rotate {
+    transition: transform ease 500ms;
+}
+
+.rotate:hover {
+    transform: rotate(-69deg);
+}

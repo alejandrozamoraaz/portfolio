@@ -1,8 +1,13 @@
-import { type getDictionary } from "@/get-dictionary"
-
+import { type getDictionary } from "@/get-dictionary";
 export type Dictionary = Awaited<ReturnType<typeof getDictionary>>;
 
-export type Icon = React.FC<React.SVGProps<SVGSVGElement>>;
+export type IconType = JSX.Element;
+export type IconData = React.FC<React.SVGProps<SVGSVGElement>>;
+
+export type SelectItem = {
+    display: string;
+    value: string;
+};
 
 export type Badge = {
     name: string;
@@ -23,12 +28,12 @@ export type Project = {
     year: number;
     image: string;
     url?: string;
-    technologies?: Icon[];
+    technologies?: IconData[];
 };
 
 export type Section = {
     linkName: string;
-    icon: Icon;
+    icon: IconData;
     name: string;
     content: ({ t }: { t: Dictionary; }) => JSX.Element;
 }

@@ -1,0 +1,15 @@
+.container {
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    gap: var(--padding-small);
+    flex-direction: column;
+    left: auto;
+    right: var(--padding-small);
+    bottom: var(--padding);
+}
+
+.container[dir="rtl"] & {
+    left: var(--padding-small);
+    right: auto;
+}

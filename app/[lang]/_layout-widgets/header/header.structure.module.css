@@ -1,0 +1,17 @@
+.container {
+    height: var(--header-size);
+    padding: var(--padding-small);
+}
+
+.brand {
+    width: var(--brand-size);
+    height: var(--brand-size);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.actions {
+    gap: var(--padding-small);
+    align-items: center;
+}

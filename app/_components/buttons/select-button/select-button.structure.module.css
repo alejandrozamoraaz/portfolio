@@ -1,0 +1,32 @@
+.container {
+    position: relative;
+}
+
+.open.items {
+    display: block;
+}
+
+.arrowIcon {
+    margin-left: var(--padding-small);
+}
+
+.currentItem {
+    border-radius: var(--border-radius-small);
+    padding: var(--text-button-padding) calc(var(--text-button-padding) * 3);
+}
+
+.items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    margin-top: var(--padding-small);
+    width: 100%;
+    border-radius: var(--border-radius-small);
+    z-index: 3;
+}
+
+.item {
+    padding: var(--padding);
+    width: 100%;
+    border-radius: var(--border-radius-small);
+}

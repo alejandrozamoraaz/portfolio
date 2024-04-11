@@ -1,0 +1,22 @@
+.show {
+    animation: actions-show-wrapper 300ms linear both;
+    animation-timeline: --progress-scroll;
+    animation-range: entry 15% cover 20%;
+}
+
+@keyframes actions-show-wrapper {
+    0% {
+        opacity: 0;
+        display: none;
+        transform: translateY(100%);
+    }
+
+    30% {
+        transform: translateY(50%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}

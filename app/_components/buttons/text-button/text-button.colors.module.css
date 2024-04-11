@@ -1,0 +1,8 @@
+.surface {
+    color: var(--base-color);
+    background-color: color-mix(in var(--color-mix-type), var(--surface-color) 90%, var(--base-color));
+}
+
+.surface:hover {
+    background-color: color-mix(in var(--color-mix-type), var(--surface-color) 60%, var(--base-color));
+}

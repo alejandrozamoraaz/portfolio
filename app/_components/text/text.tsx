@@ -1,4 +1,4 @@
-import style from './text.module.css'
+import style from './text.module.css';
 
 export default function Text({
   text,

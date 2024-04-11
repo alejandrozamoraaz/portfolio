@@ -1,0 +1,43 @@
+:root {
+    --color-mix-type: srgb;
+    --base-color: #000000;
+    --surface-color: #ffffff;
+    --primary-color: #641faf;
+    --secondary-color: #bf337c;
+    --primary-highlight-color: color-mix(in var(--color-mix-type), var(--primary-color) 30%, var(--surface-color));
+    --secondary-highlight-color: color-mix(in var(--color-mix-type), var(--secondary-color), var(--surface-color));
+    --font-color: color-mix(in var(--color-mix-type), var(--primary-color) 25%, var(--surface-color));
+
+    --font-size-headline: 64px;
+    --font-size-title: 36px;
+    --font-size-body-large: 20px;
+    --font-size-body: 16px;
+    --font-size-body-small: 12px;
+
+    --brand-size: 46px;
+    --header-size: 64px;
+
+    --icon-normal-size: 24px;
+    --icon-large-size: 48px;
+    --icon-extra-large-size: 80px;
+
+    --icon-button-size: 38px;
+    --icon-button-padding: 3px;
+    --icon-button-border-radius: 50%;
+
+    --float-button-size: 52px;
+    --float-button-padding: 3px;
+    --float-button-border-radius: 16px;
+
+    --text-button-size: 32px;
+    --text-button-padding: 4px;
+    --text-button-border-radius: 16px;
+
+    --border-radius-small: 8px;
+    --border-radius: 24px;
+    --border-radius-large: 45px;
+
+    --padding-small: 8px;
+    --padding: 16px;
+    --padding-large: 24px;
+}

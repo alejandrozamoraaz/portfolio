@@ -1,0 +1,3 @@
+.fillBase {
+    background-color: color-mix(in var(--color-mix-type), var(--surface-color) 10%, var(--base-color));
+}

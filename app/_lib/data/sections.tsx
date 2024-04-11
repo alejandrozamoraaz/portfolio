@@ -1,9 +1,10 @@
-import Projects from '@/app/[lang]/_sections/projects'
-import About from '@/app/[lang]/_sections/about'
-import Contact from '@/app/[lang]/_sections/contact'
-import { Dictionary, Section } from '@/app/_lib/definitions'
+import { Dictionary, Section } from '@/app/_lib/definitions';
 
-import { Projects as projectsIcon, About as aboutICon, Contact as contactIcon } from '@/app/_lib/icons'
+import { Projects as projectsIcon, About as aboutICon, Contact as contactIcon } from '@/app/_lib/icons';
+
+import Projects from '@/app/[lang]/_sections/projects';
+import About from '@/app/[lang]/_sections/about';
+import Contact from '@/app/[lang]/_sections/contact';
 
 export const sections = (
     t: Dictionary

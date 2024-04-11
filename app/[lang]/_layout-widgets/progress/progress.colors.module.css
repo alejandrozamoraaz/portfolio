@@ -1,0 +1,7 @@
+.backgroundPrimary {
+    background-color: color-mix(in var(--color-mix-type), var(--primary-color) 20%, var(--base-color));
+}
+
+.foregroundPrimary {
+    background-color: var(--primary-color);
+}

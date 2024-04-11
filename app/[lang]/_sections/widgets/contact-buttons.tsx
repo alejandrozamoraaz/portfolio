@@ -1,28 +1,33 @@
-import IconButton from '@/app/_components/icon-button'
-import CopyToClipboard from '@/app/[lang]/_sections/widgets/copy-to-clipboard'
+'use client'
 
-import { Github, Linkedin } from '@/app/_lib/icons'
+import IconButton from '@/app/_components/buttons/icon-button/icon-button';
 
-import { Dictionary } from '@/app/_lib/definitions'
+import CopyToClipboard from '@/app/[lang]/_sections/widgets/copy-to-clipboard';
+
+import { Github, Linkedin } from '@/app/_lib/icons';
+import { gtagIconButtonHref } from '@/app/_lib/helpers/gtag-events';
+import { Dictionary } from '@/app/_lib/definitions';
+import Icon from '@/app/_components/icon/icon';
 
 export default function ContactButtons({ t, actionsClass: buttonGroupClass }: { t: Dictionary["common"], actionsClass?: string }) {
     return (
         <>
             <CopyToClipboard text="junioralejandrozamora.az@gmail.com" t={t} />
+
             <div className={`flex gap ${buttonGroupClass}`}>
                 <IconButton
-                    href="https://github.com/alejandrozamoraaz"
+                    hrefExternal="https://github.com/alejandrozamoraaz"
                     title="Go to link Github"
-                    isHrefExternal={true}
+                    onClick={() => gtagIconButtonHref("navigate_to_github_profile")}
                 >
-                    <Github className="icon" />
+                    <Icon iconData={Github} />
                 </IconButton>
                 <IconButton
-                    href="https://www.linkedin.com/in/alejandrozamoraaz"
+                    hrefExternal="https://www.linkedin.com/in/alejandrozamoraaz"
                     title="Go to link Linkedin"
-                    isHrefExternal={true}
+                    onClick={() => gtagIconButtonHref("navigate_to_linkedin_profile")}
                 >
-                    <Linkedin className="icon" />
+                    <Icon iconData={Linkedin} />
                 </IconButton>
             </div>
         </>

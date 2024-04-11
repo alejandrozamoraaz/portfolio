@@ -1,0 +1,8 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px var(--padding-small);
+    border-radius: var(--border-radius-small);
+    max-width: max-content;
+}
