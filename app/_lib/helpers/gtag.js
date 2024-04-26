@@ -12,7 +12,7 @@ export function init() {
             <>
                 <Script
                     async
-                    strategy="beforeInteractive"
+                    strategy="lazyOnload"
                     src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
                 />
 
@@ -25,6 +25,9 @@ export function init() {
               gtag('config', '${GA_TRACKING_ID}');
             `,
                 }} />
+
+                {Default()}
+
             </>
             : <></>
     );
@@ -33,10 +36,11 @@ export function init() {
 export default function Default() {
     const pathname = usePathname();
 
-    useEffect(() => {
-        pageview(pathname);
-    }, [pathname]);
-    return (<></>);
+    return (
+        useEffect(() => {
+            pageview(pathname);
+        }, [pathname])
+    );
 }
 
 // https://developers.google.com/analytics/devguides/collection/gtagjs/pages

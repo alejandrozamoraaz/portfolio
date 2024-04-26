@@ -1,17 +1,25 @@
 .container {
+    margin-top: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     height: var(--header-size);
-    padding: var(--padding-small);
+    padding-left: var(--padding-small);
+    padding-right: var(--padding-small);
 }
 
 .brand {
     width: var(--brand-size);
     height: var(--brand-size);
     border-radius: 50%;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .actions {
+    display: flex;
     gap: var(--padding-small);
     align-items: center;
 }

@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 2px var(--padding-small);
-    border-radius: var(--border-radius-small);
+    padding: var(--padding-small);
+    border-radius: var(--border-radius);
+    gap: var(--padding-small);
     max-width: max-content;
 }

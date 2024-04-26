@@ -1,26 +1,51 @@
 .bodySmall {
-    font-size: var(--font-size-body-small);
-    font-weight: 900;
+    font-size: var(--font-size-body-small-mobile);
+    font-weight: 400;
+
+    /* For large screens */
+    @media (min-width: 700px) {
+        font-size: var(--font-size-body-small-laptop);
+    }
 }
 
 .body {
-    font-size: var(--font-size-body);
-    font-weight: 400;
+    font-size: var(--font-size-body-mobile);
+    font-weight: 600;
+
+    /* For large screens */
+    @media (min-width: 700px) {
+        font-size: var(--font-size-body-laptop);
+    }
 }
 
 .bodyLarge {
-    font-size: var(--font-size-body-large);
-    font-weight: 400;
+    font-size: var(--font-size-body-large-mobile);
+    font-weight: 600;
+
+    /* For large screens */
+    @media (min-width: 700px) {
+        font-size: var(--font-size-body-large-laptop);
+    }
 }
 
 .title {
-    font-size: var(--font-size-title);
+    font-size: var(--font-size-title-mobile);
     font-weight: 900;
+
+    /* For large screens */
+    @media (min-width: 700px) {
+        font-size: var(--font-size-title-laptop);
+    }
 }
 
 .headline {
-    font-size: var(--font-size-headline);
-    font-weight: 600;
+    font-size: var(--font-size-headline-mobile);
+    font-weight: 900;
+
+    /* For large screens */
+    @media (min-width: 700px) {
+        font-size: var(--font-size-headline-laptop);
+    }
 }
 
 .textCenter {

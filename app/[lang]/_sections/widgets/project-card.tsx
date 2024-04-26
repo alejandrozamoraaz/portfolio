@@ -5,7 +5,6 @@ import { Dictionary, Project } from '@/app/_lib/definitions';
 import Text from '@/app/_components/text/text';
 import Chip from '@/app/_components/chip/chip';
 import TextButton from '@/app/_components/buttons/text-button/text-button';
-import Icon from '@/app/_components/icon/icon';
 import Card from '@/app/_components/card/card';
 
 export default function ProjectCard({
@@ -16,37 +15,27 @@ export default function ProjectCard({
     project: Project;
 }) {
     return (
-        <div className="project-card">
-            <Card>
-                <div className="main-axis-center">
+        <Card classCard="flex p-x p-y custom-project-card">
+            <div className="col flex-1">
+                <div className="col flex-1 gap main-axis-center cross-axis-center">
                     <Image
                         width={300}
                         height={230}
                         src={project.image}
                         alt={project.title}
                     />
-                </div>
-
-                <div className="col gap p-y p-x-small">
-                    <Text classText="overflow-text" text={project.title} type="bodyLarge" />
 
                     {project.technologies && (
                         <div className="flex p-x">
                             {
-                                project.technologies.map((technology, index) => (
-                                    <Icon key={index} iconData={technology} />
+                                project.technologies.map((Technology, index) => (
+                                    <Technology key={index} className="icon" />
                                 ))
                             }
                         </div>
                     )}
-                </div>
-            </Card>
 
-            <Card type="fillBase" borderSize="large" classCard="p-y p-x-small">
-                <div className="col gap">
-                    <Text text={project.title} type="bodyLarge" />
-
-                    <div className="flex">
+                    <div className="flex p-y-large">
                         <Chip text={project.year.toString()} />
 
                         {project.url != null ? (
@@ -55,13 +44,25 @@ export default function ProjectCard({
                             <Chip text={t.projects_section.private} />
                         )}
                     </div>
-
-                    {project.description.map((paragraph, index) => (
-                        <Text key={index} type="body" text={paragraph} />
-                    ))}
-
                 </div>
-            </Card>
-        </div>
+
+                <details className="hidden-laptop">
+                    <summary><Text classText="display-inline-text" text={project.title} type="bodyLarge" /></summary>
+
+                    <div className="col gap p-y">
+                        {project.description.map((paragraph, index) => (
+                            <Text key={index} type="bodySmall" text={paragraph} />
+                        ))}
+                    </div>
+                </details>
+            </div>
+
+            <div className="col flex-1 gap hidden-mobile">
+                <Text text={project.title} type="bodyLarge" classText="p-y" />
+                {project.description.map((paragraph, index) => (
+                    <Text key={index} type="bodySmall" text={paragraph} />
+                ))}
+            </div>
+        </Card>
     );
 };

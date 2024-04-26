@@ -4,32 +4,35 @@
     --surface-color: #ffffff;
     --primary-color: #641faf;
     --secondary-color: #bf337c;
-    --primary-highlight-color: color-mix(in var(--color-mix-type), var(--primary-color) 30%, var(--surface-color));
-    --secondary-highlight-color: color-mix(in var(--color-mix-type), var(--secondary-color), var(--surface-color));
-    --font-color: color-mix(in var(--color-mix-type), var(--primary-color) 25%, var(--surface-color));
 
-    --font-size-headline: 64px;
-    --font-size-title: 36px;
-    --font-size-body-large: 20px;
-    --font-size-body: 16px;
-    --font-size-body-small: 12px;
+    --font-size-headline-mobile: 52px;
+    --font-size-title-mobile: 36px;
+    --font-size-body-large-mobile: 20px;
+    --font-size-body-mobile: 16px;
+    --font-size-body-small-mobile: 12px;
 
-    --brand-size: 46px;
-    --header-size: 64px;
+    --font-size-body-small-laptop: 1rem;
+    --font-size-body-laptop: 1.3rem;
+    --font-size-body-large-laptop: 1.5rem;
+    --font-size-title-laptop: 3rem;
+    --font-size-headline-laptop: 5rem;
+
+    --brand-size: 48px;
+    --header-size: 48px;
 
     --icon-normal-size: 24px;
     --icon-large-size: 48px;
     --icon-extra-large-size: 80px;
 
-    --icon-button-size: 38px;
+    --icon-button-size: 48px;
     --icon-button-padding: 3px;
-    --icon-button-border-radius: 50%;
+    --icon-button-border-radius: 16px;
 
-    --float-button-size: 52px;
+    --float-button-size: 54px;
     --float-button-padding: 3px;
     --float-button-border-radius: 16px;
 
-    --text-button-size: 32px;
+    --text-button-size: 48px;
     --text-button-padding: 4px;
     --text-button-border-radius: 16px;
 

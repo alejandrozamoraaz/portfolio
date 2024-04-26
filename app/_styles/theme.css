@@ -1,6 +1,10 @@
 body {
-    color: var(--font-color);
+    color: color-mix(in var(--color-mix-type), var(--primary-color) 25%, var(--surface-color));
     background-color: var(--base-color);
+}
+
+body::selection {
+    color: var(--surface-color);
 }
 
 .gradient-color {

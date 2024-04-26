@@ -11,7 +11,7 @@ export default function Chip({
     children?: JSX.Element;
 }) {
     return (
-        <div className={`${structureChip.container} ${colorsChip.primary} gap-small`}>
+        <div className={`${structureChip.container} ${colorsChip.primary}`}>
             {children}
 
             {text && <Text type="bodySmall" text={text} />}

@@ -2,7 +2,7 @@
   "common": {
     "title": "Portfolio of Junior Alejandro Zamora",
     "description": "Professional portfolio of Software Engineer Junior Alejandro Zamora",
-    "autor": "Junior Alejandro Zamora",
+    "autor": "Junior Alejandro Zamora Navarrete",
     "keywords": [
       "blog",
       "modern portfolio",
@@ -18,16 +18,16 @@
     "tag_google_analytics": "Using Google Analytics",
     "see": "See",
     "see_project": "See project",
-    "label_position": "Ing.",
-    "iam": "I am",
+    "iam": "I am systems engineer",
+    "label_position": "My current position is",
     "primary_position": "Software Engineer"
   },
   "projects_section": {
     "title": "Projects",
     "projects_data_placeholder": "❗The data included in the projects is placeholders",
     "private": "Private",
-    "graphic_design_ui_ux": "Graphic design, UI & UX",
-    "full_stack_development": "Full Stack Development",
+    "graphic_design_ui_ux": "Graphic designs, UI & UX highlights",
+    "full_stack_development": "Full-Stack developments highlights",
     "prototipo-de-gestor-de-expedientes": {
       "title": "Prototype of Clinical Records Manager",
       "description00": "Medical records system designed in Adobe XD, intended for three types of users: the patient, who will have access to the visualization of their medical history using their ID, the doctor who will input the information, and an administrator who manages one or several clinics.",

@@ -2,7 +2,7 @@
   "common": {
     "title": "Portafolio de Junior Alejandro Zamora",
     "description": "Portafolio profesinal del Ingeniero de Software Junior Alejandro Zamora",
-    "autor": "Junior Alejandro Zamora",
+    "autor": "Junior Alejandro Zamora Navarrete",
     "keywords": [
       "blog",
       "portafolio moderno",
@@ -18,16 +18,16 @@
     "tag_google_analytics": "Usando Google Analytics",
     "see": "Ir",
     "see_project": "Ver proyecto",
-    "label_position": "Ing.",
-    "iam": "Yo soy",
+    "iam": "Soy ingeniero de sistemas",
+    "label_position": "Mi posición actual es",
     "primary_position": "Ingeniero de Software"
   },
   "projects_section": {
     "title": "Proyectos",
     "projects_data_placeholder": "❗Los datos incluidos en los proyectos son marcadores de posición",
     "private": "Privado",
-    "graphic_design_ui_ux": "Diseño gráfico, UI y UX",
-    "full_stack_development": "Desarrollo Full Stack",
+    "graphic_design_ui_ux": "Diseños gráficos, UI y UX destacados",
+    "full_stack_development": "Desarrollos Full-Stack destacados",
     "prototipo-de-gestor-de-expedientes": {
       "title": "Prototipo de Gestor de expedientes clínicos",
       "description00": "Sistema de expedientes médicos diseñado en Adobe XD, pensado para tres tipos de usuarios, el paciente que dispondrá de la visualización de su historial médico con el uso de su DNI, el médico que rellenará la información y un administrador que gestiona una o varias clinicas.",

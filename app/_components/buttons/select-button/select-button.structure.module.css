@@ -6,13 +6,11 @@
     display: block;
 }
 
-.arrowIcon {
-    margin-left: var(--padding-small);
-}
-
 .currentItem {
+    height: 46px;
     border-radius: var(--border-radius-small);
-    padding: var(--text-button-padding) calc(var(--text-button-padding) * 3);
+    padding: var(--padding-small);
+    gap: var(--padding-small);
 }
 
 .items {
@@ -22,7 +20,7 @@
     margin-top: var(--padding-small);
     width: 100%;
     border-radius: var(--border-radius-small);
-    z-index: 3;
+    z-index: 1;
 }
 
 .item {

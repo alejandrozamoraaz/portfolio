@@ -1,8 +1,9 @@
+import { ComponentType } from "react";
 import { type getDictionary } from "@/get-dictionary";
+
 export type Dictionary = Awaited<ReturnType<typeof getDictionary>>;
 
-export type IconType = JSX.Element;
-export type IconData = React.FC<React.SVGProps<SVGSVGElement>>;
+export type Icon = ComponentType<{ className: string; }>;
 
 export type SelectItem = {
     display: string;
@@ -28,12 +29,5 @@ export type Project = {
     year: number;
     image: string;
     url?: string;
-    technologies?: IconData[];
+    technologies?: Icon[];
 };
-
-export type Section = {
-    linkName: string;
-    icon: IconData;
-    name: string;
-    content: ({ t }: { t: Dictionary; }) => JSX.Element;
-}

@@ -32,7 +32,7 @@ export default function Text({
     case "title":
       return <h2 className={classes}>{text}</h2>;
     case "bodyLarge":
-      return <h4 className={classes}>{text}</h4>;
+      return <h3 className={classes}>{text}</h3>;
     case "body":
       return <p className={classes}>{text}</p>;
     case "bodySmall":

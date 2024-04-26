@@ -1,19 +1,20 @@
 import cardColors from "./card.colors.module.css";
+import cardStructure from "./card.structure.module.css";
 
 export default function Card({
-    type,
     borderSize = "normal",
     classCard,
     children,
 }: {
-    type?: 'fillBase';
     borderSize?: 'normal' | 'large';
     classCard?: string;
     children: any | any[];
 }) {
     return (
-        <div className={`${classCard} ${type === "fillBase" && cardColors.fillBase} ${borderSize === "large" ? "border-radius-large" : "border-radius"}`}>
+        <div className={`${classCard} ${cardStructure.cardContainer} ${cardColors.cardContainer} ${borderSize === "large" ? cardStructure.borderRadiusLarge : cardStructure.borderRadiusNormal}`}>
             {children}
+
+            <div className={`${cardStructure.shine} ${cardColors.shine}`}></div>
         </div>
     );
 }

@@ -5,14 +5,13 @@ import selectButtonColors from "./select-button.colors.module.css";
 import selectButtonEffects from "./select-button.effects.module.css";
 
 import Text from "@/app/_components/text/text";
-import Icon from "@/app/_components/icon/icon";
 
 import { SelectItem } from "@/app/_lib/definitions";
-import { ArrowUp } from "@/app/_lib/icons";
 import { useState } from "react";
 
-export default function SelectButton({ currentOption, options, onChange }: {
+export default function SelectButton({ currentOption, icon, options, onChange }: {
     currentOption: SelectItem;
+    icon: any
     options: SelectItem[];
     onChange: (option: SelectItem) => void;
 }) {
@@ -22,7 +21,8 @@ export default function SelectButton({ currentOption, options, onChange }: {
         <div className={`${selectButtonStructure.container} ${selectButtonEffects.container}`}>
             <button type="button" onClick={() => setOpen(!isOpen)} className={`button ${selectButtonStructure.currentItem} ${selectButtonColors.currentItem} ${selectButtonColors.surface}`}>
                 <Text type="body" text={currentOption.display} />
-                <Icon iconData={ArrowUp} iconClass={`${selectButtonStructure.arrowIcon} ${selectButtonEffects.arrowIcon} ${isOpen && selectButtonEffects.open}`} />
+
+                {icon}
             </button>
 
             <div className={`col ${selectButtonStructure.items} ${isOpen && selectButtonEffects.open} ${isOpen && selectButtonStructure.open} ${selectButtonColors.surface} ${selectButtonEffects.items}`}>

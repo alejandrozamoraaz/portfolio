@@ -1,0 +1,37 @@
+.borderRadiusLarge {
+    border-radius: var(--border-radius-large);
+}
+
+.borderRadiusNormal {
+    border-radius: var(--border-radius);
+}
+
+.cardContainer {
+    position: relative;
+    overflow: hidden;
+}
+
+.cardContainer:hover {
+    .shine {
+        opacity: 1;
+    }
+}
+
+.shine {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.shine:before {
+    content: '';
+    width: 150%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: blur(35px);
+    opacity: 0.2;
+}

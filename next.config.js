@@ -1,8 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        loader: 'custom',
-        loaderFile: './cloudinary-loader.js',
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'res.cloudinary.com',
+                pathname: '/dlyfwab7x/image/upload/**',
+            },
+        ],
     },
 };
 

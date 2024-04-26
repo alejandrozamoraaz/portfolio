@@ -3,8 +3,6 @@
 import iconButtonColors from './icon-button.colors.module.css';
 import iconButtonStructure from './icon-button.structure.module.css';
 
-import { IconType } from '@/app/_lib/definitions';
-
 import { useRouter } from 'next/navigation';
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
@@ -23,7 +21,7 @@ export default function IconButton({
     isFloat?: boolean;
     classButton?: string;
     type?: 'primary' | 'secondary';
-    children: IconType;
+    children: JSX.Element;
 }) {
     const router = useRouter();
     const typeColor = (() => {

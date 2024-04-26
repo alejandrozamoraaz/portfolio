@@ -1,34 +1,24 @@
-import { sections } from '@/app/_lib/data/sections';
-import { getDictionary } from "@/get-dictionary";
+import dynamic from "next/dynamic";
 
-import Icon from '@/app/_components/icon/icon';
-import Text from '@/app/_components/text/text';
-
-import Header from '@/app/[lang]/_sections/header';
+const HeaderSection = dynamic(() => import('@/app/[lang]/_sections/header'));
+const ProjectsSection = dynamic(() => import('@/app/[lang]/_sections/projects'));
+const AboutSection = dynamic(() => import('@/app/[lang]/_sections/about'));
+const BadgesSection = dynamic(() => import('@/app/[lang]/_sections/badges'));
+const ContactSection = dynamic(() => import('@/app/[lang]/_sections/contact'));
 
 export default async function Home({
   params: { lang },
 }: {
   params: { lang: string };
 }) {
-  const dictionary = await getDictionary(lang);
-
   return (
-    <>
-      <Header t={dictionary.common} />
+    <div className="col gap-large">
+      <HeaderSection lang={lang} />
 
-      {sections(dictionary).map((link) => {
-        return (
-          <section key={link.linkName} id={link.linkName} className="col m-x gap-large m-y-large">
-            <div className="flex gap m-y-large cross-axis-center main-axis-center">
-              <Icon iconData={link.icon} size="extra-large" />
-              <Text text={link.name} type="title" />
-            </div>
-
-            <link.content t={dictionary} />
-          </section>
-        );
-      })}
-    </>
+      <ProjectsSection lang={lang} />
+      <AboutSection lang={lang} />
+      <BadgesSection lang={lang} />
+      <ContactSection lang={lang} />
+    </div>
   )
 }

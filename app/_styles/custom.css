@@ -2,68 +2,55 @@ html {
     scrollbar-width: none;
 }
 
-.header-cover {
+summary {
+    cursor: pointer;
+}
+
+.custom-position-relative {
     position: relative;
-    min-height: 500px;
-    height: calc(100svh - var(--header-size));
-    overflow: hidden;
+}
+
+.custom-fill-badge-image {
+    object-fit: cover;
+    mask-image: linear-gradient(transparent, black 80%, transparent);
+}
+
+.custom-contact-section {
+    min-height: 100svh;
 
     /* For large screens */
     @media (min-width: 700px) {
-        height: calc(100vh - var(--header-size));
+        min-height: 100vh;
     }
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-template-rows: 320px;
+.custom-fill-contact-image {
+    object-fit: contain;
 }
 
-.project-card {
-    position: relative;
+.custom-header-cover {
+    min-height: calc(100svh - var(--header-size));
+
+    /* For large screens */
+    @media (min-width: 700px) {
+        min-height: calc(100vh - var(--header-size));
+    }
+}
+
+.custom-project-card {
     overflow: hidden;
 
-    &:hover {
-        &> :first-child {
-            opacity: 0;
-            transform: translateY(-100%);
-        }
-
-        &> :last-child {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    &> :first-child {
-        opacity: 1;
-        transform: translateY(0);
-        transition: transform 0.3s, opacity 0.3s;
-
-        img {
-            object-fit: cover;
-            aspect-ratio: 16/9;
-            border-radius: var(--border-radius-large);
-        }
-    }
-
-    &> :last-child {
-        display: block;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        overflow-y: scroll;
-        scrollbar-width: none;
-        border-radius: var(--border-radius-large);
-        opacity: 0;
-        transform: translateY(70%);
-        transition: transform 0.3s, opacity 0.3s;
+    img {
+        border-radius: var(--border-radius);
     }
 }
 
-.badges-grid {
+.custom-badges-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+    /* For large screens */
+    @media (min-width: 700px) {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
 }

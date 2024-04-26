@@ -1,14 +1,5 @@
-.open.arrowIcon {
-    transform: rotate(0deg);
-}
-
 .open.items {
     animation: select-options-show 300ms linear forwards;
-}
-
-.arrowIcon {
-    transform: rotate(180deg);
-    transition: transform 0.3s;
 }
 
 @keyframes select-options-show {

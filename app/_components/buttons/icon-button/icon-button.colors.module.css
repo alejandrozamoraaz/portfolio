@@ -1,5 +1,5 @@
 .secondary {
-    color: var(--secondary-highlight-color);
+    color: color-mix(in var(--color-mix-type), var(--secondary-color), var(--surface-color));
     background-color: color-mix(in var(--color-mix-type), var(--secondary-color) 90%, var(--base-color));
 }
 
@@ -8,7 +8,7 @@
 }
 
 .primary {
-    color: var(--primary-highlight-color);
+    color: color-mix(in var(--color-mix-type), var(--primary-color) 30%, var(--surface-color));
     background: color-mix(in var(--color-mix-type), var(--primary-color) 90%, var(--base-color));
 }
 

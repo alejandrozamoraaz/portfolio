@@ -1,3 +1,7 @@
-.fillBase {
-    background-color: color-mix(in var(--color-mix-type), var(--surface-color) 10%, var(--base-color));
+.cardContainer {
+    border: 1px solid color-mix(in var(--color-mix-type), var(--surface-color) 20%, transparent);
+}
+
+.shine::before {
+    background-image: conic-gradient(from 205deg, transparent 0deg, var(--primary-color) 25deg, transparent 295deg, color-mix(in var(--color-mix-type), var(--primary-color) 25%, transparent) 360deg);
 }

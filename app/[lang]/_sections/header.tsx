@@ -1,24 +1,31 @@
+import dynamic from 'next/dynamic';
+
+import { getDictionary } from "@/get-dictionary";
+
 import Text from '@/app/_components/text/text';
 
-import { Dictionary } from '@/app/_lib/definitions';
+const ContactButtons = dynamic(() => import('@/app/[lang]/_sections/widgets/contact-buttons'));
 
-import ContactButtons from '@/app/[lang]/_sections/widgets/contact-buttons';
-
-export default function Header({ t }: {
-    t: Dictionary["common"];
+export default async function Header({
+    lang,
+}: {
+    lang: string;
 }) {
+    const dictionary = (await getDictionary(lang)).common;
+
     return (
-        <section className={"col gap p-x-small header-cover main-axis-center cross-axis-center"}>
-            <div>
-                <Text text={t.label_position} />
-                <Text text={t.autor} type="title" classText="center-text" />
-            </div>
-            <div className="p-y">
-                <Text text={t.iam} />
-                <Text text={t.primary_position} classText="gradient-color center-text" type="headline" />
+        <section className={"col gap custom-header-cover main-axis-center cross-axis-center"}>
+            <div className="p-y-large">
+                <Text text={dictionary.iam} classText="p-x-small" />
+                <Text text={dictionary.autor} type="title" classText="center-text" />
             </div>
 
-            <ContactButtons t={t} />
+            <div className="p-y-large">
+                <Text text={dictionary.label_position} classText="p-x-small" />
+                <Text text={dictionary.primary_position} classText="gradient-color center-text" type="headline" />
+            </div>
+
+            <ContactButtons t={dictionary} />
         </section>
     )
 }
